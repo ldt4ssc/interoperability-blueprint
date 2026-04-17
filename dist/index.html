@@ -1,0 +1,602 @@
+<!DOCTYPE html><html lang="en" dir="ltr"><head>
+<meta charset="utf-8">
+<meta name="generator" content="ReSpec 35.9.0">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<style>
+dfn{cursor:pointer}
+.dfn-panel{position:absolute;z-index:35;min-width:300px;max-width:500px;padding:.5em .75em;margin-top:.6em;font-family:"Helvetica Neue",sans-serif;font-size:small;background:#fff;background:var(--indextable-hover-bg,#fff);color:#000;color:var(--text,#000);box-shadow:0 1em 3em -.4em rgba(0,0,0,.3),0 0 1px 1px rgba(0,0,0,.05);box-shadow:0 1em 3em -.4em var(--tocsidebar-shadow,rgba(0,0,0,.3)),0 0 1px 1px var(--tocsidebar-shadow,rgba(0,0,0,.05));border-radius:2px}
+.dfn-panel:not(.docked)>.caret{position:absolute;top:-9px}
+.dfn-panel:not(.docked)>.caret::after,.dfn-panel:not(.docked)>.caret::before{content:"";position:absolute;border:10px solid transparent;border-top:0;border-bottom:10px solid #fff;border-bottom-color:var(--indextable-hover-bg,#fff);top:0}
+.dfn-panel:not(.docked)>.caret::before{border-bottom:9px solid #a2a9b1;border-bottom-color:var(--indextable-hover-bg,#a2a9b1)}
+.dfn-panel *{margin:0}
+.dfn-panel b{display:block;color:#000;color:var(--text,#000);margin-top:.25em}
+.dfn-panel ul a[href]{color:#333;color:var(--text,#333)}
+.dfn-panel>div{display:flex}
+.dfn-panel a.self-link{font-weight:700;margin-right:auto}
+.dfn-panel .marker{padding:.1em;margin-left:.5em;border-radius:.2em;text-align:center;white-space:nowrap;font-size:90%;color:#040b1c}
+.dfn-panel .marker.dfn-exported{background:#d1edfd;box-shadow:0 0 0 .125em #1ca5f940}
+.dfn-panel .marker.idl-block{background:#8ccbf2;box-shadow:0 0 0 .125em #0670b161}
+.dfn-panel a:not(:hover){text-decoration:none!important;border-bottom:none!important}
+.dfn-panel a[href]:hover{border-bottom-width:1px}
+.dfn-panel ul{padding:0}
+.dfn-panel li{margin-left:1em}
+.dfn-panel.docked{position:fixed;left:.5em;top:unset;bottom:2em;margin:0 auto;max-width:calc(100vw - .75em * 2 - .5em - .2em * 2);max-height:30vh;overflow:auto}
+</style>
+  
+  
+<title>LDT Interoperability Blueprint</title>
+  
+  
+
+<style id="respec-mainstyle">
+@keyframes pop{
+0%{transform:scale(1,1)}
+25%{transform:scale(1.25,1.25);opacity:.75}
+100%{transform:scale(1,1)}
+}
+a.internalDFN{color:inherit;border-bottom:1px solid #99c;text-decoration:none}
+a.externalDFN{color:inherit;border-bottom:1px dotted #ccc;text-decoration:none}
+a.bibref{text-decoration:none}
+.respec-offending-element:target{animation:pop .25s ease-in-out 0s 1}
+.respec-offending-element,a[href].respec-offending-element{text-decoration:red wavy underline}
+@supports not (text-decoration:red wavy underline){
+.respec-offending-element:not(pre){display:inline-block}
+.respec-offending-element{background:url(data:image/gif;base64,R0lGODdhBAADAPEAANv///8AAP///wAAACwAAAAABAADAEACBZQjmIAFADs=) bottom repeat-x}
+}
+#references :target{background:#eaf3ff;animation:pop .4s ease-in-out 0s 1}
+cite .bibref{font-style:italic}
+a[href].orcid{padding-left:4px;padding-right:4px}
+a[href].orcid>svg{margin-bottom:-2px}
+ol.tof,ul.tof{list-style:none outside none}
+.caption{margin-top:.5em;font-style:italic}
+#issue-summary>ul{column-count:2}
+#issue-summary li{list-style:none;display:inline-block}
+details.respec-tests-details{margin-left:1em;display:inline-block;vertical-align:top}
+details.respec-tests-details>*{padding-right:2em}
+details.respec-tests-details[open]{z-index:999999;position:absolute;border:thin solid #cad3e2;border-radius:.3em;background-color:#fff;padding-bottom:.5em}
+details.respec-tests-details[open]>summary{border-bottom:thin solid #cad3e2;padding-left:1em;margin-bottom:1em;line-height:2em}
+details.respec-tests-details>ul{width:100%;margin-top:-.3em}
+details.respec-tests-details>li{padding-left:1em}
+.self-link:hover{opacity:1;text-decoration:none;background-color:transparent}
+aside.example .marker>a.self-link{color:inherit}
+.header-wrapper{display:flex;align-items:baseline}
+:is(h2,h3,h4,h5,h6):not(#toc>h2,#abstract>h2,#sotd>h2,.head>h2){position:relative;left:-.5em}
+:is(h2,h3,h4,h5,h6):not(#toch2)+a.self-link{color:inherit;order:-1;position:relative;left:-1.1em;font-size:1rem;opacity:.5}
+:is(h2,h3,h4,h5,h6)+a.self-link::before{content:"§";text-decoration:none;color:var(--heading-text)}
+:is(h2,h3)+a.self-link{top:-.2em}
+:is(h4,h5,h6)+a.self-link::before{color:#000}
+@media (max-width:767px){
+dd{margin-left:0}
+}
+@media print{
+.removeOnSave{display:none}
+}
+</style>
+<meta name="color-scheme" content="light">
+<meta name="description" content="This is required.">
+<link rel="canonical" href="_ORCHESTRATOR_CURRENT_BUILD_FULL_LINK_">
+<style>
+var:hover{text-decoration:underline;cursor:pointer}
+var.respec-hl{color:var(--color,#000);background-color:var(--bg-color);box-shadow:0 0 0 2px var(--bg-color)}
+@media (prefers-color-scheme:dark){
+var.respec-hl{filter:saturate(.9) brightness(.9)}
+}
+var.respec-hl-c1{--bg-color:#f4d200}
+var.respec-hl-c2{--bg-color:#ff87a2}
+var.respec-hl-c3{--bg-color:#96e885}
+var.respec-hl-c4{--bg-color:#3eeed2}
+var.respec-hl-c5{--bg-color:#eacfb6}
+var.respec-hl-c6{--bg-color:#82ddff}
+var.respec-hl-c7{--bg-color:#ffbcf2}
+@media print{
+var.respec-hl{background:0 0;color:#000;box-shadow:unset}
+}
+</style>
+<style>
+var{position:relative;cursor:pointer}
+var[data-type]::after,var[data-type]::before{position:absolute;left:50%;top:-6px;opacity:0;transition:opacity .4s;pointer-events:none}
+var[data-type]::before{content:"";transform:translateX(-50%);border-width:4px 6px 0 6px;border-style:solid;border-color:transparent;border-top-color:#222}
+var[data-type]::after{content:attr(data-type);transform:translateX(-50%) translateY(-100%);background:#222;text-align:center;font-family:"Dank Mono","Fira Code",monospace;font-style:normal;padding:6px;border-radius:3px;color:#daca88;text-indent:0;font-weight:400}
+var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
+</style>
+<script id="initialUserConfig" type="application/json">{
+  "specStatus": "unofficial",
+  "editors": [
+    {
+      "name": "Pieter Heyvaert",
+      "company": "Ghent University - imec",
+      "companyURL": "http://idlab.ugent.be/"
+    }
+  ],
+  "authors": [
+    {
+      "name": "Pieter Heyvaert",
+      "company": "Ghent University - imec",
+      "companyURL": "http://idlab.ugent.be/"
+    },
+    {
+      "name": "Laura Riou",
+      "company": "To-do",
+      "companyURL": "http://example.com"
+    },
+    {
+      "name": "Lucas",
+      "company": "To-do",
+      "companyURL": "http://example.com"
+    },
+    {
+      "name": "Sille Sepp",
+      "company": "To-do",
+      "companyURL": "http://example.com"
+    },
+    {
+      "name": "Thimo",
+      "company": "To-do",
+      "companyURL": "http://example.com"
+    }
+  ],
+  "shortName": "ldt-interoperability-blueprint",
+  "xref": "web-platform",
+  "canonicalURI": "_ORCHESTRATOR_CURRENT_BUILD_FULL_LINK_",
+  "previousURI": "_ORCHESTRATOR_PREVIOUS_BUILD_FULL_LINK_",
+  "github": "https://github.com/pheyvaer/to-do",
+  "edDraftURI": null,
+  "logos": [
+    {
+      "src": "ldt4ssc-logo.jpg",
+      "url": "https://ldt4ssc.eu/",
+      "alt": "LDT4SSC",
+      "height": 48,
+      "id": "ldt4ssc-logo"
+    }
+  ],
+  "publishISODate": "2026-04-15T00:00:00.000Z",
+  "generatedSubtitle": "Unofficial Draft 15 April 2026"
+}</script>
+<link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2021/W3C-UD"></head>
+<body class="h-entry informative toc-inline" data-cite="HTML INFRA URL WEBIDL DOM FETCH"><div class="head">
+    <p class="logos"><a class="logo" href="https://ldt4ssc.eu/"><img crossorigin="" alt="LDT4SSC" height="48" id="ldt4ssc-logo" src="ldt4ssc-logo.jpg">
+  </a></p>
+    <h1 id="title" class="title">LDT Interoperability Blueprint</h1> 
+    <p id="w3c-state">Unofficial Draft <time class="dt-published" datetime="2026-04-15">15 April 2026</time></p>
+    <details open="">
+      <summary>More details about this document</summary>
+      <dl>
+        
+        <dt>Latest published version:</dt><dd>
+                <a href="https://www.w3.org/ldt-interoperability-blueprint/">https://www.w3.org/ldt-interoperability-blueprint/</a>
+              </dd>
+        
+        <dt>History:</dt><dd>
+                    <a href="https://github.com/pheyvaer/to-do/commits/">Commit history</a>
+                  </dd>
+        
+        
+        
+        
+        
+        <dt>Editor:</dt><dd class="editor p-author h-card vcard">
+    <span class="p-name fn">Pieter Heyvaert</span> (<a class="p-org org h-org" href="http://idlab.ugent.be/">Ghent University - imec</a>)
+  </dd>
+        
+        <dt>Authors:</dt><dd class="editor p-author h-card vcard">
+    <span class="p-name fn">Pieter Heyvaert</span> (<a class="p-org org h-org" href="http://idlab.ugent.be/">Ghent University - imec</a>)
+  </dd><dd class="editor p-author h-card vcard">
+    <span class="p-name fn">Laura Riou</span> (<a class="p-org org h-org" href="http://example.com">To-do</a>)
+  </dd><dd class="editor p-author h-card vcard">
+    <span class="p-name fn">Lucas</span> (<a class="p-org org h-org" href="http://example.com">To-do</a>)
+  </dd><dd class="editor p-author h-card vcard">
+    <span class="p-name fn">Sille Sepp</span> (<a class="p-org org h-org" href="http://example.com">To-do</a>)
+  </dd><dd class="editor p-author h-card vcard">
+    <span class="p-name fn">Thimo</span> (<a class="p-org org h-org" href="http://example.com">To-do</a>)
+  </dd>
+        <dt>Feedback:</dt><dd>
+        <a href="https://github.com/pheyvaer/to-do/">GitHub pheyvaer/to-do</a>
+        (<a href="https://github.com/pheyvaer/to-do/pulls/">pull requests</a>,
+        <a href="https://github.com/pheyvaer/to-do/issues/new/choose">new issue</a>,
+        <a href="https://github.com/pheyvaer/to-do/issues/">open issues</a>)
+      </dd>
+        
+        
+      </dl>
+    </details>
+    
+    
+    <p class="copyright">
+      Copyright ©
+      2026
+      the document editors/authors.
+      Text is available under the
+            <a rel="license" href="https://creativecommons.org/licenses/by/4.0/legalcode">Creative Commons Attribution 4.0 International Public License</a>; additional terms may apply.
+    </p>
+    <hr title="Separator for header">
+  </div>
+<section id="abstract" class="introductory"><h2>Abstract</h2>
+  <p>This is required.</p>
+</section><nav id="toc"><h2 class="introductory" id="table-of-contents">Table of Contents</h2><ol class="toc"><li class="tocline"><a class="tocxref" href="#abstract">Abstract</a></li><li class="tocline"><a class="tocxref" href="#introduction"><bdi class="secno">1. </bdi>Introduction</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#why-use-an-ldt"><bdi class="secno">1.1 </bdi>Why use an LDT</a></li><li class="tocline"><a class="tocxref" href="#high-level-overview-of-an-ldt"><bdi class="secno">1.2 </bdi>High-level overview of an LDT</a></li><li class="tocline"><a class="tocxref" href="#adding-a-new-surface-level-component-to-an-existing-ldt"><bdi class="secno">1.3 </bdi>Adding a new Surface-level component to an existing LDT</a></li></ol></li><li class="tocline"><a class="tocxref" href="#building-blocks"><bdi class="secno">2. </bdi>LDT building blocks based on DSSC &amp; DS4SSCC-DEP building blocks</a></li><li class="tocline"><a class="tocxref" href="#workflows"><bdi class="secno">3. </bdi>Workflows</a></li><li class="tocline"><a class="tocxref" href="#reference-architectures"><bdi class="secno">4. </bdi>Reference architectures</a></li><li class="tocline"><a class="tocxref" href="#workflows-reference-architectures"><bdi class="secno">5. </bdi>Workflows using reference architectures</a></li><li class="tocline"><a class="tocxref" href="#how-to-build-an-ldt"><bdi class="secno">6. </bdi>How to build an LDT</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#explore-and-validate"><bdi class="secno">6.1 </bdi>Explore and validate</a></li><li class="tocline"><a class="tocxref" href="#define-and-implement"><bdi class="secno">6.2 </bdi>Define and implement</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#how-to-build-a-data-acquisition-component"><bdi class="secno">6.2.1 </bdi>How to build a data acquisition component</a></li><li class="tocline"><a class="tocxref" href="#how-to-build-a-data-management-component"><bdi class="secno">6.2.2 </bdi>How to build a data management component</a></li><li class="tocline"><a class="tocxref" href="#how-to-build-a-connectivity-component"><bdi class="secno">6.2.3 </bdi>How to build a connectivity component</a></li><li class="tocline"><a class="tocxref" href="#how-to-build-decision-making-components"><bdi class="secno">6.2.4 </bdi>How to build decision-making components</a></li><li class="tocline"><a class="tocxref" href="#how-to-build-analysis-components"><bdi class="secno">6.2.5 </bdi>How to build analysis components</a></li><li class="tocline"><a class="tocxref" href="#how-to-build-visualisations"><bdi class="secno">6.2.6 </bdi>How to build visualisations</a></li></ol></li></ol></li></ol></nav>
+<section id="introduction"><div class="header-wrapper"><h2 id="x1-introduction"><bdi class="secno">1. </bdi>Introduction</h2><a class="self-link" href="#introduction" aria-label="Permalink for Section 1."></a></div>
+  
+
+  <section id="why-use-an-ldt"><div class="header-wrapper"><h3 id="x1-1-why-use-an-ldt"><bdi class="secno">1.1 </bdi>Why use an LDT</h3><a class="self-link" href="#why-use-an-ldt" aria-label="Permalink for Section 1.1"></a></div>
+    
+  </section>
+
+  <section id="high-level-overview-of-an-ldt"><div class="header-wrapper"><h3 id="x1-2-high-level-overview-of-an-ldt"><bdi class="secno">1.2 </bdi>High-level overview of an LDT</h3><a class="self-link" href="#high-level-overview-of-an-ldt" aria-label="Permalink for Section 1.2"></a></div>
+    
+  </section>
+
+  <section id="adding-a-new-surface-level-component-to-an-existing-ldt"><div class="header-wrapper"><h3 id="x1-3-adding-a-new-surface-level-component-to-an-existing-ldt"><bdi class="secno">1.3 </bdi>Adding a new Surface-level component to an existing LDT</h3><a class="self-link" href="#adding-a-new-surface-level-component-to-an-existing-ldt" aria-label="Permalink for Section 1.3"></a></div>
+    
+  </section>
+</section>
+<section id="building-blocks"><div class="header-wrapper"><h2 id="x2-ldt-building-blocks-based-on-dssc-ds4sscc-dep-building-blocks"><bdi class="secno">2. </bdi>LDT building blocks based on DSSC &amp; DS4SSCC-DEP building blocks</h2><a class="self-link" href="#building-blocks" aria-label="Permalink for Section 2."></a></div>
+  
+</section>
+<section id="workflows"><div class="header-wrapper"><h2 id="x3-workflows"><bdi class="secno">3. </bdi>Workflows</h2><a class="self-link" href="#workflows" aria-label="Permalink for Section 3."></a></div>
+  
+</section>
+<section id="reference-architectures"><div class="header-wrapper"><h2 id="x4-reference-architectures"><bdi class="secno">4. </bdi>Reference architectures</h2><a class="self-link" href="#reference-architectures" aria-label="Permalink for Section 4."></a></div>
+  
+</section>
+<section id="workflows-reference-architectures"><div class="header-wrapper"><h2 id="x5-workflows-using-reference-architectures"><bdi class="secno">5. </bdi>Workflows using reference architectures</h2><a class="self-link" href="#workflows-reference-architectures" aria-label="Permalink for Section 5."></a></div>
+  
+</section>
+<section id="how-to-build-an-ldt"><div class="header-wrapper"><h2 id="x6-how-to-build-an-ldt"><bdi class="secno">6. </bdi>How to build an LDT</h2><a class="self-link" href="#how-to-build-an-ldt" aria-label="Permalink for Section 6."></a></div>
+  
+
+  <section id="explore-and-validate"><div class="header-wrapper"><h3 id="x6-1-explore-and-validate"><bdi class="secno">6.1 </bdi>Explore and validate</h3><a class="self-link" href="#explore-and-validate" aria-label="Permalink for Section 6.1"></a></div>
+    
+  </section>
+
+  <section id="define-and-implement"><div class="header-wrapper"><h3 id="x6-2-define-and-implement"><bdi class="secno">6.2 </bdi>Define and implement</h3><a class="self-link" href="#define-and-implement" aria-label="Permalink for Section 6.2"></a></div>
+    
+
+    <section id="how-to-build-a-data-acquisition-component"><div class="header-wrapper"><h4 id="x6-2-1-how-to-build-a-data-acquisition-component"><bdi class="secno">6.2.1 </bdi>How to build a data acquisition component</h4><a class="self-link" href="#how-to-build-a-data-acquisition-component" aria-label="Permalink for Section 6.2.1"></a></div>
+      
+    </section>
+
+    <section id="how-to-build-a-data-management-component"><div class="header-wrapper"><h4 id="x6-2-2-how-to-build-a-data-management-component"><bdi class="secno">6.2.2 </bdi>How to build a data management component</h4><a class="self-link" href="#how-to-build-a-data-management-component" aria-label="Permalink for Section 6.2.2"></a></div>
+      
+    </section>
+
+    <section id="how-to-build-a-connectivity-component"><div class="header-wrapper"><h4 id="x6-2-3-how-to-build-a-connectivity-component"><bdi class="secno">6.2.3 </bdi>How to build a connectivity component</h4><a class="self-link" href="#how-to-build-a-connectivity-component" aria-label="Permalink for Section 6.2.3"></a></div>
+      
+    </section>
+
+    <section id="how-to-build-decision-making-components"><div class="header-wrapper"><h4 id="x6-2-4-how-to-build-decision-making-components"><bdi class="secno">6.2.4 </bdi>How to build decision-making components</h4><a class="self-link" href="#how-to-build-decision-making-components" aria-label="Permalink for Section 6.2.4"></a></div>
+      
+    </section>
+
+    <section id="how-to-build-analysis-components"><div class="header-wrapper"><h4 id="x6-2-5-how-to-build-analysis-components"><bdi class="secno">6.2.5 </bdi>How to build analysis components</h4><a class="self-link" href="#how-to-build-analysis-components" aria-label="Permalink for Section 6.2.5"></a></div>
+      
+    </section>
+
+    <section id="how-to-build-visualisations"><div class="header-wrapper"><h4 id="x6-2-6-how-to-build-visualisations"><bdi class="secno">6.2.6 </bdi>How to build visualisations</h4><a class="self-link" href="#how-to-build-visualisations" aria-label="Permalink for Section 6.2.6"></a></div>
+      
+    </section>
+  </section>
+</section>
+
+
+<p role="navigation" id="back-to-top">
+    <a href="#title"><abbr title="Back to Top">↑</abbr></a>
+  </p><script id="respec-highlight-vars">(() => {
+// @ts-check
+
+if (document.respec) {
+  document.respec.ready.then(setupVarHighlighter);
+} else {
+  setupVarHighlighter();
+}
+
+function setupVarHighlighter() {
+  document
+    .querySelectorAll("var")
+    .forEach(varElem => varElem.addEventListener("click", highlightListener));
+}
+
+function highlightListener(ev) {
+  ev.stopPropagation();
+  const { target: varElem } = ev;
+  const hightligtedElems = highlightVars(varElem);
+  const resetListener = () => {
+    const hlColor = getHighlightColor(varElem);
+    hightligtedElems.forEach(el => removeHighlight(el, hlColor));
+    [...HL_COLORS.keys()].forEach(key => HL_COLORS.set(key, true));
+  };
+  if (hightligtedElems.length) {
+    document.body.addEventListener("click", resetListener, { once: true });
+  }
+}
+
+// availability of highlight colors. colors from var.css
+const HL_COLORS = new Map([
+  ["respec-hl-c1", true],
+  ["respec-hl-c2", true],
+  ["respec-hl-c3", true],
+  ["respec-hl-c4", true],
+  ["respec-hl-c5", true],
+  ["respec-hl-c6", true],
+  ["respec-hl-c7", true],
+]);
+
+function getHighlightColor(target) {
+  // return current colors if applicable
+  const { value } = target.classList;
+  const re = /respec-hl-\w+/;
+  const activeClass = re.test(value) && value.match(re);
+  if (activeClass) return activeClass[0];
+
+  // first color preference
+  if (HL_COLORS.get("respec-hl-c1") === true) return "respec-hl-c1";
+
+  // otherwise get some other available color
+  return [...HL_COLORS.keys()].find(c => HL_COLORS.get(c)) || "respec-hl-c1";
+}
+
+function highlightVars(varElem) {
+  const textContent = norm(varElem.textContent);
+  const parent = varElem.closest(".algorithm, section");
+  const highlightColor = getHighlightColor(varElem);
+
+  const varsToHighlight = [...parent.querySelectorAll("var")].filter(
+    el =>
+      norm(el.textContent) === textContent &&
+      el.closest(".algorithm, section") === parent
+  );
+
+  // update availability of highlight color
+  const colorStatus = varsToHighlight[0].classList.contains("respec-hl");
+  HL_COLORS.set(highlightColor, colorStatus);
+
+  // highlight vars
+  if (colorStatus) {
+    varsToHighlight.forEach(el => removeHighlight(el, highlightColor));
+    return [];
+  } else {
+    varsToHighlight.forEach(el => addHighlight(el, highlightColor));
+  }
+  return varsToHighlight;
+}
+
+function removeHighlight(el, highlightColor) {
+  el.classList.remove("respec-hl", highlightColor);
+  // clean up empty class attributes so they don't come in export
+  if (!el.classList.length) el.removeAttribute("class");
+}
+
+function addHighlight(elem, highlightColor) {
+  elem.classList.add("respec-hl", highlightColor);
+}
+
+/**
+ * Same as `norm` from src/core/utils, but our build process doesn't allow
+ * imports in runtime scripts, so duplicated here.
+ * @param {string} str
+ */
+function norm(str) {
+  return str.trim().replace(/\s+/g, " ");
+}
+})()</script><script id="respec-dfn-panel">(() => {
+// @ts-check
+if (document.respec) {
+  document.respec.ready.then(setupPanel);
+} else {
+  setupPanel();
+}
+
+function setupPanel() {
+  const listener = panelListener();
+  document.body.addEventListener("keydown", listener);
+  document.body.addEventListener("click", listener);
+}
+
+function panelListener() {
+  /** @type {HTMLElement} */
+  let panel = null;
+  return event => {
+    const { target, type } = event;
+
+    if (!(target instanceof HTMLElement)) return;
+
+    // For keys, we only care about Enter key to activate the panel
+    // otherwise it's activated via a click.
+    if (type === "keydown" && event.key !== "Enter") return;
+
+    const action = deriveAction(event);
+
+    switch (action) {
+      case "show": {
+        hidePanel(panel);
+        /** @type {HTMLElement} */
+        const dfn = target.closest("dfn, .index-term");
+        panel = document.getElementById(`dfn-panel-for-${dfn.id}`);
+        const coords = deriveCoordinates(event);
+        displayPanel(dfn, panel, coords);
+        break;
+      }
+      case "dock": {
+        panel.style.left = null;
+        panel.style.top = null;
+        panel.classList.add("docked");
+        break;
+      }
+      case "hide": {
+        hidePanel(panel);
+        panel = null;
+        break;
+      }
+    }
+  };
+}
+
+/**
+ * @param {MouseEvent|KeyboardEvent} event
+ */
+function deriveCoordinates(event) {
+  const target = /** @type HTMLElement */ (event.target);
+
+  // We prevent synthetic AT clicks from putting
+  // the dialog in a weird place. The AT events sometimes
+  // lack coordinates, so they have clientX/Y = 0
+  const rect = target.getBoundingClientRect();
+  if (
+    event instanceof MouseEvent &&
+    event.clientX >= rect.left &&
+    event.clientY >= rect.top
+  ) {
+    // The event probably happened inside the bounding rect...
+    return { x: event.clientX, y: event.clientY };
+  }
+
+  // Offset to the middle of the element
+  const x = rect.x + rect.width / 2;
+  // Placed at the bottom of the element
+  const y = rect.y + rect.height;
+  return { x, y };
+}
+
+/**
+ * @param {Event} event
+ */
+function deriveAction(event) {
+  const target = /** @type {HTMLElement} */ (event.target);
+  const hitALink = !!target.closest("a");
+  if (target.closest("dfn:not([data-cite]), .index-term")) {
+    return hitALink ? "none" : "show";
+  }
+  if (target.closest(".dfn-panel")) {
+    if (hitALink) {
+      return target.classList.contains("self-link") ? "hide" : "dock";
+    }
+    const panel = target.closest(".dfn-panel");
+    return panel.classList.contains("docked") ? "hide" : "none";
+  }
+  if (document.querySelector(".dfn-panel:not([hidden])")) {
+    return "hide";
+  }
+  return "none";
+}
+
+/**
+ * @param {HTMLElement} dfn
+ * @param {HTMLElement} panel
+ * @param {{ x: number, y: number }} clickPosition
+ */
+function displayPanel(dfn, panel, { x, y }) {
+  panel.hidden = false;
+  // distance (px) between edge of panel and the pointing triangle (caret)
+  const MARGIN = 20;
+
+  const dfnRects = dfn.getClientRects();
+  // Find the `top` offset when the `dfn` can be spread across multiple lines
+  let closestTop = 0;
+  let minDiff = Infinity;
+  for (const rect of dfnRects) {
+    const { top, bottom } = rect;
+    const diffFromClickY = Math.abs((top + bottom) / 2 - y);
+    if (diffFromClickY < minDiff) {
+      minDiff = diffFromClickY;
+      closestTop = top;
+    }
+  }
+
+  const top = window.scrollY + closestTop + dfnRects[0].height;
+  const left = x - MARGIN;
+  panel.style.left = `${left}px`;
+  panel.style.top = `${top}px`;
+
+  // Find if the panel is flowing out of the window
+  const panelRect = panel.getBoundingClientRect();
+  const SCREEN_WIDTH = Math.min(window.innerWidth, window.screen.width);
+  if (panelRect.right > SCREEN_WIDTH) {
+    const newLeft = Math.max(MARGIN, x + MARGIN - panelRect.width);
+    const newCaretOffset = left - newLeft;
+    panel.style.left = `${newLeft}px`;
+    /** @type {HTMLElement} */
+    const caret = panel.querySelector(".caret");
+    caret.style.left = `${newCaretOffset}px`;
+  }
+
+  // As it's a dialog, we trap focus.
+  // TODO: when <dialog> becomes a implemented, we should really
+  // use that.
+  trapFocus(panel, dfn);
+}
+
+/**
+ * @param {HTMLElement} panel
+ * @param {HTMLElement} dfn
+ * @returns
+ */
+function trapFocus(panel, dfn) {
+  /** @type NodeListOf<HTMLAnchorElement> elements */
+  const anchors = panel.querySelectorAll("a[href]");
+  // No need to trap focus
+  if (!anchors.length) return;
+
+  // Move focus to first anchor element
+  const first = anchors.item(0);
+  first.focus();
+
+  const trapListener = createTrapListener(anchors, panel, dfn);
+  panel.addEventListener("keydown", trapListener);
+
+  // Hiding the panel releases the trap
+  const mo = new MutationObserver(records => {
+    const [record] = records;
+    const target = /** @type HTMLElement */ (record.target);
+    if (target.hidden) {
+      panel.removeEventListener("keydown", trapListener);
+      mo.disconnect();
+    }
+  });
+  mo.observe(panel, { attributes: true, attributeFilter: ["hidden"] });
+}
+
+/**
+ *
+ * @param {NodeListOf<HTMLAnchorElement>} anchors
+ * @param {HTMLElement} panel
+ * @param {HTMLElement} dfn
+ * @returns
+ */
+function createTrapListener(anchors, panel, dfn) {
+  const lastIndex = anchors.length - 1;
+  let currentIndex = 0;
+  return event => {
+    switch (event.key) {
+      // Hitting "Tab" traps us in a nice loop around elements.
+      case "Tab": {
+        event.preventDefault();
+        currentIndex += event.shiftKey ? -1 : +1;
+        if (currentIndex < 0) {
+          currentIndex = lastIndex;
+        } else if (currentIndex > lastIndex) {
+          currentIndex = 0;
+        }
+        anchors.item(currentIndex).focus();
+        break;
+      }
+
+      // Hitting "Enter" on an anchor releases the trap.
+      case "Enter":
+        hidePanel(panel);
+        break;
+
+      // Hitting "Escape" returns focus to dfn.
+      case "Escape":
+        hidePanel(panel);
+        dfn.focus();
+        return;
+    }
+  };
+}
+
+/** @param {HTMLElement} panel */
+function hidePanel(panel) {
+  if (!panel) return;
+  panel.hidden = true;
+  panel.classList.remove("docked");
+}
+})()</script><script src="https://www.w3.org/scripts/TR/2021/fixup.js"></script></body></html>
