@@ -1490,6 +1490,7 @@ Possible extra rowspan handling
 </style>
   <meta content="Bikeshed version 945dae3, updated Fri Apr 17 02:01:25 2026 +0000" name="generator">
   <link href="_ORCHESTRATOR_CURRENT_BUILD_FULL_LINK_" rel="canonical">
+  <meta content="6a278eff51b67d9847497626ed2a93a68f8d5594" name="revision">
 <style>/* Boilerplate: style-autolinks */
 .css.css, .property.property, .descriptor.descriptor {
     color: var(--a-normal-text);
@@ -1788,6 +1789,8 @@ dfn > a.self-link::before      { content: "#"; }
     <time class="dt-updated" datetime="2026-04-17">17 April 2026</time></span></h2>
    <div data-fill-with="spec-metadata">
     <dl>
+     <dt>This version:
+     <dd><a class="u-url" href="_ORCHESTRATOR_CURRENT_BUILD_FULL_LINK_">_ORCHESTRATOR_CURRENT_BUILD_FULL_LINK_</a>
      <dt>Previous Versions:
      <dd><a href="_ORCHESTRATOR_PREVIOUS_BUILD_FULL_LINK_" rel="prev">_ORCHESTRATOR_PREVIOUS_BUILD_FULL_LINK_</a>
      <dt>Issue Tracking:
@@ -1821,22 +1824,22 @@ dfn > a.self-link::before      { content: "#"; }
    <h2 class="no-num no-ref no-toc" id="contents">Table of Contents</h2>
    <ol class="toc">
     <li>
-     <a href="#introduction"><span class="secno">1</span> <span class="content">Introduction {#introduction}</span></a>
+     <a href="#introduction"><span class="secno">1</span> <span class="content">Introduction</span></a>
      <ol class="toc">
-      <li><a href="#why-use-an-ldt"><span class="secno">1.1</span> <span class="content">Why use an LDT {#why-use-an-ldt}</span></a>
+      <li><a href="#why-use-an-ldt"><span class="secno">1.1</span> <span class="content">Why use an LDT</span></a>
       <li><a href="#high-level-overview-of-an-ldt"><span class="secno">1.2</span> <span class="content">High-level overview of an LDT</span></a>
       <li><a href="#adding-a-new-surface-level-component-to-an-existing-ldt"><span class="secno">1.3</span> <span class="content">Adding a new Surface-level component to an existing LDT</span></a>
      </ol>
-    <li><a href="#building-blocks"><span class="secno">2</span> <span class="content">LDT building blocks based on DSSC &amp; DS4SSCC-DEP building blocks {#building-blocks}</span></a>
-    <li><a href="#workflows"><span class="secno">3</span> <span class="content">Workflows {#workflows}</span></a>
-    <li><a href="#reference-architectures"><span class="secno">4</span> <span class="content">Reference architectures {#reference-architectures}</span></a>
+    <li><a href="#building-blocks"><span class="secno">2</span> <span class="content">LDT building blocks based on DSSC &amp; DS4SSCC-DEP building blocks</span></a>
+    <li><a href="#workflows"><span class="secno">3</span> <span class="content">Workflows</span></a>
+    <li><a href="#reference-architectures"><span class="secno">4</span> <span class="content">Reference architectures</span></a>
     <li><a href="#workflows-using-reference-architectures"><span class="secno">5</span> <span class="content">Workflows using reference architectures</span></a>
     <li>
      <a href="#how-to-build-an-ldt"><span class="secno">6</span> <span class="content">How to build an LDT</span></a>
      <ol class="toc">
-      <li><a href="#explore-validate"><span class="secno">6.1</span> <span class="content">Explore and validate {#explore-validate}</span></a>
+      <li><a href="#explore-validate"><span class="secno">6.1</span> <span class="content">Explore and validate</span></a>
       <li>
-       <a href="#define-implement"><span class="secno">6.2</span> <span class="content">Define and implement {#define-implement}</span></a>
+       <a href="#define-implement"><span class="secno">6.2</span> <span class="content">Define and implement</span></a>
        <ol class="toc">
         <li><a href="#how-to-build-a-data-acquisition-component"><span class="secno">6.2.1</span> <span class="content">How to build a data acquisition component</span></a>
         <li><a href="#how-to-build-a-data-management-component"><span class="secno">6.2.2</span> <span class="content">How to build a data management component</span></a>
@@ -1849,17 +1852,17 @@ dfn > a.self-link::before      { content: "#"; }
    </ol>
   </nav>
   <main>
-   <h2 class="heading settled" data-level="1" id="introduction"><span class="secno">1. </span><span class="content">Introduction {#introduction}</span><a class="self-link" href="#introduction"></a></h2>
-   <h3 class="heading settled" data-level="1.1" id="why-use-an-ldt"><span class="secno">1.1. </span><span class="content">Why use an LDT {#why-use-an-ldt}</span><a class="self-link" href="#why-use-an-ldt"></a></h3>
+   <h2 class="heading settled" data-level="1" id="introduction"><span class="secno">1. </span><span class="content">Introduction</span><a class="self-link" href="#introduction"></a></h2>
+   <h3 class="heading settled" data-level="1.1" id="why-use-an-ldt"><span class="secno">1.1. </span><span class="content">Why use an LDT</span><a class="self-link" href="#why-use-an-ldt"></a></h3>
    <h3 class="heading settled" data-level="1.2" id="high-level-overview-of-an-ldt"><span class="secno">1.2. </span><span class="content">High-level overview of an LDT</span><a class="self-link" href="#high-level-overview-of-an-ldt"></a></h3>
    <h3 class="heading settled" data-level="1.3" id="adding-a-new-surface-level-component-to-an-existing-ldt"><span class="secno">1.3. </span><span class="content">Adding a new Surface-level component to an existing LDT</span><a class="self-link" href="#adding-a-new-surface-level-component-to-an-existing-ldt"></a></h3>
-   <h2 class="heading settled" data-level="2" id="building-blocks"><span class="secno">2. </span><span class="content">LDT building blocks based on DSSC &amp; DS4SSCC-DEP building blocks {#building-blocks}</span><a class="self-link" href="#building-blocks"></a></h2>
-   <h2 class="heading settled" data-level="3" id="workflows"><span class="secno">3. </span><span class="content">Workflows {#workflows}</span><a class="self-link" href="#workflows"></a></h2>
-   <h2 class="heading settled" data-level="4" id="reference-architectures"><span class="secno">4. </span><span class="content">Reference architectures {#reference-architectures}</span><a class="self-link" href="#reference-architectures"></a></h2>
+   <h2 class="heading settled" data-level="2" id="building-blocks"><span class="secno">2. </span><span class="content">LDT building blocks based on DSSC &amp; DS4SSCC-DEP building blocks</span><a class="self-link" href="#building-blocks"></a></h2>
+   <h2 class="heading settled" data-level="3" id="workflows"><span class="secno">3. </span><span class="content">Workflows</span><a class="self-link" href="#workflows"></a></h2>
+   <h2 class="heading settled" data-level="4" id="reference-architectures"><span class="secno">4. </span><span class="content">Reference architectures</span><a class="self-link" href="#reference-architectures"></a></h2>
    <h2 class="heading settled" data-level="5" id="workflows-using-reference-architectures"><span class="secno">5. </span><span class="content">Workflows using reference architectures</span><a class="self-link" href="#workflows-using-reference-architectures"></a></h2>
    <h2 class="heading settled" data-level="6" id="how-to-build-an-ldt"><span class="secno">6. </span><span class="content">How to build an LDT</span><a class="self-link" href="#how-to-build-an-ldt"></a></h2>
-   <h3 class="heading settled" data-level="6.1" id="explore-validate"><span class="secno">6.1. </span><span class="content">Explore and validate {#explore-validate}</span><a class="self-link" href="#explore-validate"></a></h3>
-   <h3 class="heading settled" data-level="6.2" id="define-implement"><span class="secno">6.2. </span><span class="content">Define and implement {#define-implement}</span><a class="self-link" href="#define-implement"></a></h3>
+   <h3 class="heading settled" data-level="6.1" id="explore-validate"><span class="secno">6.1. </span><span class="content">Explore and validate</span><a class="self-link" href="#explore-validate"></a></h3>
+   <h3 class="heading settled" data-level="6.2" id="define-implement"><span class="secno">6.2. </span><span class="content">Define and implement</span><a class="self-link" href="#define-implement"></a></h3>
    <h4 class="heading settled" data-level="6.2.1" id="how-to-build-a-data-acquisition-component"><span class="secno">6.2.1. </span><span class="content">How to build a data acquisition component</span><a class="self-link" href="#how-to-build-a-data-acquisition-component"></a></h4>
    <h4 class="heading settled" data-level="6.2.2" id="how-to-build-a-data-management-component"><span class="secno">6.2.2. </span><span class="content">How to build a data management component</span><a class="self-link" href="#how-to-build-a-data-management-component"></a></h4>
    <h4 class="heading settled" data-level="6.2.3" id="how-to-build-a-connectivity-component"><span class="secno">6.2.3. </span><span class="content">How to build a connectivity component</span><a class="self-link" href="#how-to-build-a-connectivity-component"></a></h4>
