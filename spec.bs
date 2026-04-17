@@ -1,0 +1,50 @@
+<pre class='metadata'>
+Title: LDT Interoperability Blueprint
+Shortname: ldt-interoperability-blueprint
+Warning: Not Ready
+Level: none
+Status: LD
+Editor: Pieter Heyvaert, Ghent University - imec http://idlab.ugent.be/, pieter.heyvaert@ugent.be
+Abstract: To-do
+Markup Shorthands: markdown yes, css no
+Canonical URL: _ORCHESTRATOR_CURRENT_BUILD_FULL_LINK_
+Previous Version: _ORCHESTRATOR_PREVIOUS_BUILD_FULL_LINK_
+Repository: https://github.com/ldt4ssc/interoperability-blueprint
+Boilerplate: copyright no, conformance no, references no
+Local Boilerplate: logo yes
+Dark Mode: no
+</pre>
+
+# Introduction {#introduction}
+
+## Why use an LDT {#why-use-an-ldt}
+
+## High-level overview of an LDT
+
+## Adding a new Surface-level component to an existing LDT
+
+# LDT building blocks based on DSSC & DS4SSCC-DEP building blocks {#building-blocks}
+
+# Workflows {#workflows}
+
+# Reference architectures {#reference-architectures}
+
+# Workflows using reference architectures
+
+# How to build an LDT
+
+## Explore and validate {#explore-validate}
+
+## Define and implement {#define-implement}
+
+### How to build a data acquisition component
+
+### How to build a data management component
+
+### How to build a connectivity component
+
+### How to build decision-making components
+
+### How to build analysis components
+
+### How to build visualisations
