@@ -1,0 +1,18 @@
+{
+  "repo": "https://github.com/example/bikeshed-template",
+  "name": "Bikeshed Template",
+  "id": "bikeshed-template",
+  "scripts": {
+    "install": "npm i",
+    "build": "npm run build"
+  },
+  "publications": [
+    {
+      "name": "All commits",
+      "id": "all-commits",
+      "path": "all",
+      "comment": "Publish all commits on the main branch.",
+      "type": "all-commits"
+    }
+  ]
+}
