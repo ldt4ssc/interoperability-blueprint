@@ -5,6 +5,10 @@ Warning: Not Ready
 Level: none
 Status: LD
 Editor: Pieter Heyvaert, Ghent University - imec http://idlab.ugent.be/, pieter.heyvaert@ugent.be
+Editor: Sille Sepp, TalTech https://taltech.ee/
+Editor: Laura Riou, Cerema https://www.cerema.fr
+Editor: Lucas Vieira Magalhães, LIST https://www.list.lu/
+Editor: Thimo Thoeye, OASC https://oascities.org/
 Abstract: To-do
 Markup Shorthands: markdown yes, css no
 Canonical URL: _ORCHESTRATOR_CURRENT_BUILD_FULL_LINK_
