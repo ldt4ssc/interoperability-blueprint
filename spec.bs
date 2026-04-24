@@ -20,36 +20,129 @@ Local Boilerplate: logo yes
 Dark Mode: no
 </pre>
 
+<link rel="stylesheet" href="css/style.css">
+
 # Introduction # {#introduction}
 
 ## Why use an LDT ## {#why-use-an-ldt}
 
-## High-level overview of an LDT
+## High-level overview of an LDT ## {#high-level-overview-ldt}
 
-## Adding a new Surface-level component to an existing LDT
+<figure id="fig-high-level-ldt">
+<img id="high-level-ldt" alt="TO-DO" src="img/high-level-ldt.jpg">
+<figcaption>Test</figcaption>
+</figure>
+
+## Adding a new Surface-level component to an existing LDT ## {#adding-new-slc-to-existing-ldt}
+
+<figure>
+<img id="ldt-add-new-slc" alt="TO-DO" src="img/ldt-add-new-slc.jpg">
+<figcaption>Test</figcaption>
+</figure>
+
+## Discovering which Surface-level components work on which existing LDTs ## {#discover-slc-existing-ldt}
+
+<figure>
+<img id="ldt-discovery" alt="TO-DO" src="img/ldt-discovery.jpg">
+<figcaption>Test</figcaption>
+</figure>
+
+## Alignment with MIMs Plus ## {#alignment-mims}
+
+<figure>
+<img id="ldt-mim8" alt="TO-DO" src="img/ldt-mim8.jpg">
+<figcaption>Test</figcaption>
+</figure>
+
+## Relationship between data spaces and LDTs ## {#relationship-data-spaces}
 
 # LDT building blocks based on DSSC & DS4SSCC-DEP building blocks # {#building-blocks}
 
+## Business and organisational building blocks ## {#business-organisational-building-blocks}
+
+<figure>
+<img id="img-business-organisational-building-blocks" alt="TO-DO" src="img/business-organisational-building-blocks.jpg">
+<figcaption>Test</figcaption>
+</figure>
+
+## Technical building blocks ## {#technical-building-blocks}
+
+<figure>
+<img id="img-technical-building-blocks" alt="TO-DO" src="img/technical-building-blocks.jpg">
+<figcaption>Test</figcaption>
+</figure>
+
 # Workflows # {#workflows}
+
+## Adding a new Surface-level component to an existing LDT ## {#workflow-adding-new-slc-existing-ldt}
+
+## Discovering which Surface-level components work on an existing LDT ## {#workflow-discover-slc-existing-ldt}
 
 # Reference architectures # {#reference-architectures}
 
-# Workflows using reference architectures
+## Business and organisational architecture ## {#business-organisational-architecture}
 
-# How to build an LDT
+## Technical architecture ## {#technical-architecture}
+
+<figure>
+<img alt="TO-DO" src="img/architecture-everything.jpg">
+<figcaption>Test</figcaption>
+</figure>
+
+### Support different data models ### {#support-different-data-models}
+
+<figure>
+<img id="focus-on-data-models" alt="TO-DO" src="img/focus-on-data-models.jpg">
+<figcaption>Test</figcaption>
+</figure>
+
+### Support different data exchange types ### {#support-different-data-exchange-types}
+
+<figure>
+<img id="focus-on-data-exchange-types" alt="TO-DO" src="img/focus-on-data-exchange-types.jpg">
+<figcaption>Test</figcaption>
+</figure>
+
+### Support for the usage of data from different LDTs ### {#support-different-data}
+
+<figure>
+<img id="focus-on-sharing-data-between-ldts" alt="TO-DO" src="img/focus-on-sharing-data-between-ldts.jpg">
+<figcaption>Test</figcaption>
+</figure>
+
+### Support for working with different AI models ### {#support-different-ai-models}
+
+<figure>
+<img id="how-ai-components-work" alt="TO-DO" src="img/how-ai-components-work.jpg">
+<figcaption>Test</figcaption>
+</figure>
+
+### Standards and protocols ### {#standards-protocols}
+
+#### Artefacts #### {#artefacts}
+
+#### Interaction between components #### {#interaction-components}
+
+# Workflows using reference architectures # {#workflows-architectures}
+
+## Adding a new Surface-level component to an existing LDT ## {#workflow-architecture-adding-new-slc-existing-ldt}
+
+## Discovering which Surface-level components work on an existing LDT ## {#workflow-architecture-discover-slc-existing-ldt}
+
+# How to build an LDT # {#how-to-build-ldt}
 
 ## Explore and validate ## {#explore-validate}
 
 ## Define and implement ## {#define-implement}
 
-### How to build a data acquisition component
+### How to build a Data Acquisition component ### {#how-to-build-data-acquisition}
 
-### How to build a data management component
+### How to build a Data Management component ### {#how-to-build-data-management}
 
-### How to build a connectivity component
+### How to build a Connectivity component ### {#how-to-build-connectivity}
 
-### How to build decision-making components
+### How to build Decision-Making components ### {#how-to-build-decision-making}
 
-### How to build analysis components
+### How to build Analysis components ### {#how-to-build-analysis}
 
-### How to build visualisations
+### How to build Visualisations ### {#how-to-build-visualisations}
