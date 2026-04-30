@@ -6,7 +6,10 @@ img {
 #high-level-ldt,
 #ldt-add-new-slc,
 #ldt-discovery,
-#focus-on-data-exchange-types {
+#focus-on-data-exchange-types,
+#connect-ldts-via-ds-1,
+#connect-ldts-via-ds-2
+{
     width: 70%;
 }
 
