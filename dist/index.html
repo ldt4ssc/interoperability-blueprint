@@ -1490,7 +1490,7 @@ Possible extra rowspan handling
 </style>
   <meta content="Bikeshed version 945dae3, updated Fri Apr 17 02:01:25 2026 +0000" name="generator">
   <link href="_ORCHESTRATOR_CURRENT_BUILD_FULL_LINK_" rel="canonical">
-  <meta content="7a6bd86e28b623533405b5341fe485b9fc9f4c53" name="revision">
+  <meta content="ca46e379862906d84ed500b7c9d5d651a4a7b981" name="revision">
   <link href="css/style.css" rel="stylesheet">
 <style>/* Boilerplate: style-autolinks */
 .css.css, .property.property, .descriptor.descriptor {
@@ -2263,19 +2263,205 @@ Data spaces can strengthen LDTs by providing governed access to external data an
 while LDTs can contribute back valuable derived data products and capabilities.
 This makes data spaces a key interoperability mechanism for connecting LDTs with broader digital ecosystems.</p>
    <h2 class="heading settled" data-level="2" id="building-blocks"><span class="secno">2. </span><span class="content">LDT building blocks based on DSSC &amp; DS4SSCC-DEP building blocks</span><a class="self-link" href="#building-blocks"></a></h2>
-   <h3 class="heading settled" data-level="2.1" id="business-organisational-building-blocks"><span class="secno">2.1. </span><span class="content">Business and organisational building blocks</span><a class="self-link" href="#business-organisational-building-blocks"></a></h3>
-   <figure>
+   <p>Building on the fact that LDTs can act as data consumers and data providers in data space ecosystems
+(<a href="#relationship-data-spaces">§ 1.6 Relationship between data spaces and LDTs</a>),
+this blueprint proposes to reuse the DSSC &amp; DS4SSCC-DEP Blueprints and their building blocks
+to a certain extent (see <a href="#fig-blueprints">Figure 7</a>).
+The <a href="https://blueprint.dssc.eu/">DSSC Blueprint</a> defines a set of business, organisational, and technical building blocks,
+which need to be implemented in the context of data spaces.
+The application of each of these building blocks in the context of smart cities and communities was refined
+in the
+<a href="https://static1.squarespace.com/static/63718ba2d90d0263d7fc1857/t/696e156b592f0c60d9d9f764/1768822123196/2.+Blueprint+Evolution.pdf">DS4SSCC-DEP project</a>.
+Here, relevant implementations for each building block were identified.
+In LDT4SSC, these refined and detailed building blocks are then applied to
+the context of interconnected local digital twins.
+Again, practical implementations are identified, and new, LDT-specific building blocks are added.</p>
+   <figure id="fig-blueprints">
     
-<img alt="TO-DO" height="2002" id="img-business-organisational-building-blocks" src="img/business-organisational-building-blocks.jpg" width="5868">
-
-    <figcaption>Test</figcaption>
+  <img alt="TO-DO" height="3671" id="blueprints" src="img/blueprints.jpg" width="3879">
+  
+    <figcaption>
+    The DSSC Blueprint was used by the DS4SSCC-DEP Blueprint.
+    The LDT4SSC Blueprint uses the DS4SSCC-DEP Blueprint and, consequently, the DSSC Blueprint.
+  </figcaption>
    </figure>
-   <h3 class="heading settled" data-level="2.2" id="technical-building-blocks"><span class="secno">2.2. </span><span class="content">Technical building blocks</span><a class="self-link" href="#technical-building-blocks"></a></h3>
-   <figure>
+   <p>In <a href="#business-organisational-building-blocks">§ 2.1 Business and organisational building blocks</a> and <a href="#technical-building-blocks">§ 2.2 Technical building blocks</a>,
+we list the business and organisational building blocks and the
+technical building blocks, respectively.
+The blocks' summaries are altered to fit LDTs, instead of data spaces.
+For their full descriptions,
+we refer to the <a href="https://blueprint.dssc.eu/">DSSC Blueprint v3 (released in March 2026)</a> and
+<a href="https://static1.squarespace.com/static/63718ba2d90d0263d7fc1857/t/696e156b592f0c60d9d9f764/1768822123196/2.+Blueprint+Evolution.pdf">DS4SSCC-DEP Blueprint (published in Sept 2025)</a>.
+In the case of a new business and organisational building block,
+we add a more detailed description referring to available academic and grey literature.
+In case of a new technical building block,
+we refer to <a href="#technical-architecture">§ 4.2 Technical architecture</a> and <a href="#define-implement">§ 6.2 Define and implement</a>.
+If the LDT is part of a data space,
+we need to take into account the building blocks on both the levels of the LDT and the data space.</p>
+   <h3 class="heading settled" data-level="2.1" id="business-organisational-building-blocks"><span class="secno">2.1. </span><span class="content">Business and organisational building blocks</span><a class="self-link" href="#business-organisational-building-blocks"></a></h3>
+   <p>An essential part of LDTs' interoperability is the business and organisational aspects that
+define the purpose, organisational context (including involved stakeholders and their roles),
+incentives, rules and processes for designing, deploying, and operating LDTs.
+This section explains which business and organisational building blocks are important for either building
+LDTs or interconnecting LDTs.
+<a href="#fig-img-business-organisational-building-blocks">Figure 8</a> provides a visual overview of these building blocks in
+four pillars: business, governance, legal and design.</p>
+   <figure id="fig-img-business-organisational-building-blocks">
     
-<img alt="TO-DO" height="1885" id="img-technical-building-blocks" src="img/technical-building-blocks.jpg" width="6301">
-
-    <figcaption>Test</figcaption>
+  <img alt="TO-DO" height="2002" id="img-business-organisational-building-blocks" src="img/business-organisational-building-blocks.jpg" width="5868">
+  
+    <figcaption>
+    Business and organisational building blocks,
+    based on theDSSC/DS4SSCC-DEP building blocks and evolved as part of the LDT4SSC project.
+  </figcaption>
+   </figure>
+   <p>The <strong>Business pillar</strong> of LDTs frames the context for value creation, value capture and
+feasibility for sustaining the LDT beyond initial testing and piloting.
+This pillar of building blocks explores how to identify
+stakeholder incentives and structure data and service offerings.
+At its core, the business model should address the motives and strategic objectives of relevant stakeholders,
+ensure their alignment with offered data and services,
+foster multi-stakeholder data cooperations, and be sustainable in the long-run.
+This pillar includes the following blocks:</p>
+   <ul>
+    <li data-md>
+     <p><a href="https://blueprint.dssc.eu/?pane=business&amp;business=business-model"><strong>Business Model</strong></a>:
+This building block provides insight into establishing the value creation and value capture mechanisms,
+alongside other related business model elements
+(such as cost structures, revenue streams, funding models, public-private collaboration challenges...),
+for both the LDT Base and Core (for example, if based on a data space), and the central use case(s) the LDT enables.</p>
+    <li data-md>
+     <p><a href="https://blueprint.dssc.eu/?pane=business&amp;business=use-case-development"><strong>Use Case Development</strong></a>:
+This building block shows how to identify, refine, implement and improve a use case.</p>
+    <li data-md>
+     <p><strong>LDT Services as Data Space Offerings</strong>:
+Whereas in data spaces, both data, data products and services are considered as data space offerings,
+in the context of LDTs, this building block emphasises the offering of LDT services from
+a business perspective and provides a strategy to develop and maintain them.
+More details in the
+<a href="https://blueprint.dssc.eu/?pane=business&amp;business=data-space-offerings">DSSC blueprint v3, section Data Space Offerings</a>.</p>
+    <li data-md>
+     <p><a href="https://blueprint.dssc.eu/?pane=business&amp;business=intermediaries-and-operators"><strong>Intermediaries and Operators</strong></a>:
+Intermediaries and operators may have a significant role in fostering data exchange among
+(data space) participants, providing essential functionalities, as well as value-added services.
+In multi-actor environments, intermediaries may also foster interoperability,
+with diverse technical and non-technical implementations.</p>
+   </ul>
+   <p>In addition, the <strong>Governance pillar</strong> ensures that the operating model of a single LDT or
+its interconnection with other LDTs is aligned with its core purpose.
+It sets clear roles and responsibilities, rules, and processes, among others,
+to ensure trust among engaged stakeholders and beneficiaries, foster clear and transparent decision-making, and
+support operational compliance with relevant regulations and requirements.
+This pillar includes the following building blocks:</p>
+   <ul>
+    <li data-md>
+     <p><a href="https://blueprint.dssc.eu/?pane=business&amp;business=organisational-form-and-governance-authority"><strong>Organisational Form and Governance Authority</strong></a>:
+In case the LDT Base and Core are built on multi-stakeholder data cooperations, clarifying its organisational form
+(either as incorporated or unincorporated) may be useful.
+This building block provides guidance on the various types of entities stakeholders may establish,
+emphasises the governance authority (for example, setting the rules of the chosen data cooperation,
+defining the governance framework, ensuring compliance, and resolving conflicts,
+thereby fostering trust and data quality).</p>
+    <li data-md>
+     <p><a href="https://blueprint.dssc.eu/?pane=business&amp;business=participation-management"><strong>Participation Management</strong></a>:
+In case the LDT Base and Core require the participation of multiple actors,
+this building block helps to clarify how to identify potential participants and manage
+their onboarding and offboarding, emphasising the risks associated with poorly managed participation,
+including data governance challenges and reduced collaboration.
+The building block highlights the need for clear rules, inclusive governance, and regulatory compliance.</p>
+   </ul>
+   <p>In addition to having clear and strong governance,
+the <strong>Legal pillar</strong> emphasises the necessity for ensuring regulatory compliance and
+a strong legal foundation for the LDT’s operations.
+It defines the following blocks:</p>
+   <ul>
+    <li data-md>
+     <p><a href="https://blueprint.dssc.eu/?pane=business&amp;business=regulatory-compliance"><strong>Regulatory Compliance</strong></a>:
+An LDT is subject to both data and digital, sector-specific or other regulations, and as such,
+this building block indicates how to ensure regulatory compliance of the envisioned data cooperations,
+the use and sharing of data, and the provision of LDT services.
+It outlines actions to be undertaken by participants or potential policies that the governance authority shall consider.
+The building block is focusing on legal triggers, in other words, elements, criteria or events that have occurred
+in a particular context and signal that a specific legal framework must or should be applied.</p>
+    <li data-md>
+     <p><a href="https://blueprint.dssc.eu/?pane=business&amp;business=contractual-framework"><strong>Contractual Framework</strong></a>:
+While the governance framework sets out the principles, processes, standards, protocols, rules and practices that
+guide and regulate the governance, management and operations, those agreements also need a legal basis.
+This building block provides an overview of the types of legal agreements
+that are essential for data cooperations, categorising agreements according to their objectives,
+for example, institutional agreements, data sharing agreements, and service agreements.
+For each category of agreements, it highlights horizontal issues that are likely to emerge or take into account
+common regulations across all sectors
+(for example, the requirement of fairness in data contracts).</p>
+   </ul>
+   <p>Finally, the LDT4SSC Blueprint defines a <strong>Design pillar</strong> with two essential building blocks
+which will influence how the LDTs are built, sustained and adopted,
+influencing all other business and organisational as well as technical building blocks,
+enabling the alignment of technological innovation with societal and environmental goals,
+fostering trust and long-term value for all users and citizens.</p>
+   <ul>
+    <li data-md>
+     <p><strong>User Experience (UX)</strong>:
+Whereas user interfaces for various LDT services, such as
+visualisation, analytics, simulations and so on, have a technical perspective,
+these also hold non-technical design choices to ensure usability, accessibility, and trust
+while maintaining system performance, monitored through clearly defined KPIs
+such as user adoption rates, task completion efficiency, and decision impact.
+As such, this building block emphasises the importance of a user-centric design of LDTs,
+including their monitoring, to align interface design with user needs, decision-making contexts,
+and cognitive capacities.
+Firstly, interfaces should provide clear and intuitive navigation, flexible data-layer management, and
+immediate visual feedback, supported by onboarding tools and training materials.
+Secondly, effective interfaces integrate spatial visualisation (3D models, overlays, linked charts, VR/XR) with
+analytical clarity and role-based customisation, enabling various types of users
+(planners, policymakers, citizens, and others) to explore both real-time and historical data through
+synchronised views and scenario-based simulations.
+Thirdly, users' visual and cognitive diversity should be considered and catered to,
+supporting accessibility (for example, <a href="https://www.w3.org/WAI/standards-guidelines/wcag/">WCAG compliance</a>).
+In addition, transparency of data sources and data processing,
+including alignment with privacy-by-design principles (such as Gemini Principles), are essential to build
+user trust and inclusivity. Fourthly, co-design approaches such as actively involving
+stakeholders in early design and iterative testing ensure relevance, usability, and
+shared understanding of LDT concepts, as highlighted in studies
+such as
+BEAM (<a href="https://iopscience.iop.org/article/10.1088/1742-6596/3140/20/082017">Ignatius et al., 2025</a>) and
+<a href="https://www.frontiersin.org/journals/environmental-science/articles/10.3389/fenvs.2025.1724250/full">FLOODTWIN (Frontiers, 2025)</a>.
+Finally, continuous UX evaluation should combine standardised questionnaires
+(for example, <a href="https://web.archive.org/web/20171001122308/http://www.ueq-online.org/">UEQ</a>,
+<a href="https://en.wikipedia.org/wiki/System_usability_scale">SUS</a>),
+task-based usability testing, cognitive load measures
+(for example, <a href="https://www.nasa.gov/human-systems-integration-division/nasa-task-load-index-tlx/">NASA-TLX</a>), and
+usage analytics to monitor effectiveness and identify friction points.</p>
+    <li data-md>
+     <p><strong>Responsible Digital Practices</strong>:
+This building block refers to design principles that
+encourage environmentally sustainable digitalisation efforts, while building and deploying LDTs.
+Taking into consideration <a href="https://arxiv.org/abs/2102.02622">the increasing and transformative impact
+the digital sector has on the environment and society</a>,
+this building block is designed to embed environmental sustainability, ethics, and social responsibility into
+the core of LDTs and its digital infrastructure.
+It aims to minimise the environmental footprint of digital technologies through measuring its impact
+(<a href="https://www.itu.int/myworkspace/t-rec/item?id=16010&amp;lang=en">life cycle assessment</a>,
+<a href="https://landscape.bundesverband-green-software.de/">software-assisted</a>),
+<a href="https://www.arcep.fr/uploads/tx_gspublication/general_policy_framework_for_the_ecodesign_of_digital_services_version_2024.pdf">eco-design</a>,
+energy efficiency, and circular economy practices
+throughout the lifecycle phases of the LDT, from design and development to
+decommissioning and end-of-life, including operations and maintenance.</p>
+   </ul>
+   <p>The aforementioned building blocks are implemented in various ways, using specific assets,
+inter alia contracts and rulebooks, or specific methodologies and templates,
+inter alia the
+<a href="https://knowledgehub.ldt4ssc.eu/resources_content/non_tech_resources/#the-ldt4ssc-methodology">LDT4SSC Methodology</a>,
+<a href="https://www.datacooperationcanvas.eu/canvas/intro">Data Cooperation Canvas</a>, and/or various ecosystem design materials.</p>
+   <p>The business and organisational building blocks are further described in the Business and
+Organisational Architecture in <a href="#business-organisational-architecture">§ 4.1 Business and organisational architecture</a>,
+emphasising their connections and relevance for LDTs interoperability.</p>
+   <h3 class="heading settled" data-level="2.2" id="technical-building-blocks"><span class="secno">2.2. </span><span class="content">Technical building blocks</span><a class="self-link" href="#technical-building-blocks"></a></h3>
+   <figure id="fig-img-technical-building-blocks">
+    
+  <img alt="TO-DO" height="1885" id="img-technical-building-blocks" src="img/technical-building-blocks.jpg" width="6301">
+  
+    <figcaption></figcaption>
    </figure>
    <h2 class="heading settled" data-level="3" id="workflows"><span class="secno">3. </span><span class="content">Workflows</span><a class="self-link" href="#workflows"></a></h2>
    <h3 class="heading settled" data-level="3.1" id="workflow-adding-new-slc-existing-ldt"><span class="secno">3.1. </span><span class="content">Adding a new Surface-level component to an existing LDT</span><a class="self-link" href="#workflow-adding-new-slc-existing-ldt"></a></h3>

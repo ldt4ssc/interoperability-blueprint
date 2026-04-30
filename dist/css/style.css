@@ -13,6 +13,10 @@ img {
     width: 70%;
 }
 
+#blueprints {
+    width: 35%;
+}
+
 figcaption {
     font-style: normal;
     text-align: left;
@@ -21,4 +25,8 @@ figcaption {
 
 h5 {
     font-style: normal;
+}
+
+figcaption:not(.no-marker)::before {
+    content: "Figure " counter(figure) ". " !important;
 }
