@@ -1490,7 +1490,7 @@ Possible extra rowspan handling
 </style>
   <meta content="Bikeshed version 945dae3, updated Fri Apr 17 02:01:25 2026 +0000" name="generator">
   <link href="_ORCHESTRATOR_CURRENT_BUILD_FULL_LINK_" rel="canonical">
-  <meta content="f7b8985f976272a7f7ae70b8e7824a5bb2ab5ccf" name="revision">
+  <meta content="89fe636f13747d0cc6f0661a66c1e743ad6ef7f0" name="revision">
   <link href="css/style.css" rel="stylesheet">
 <style>/* Boilerplate: style-autolinks */
 .css.css, .property.property, .descriptor.descriptor {
@@ -2568,8 +2568,94 @@ This is a new LDT-specific building block due to the importance of supporting de
 creating a service on top of an LDT.</p>
    </ul>
    <h2 class="heading settled" data-level="3" id="workflows"><span class="secno">3. </span><span class="content">Workflows</span><a class="self-link" href="#workflows"></a></h2>
+   <p>Once we have built an LDT, the LDT should support the following workflows:
+adding a new SLC to an existing LDT (<a href="#workflow-adding-new-slc-existing-ldt">§ 3.1 Adding a new Surface-level component to an existing LDT</a>) and
+discovering which SLCs work on an existing LDT (<a href="#workflow-discover-slc-existing-ldt">§ 3.2 Discovering which Surface-level components work on an existing LDT</a>).
+We include both technical steps, which are labelled starting with "T", and
+business and organisational steps,
+which are labelled starting with "BO".
+We present the workflows in a mostly sequential way,
+but it might be necessary that we revisit previous steps when we acquire new information,
+including requirements and restrictions.</p>
    <h3 class="heading settled" data-level="3.1" id="workflow-adding-new-slc-existing-ldt"><span class="secno">3.1. </span><span class="content">Adding a new Surface-level component to an existing LDT</span><a class="self-link" href="#workflow-adding-new-slc-existing-ldt"></a></h3>
+   <p>In this section,
+we describe the workflow for adding a new SLC to an existing LDT,
+as mentioned in <a href="#adding-new-slc-to-existing-ldt">§ 1.3 Adding a new Surface-level component to an existing LDT, reusing Core and Base-level components</a>.
+We visualise this in <a href="#workflow-1">Figure 10</a>,
+where technical steps are blue with rounded corners and business and organisational steps are green with square corners.</p>
+   <figure id="fig-workflow-1">
+    
+  <img alt="TO-DO" height="5202" id="workflow-1" src="img/workflow-1.jpg" width="2860">
+  
+    <figcaption>
+    This workflow guides us through the process of adding a new SLC to an existing LDT.
+    It includes technical steps (blue, rounded corners) and
+    business and organisational steps (green, square corners).
+  </figcaption>
+   </figure>
+   <p>First, we create a shared understanding of the use, pain points, and envisioned solutions
+(with our key stakeholders) (BO1).
+Next, in parallel, we determine the functional requirements of the new SLC (T1) and
+align the stakeholders and ensure a shared motivation to
+develop the use case where the new SLC is needed (BO2).
+T1 and BO2 might influence each other,
+because the stakeholders need to support the selected SLC.
+After T1, we determine the SLC’s technical requirements (T2).
+After BO2, we, in parallel, should determine how value is created and captured (BO3), and
+explore regulatory boundaries (BO4) to explore the feasibility of adding a new SLC and justify the investments required.
+BO3 can influence the technical requirements of the SLC.
+Next, we determine the technical gaps between the SLC’s requirements and what the LDT currently offers (T3).
+We follow this up, in parallel,
+with mapping out the costs and benefits and assessing the return on investment (BO5); and
+determining how we will deal with the technical gaps (T4).
+BO5 leads us to exploring if we need additional data providers and/or intermediaries and operators (BO6), and
+if we need to make changes to the existing governance framework (BO7) or if it doesn’t exist yet,
+create one.
+BO7 might require us to update our contractual framework (BO8),
+which in turn might require us to make parties sign updated or newly established agreements and contracts (BO9).</p>
+   <p>BO6 and BO7 might influence each other,
+because, on the one side,
+the governance framework might affect the data providers and intermediaries we are allowed to interact with, and,
+on the other side,
+if we want to work with providers and intermediaries that don’t fit within the governance framework,
+we need to update the governance framework.
+BO6 and T4 might also influence each other,
+because, on the one hand,
+the technical gaps might influence which providers and intermediaries we need, and,
+on the other hand,
+the unavailability of certain providers and intermediaries might require additional actions to resolve a technical gap.</p>
+   <p>If there are new participants in the LDT,
+we need to onboard them (BO10).
+Next, we deploy the participatory and service design methods throughout the design and implementation phases (BO11),
+addressing the two design building blocks described in <a href="#business-organisational-building-blocks">§ 2.1 Business and organisational building blocks</a>.
+We follow both T4 and BO11 by implementing the technical changes and deploying the components.
+Finally, we can start using the new SLC with our LDT and start creating the envisioned value for our beneficiaries.</p>
+   <p>Note that this process might not be straightforward, and
+we might need to go back to previous steps to adapt or validate specific details,
+either with respect to the technical aspects or the business and organisational aspects, or both.</p>
    <h3 class="heading settled" data-level="3.2" id="workflow-discover-slc-existing-ldt"><span class="secno">3.2. </span><span class="content">Discovering which Surface-level components work on an existing LDT</span><a class="self-link" href="#workflow-discover-slc-existing-ldt"></a></h3>
+   <p>In the previous workflow, we manually executed the steps T2 and T3,
+but it should be possible to automate these steps, as mentioned in <a href="#discover-slc-existing-ldt">§ 1.4 Discovering which Surface-level components work on which existing LDTs and exchanging components through interconnected LDTs</a>.
+This is the goal of this section’s workflow (see <a href="#fig-workflow-2">Figure 11</a>).</p>
+   <figure id="fig-workflow-2">
+    
+  <img alt="TO-DO" height="4465" id="workflow-2" src="img/workflow-2.jpg" width="3397">
+  
+    <figcaption>
+    This workflow contains the steps to automatically determine
+    the technical requirements to deploy the SLC and automatically determine the gaps between
+    these requirements and what the LDT offers.
+  </figcaption>
+   </figure>
+   <p>For each available SLC,
+especially those built for other SLCs,
+e execute 2 steps. First, we automatically determine the technical requirements to deploy the SLC (T1).
+Next, we automatically determine the gaps between these requirements and what the LDT offers (T2).
+Finally, we use these SLCs in the first workflow at T1.
+This doesn’t mean that we can skip T2 and T3 of this workflow because
+we still have to take into account the business and organisational aspects,
+such as legal checks and signing of necessary agreements or budgetary assessments,
+but it allows us to speed up the process.</p>
    <h2 class="heading settled" data-level="4" id="reference-architectures"><span class="secno">4. </span><span class="content">Reference architectures</span><a class="self-link" href="#reference-architectures"></a></h2>
    <h3 class="heading settled" data-level="4.1" id="business-organisational-architecture"><span class="secno">4.1. </span><span class="content">Business and organisational architecture</span><a class="self-link" href="#business-organisational-architecture"></a></h3>
    <h3 class="heading settled" data-level="4.2" id="technical-architecture"><span class="secno">4.2. </span><span class="content">Technical architecture</span><a class="self-link" href="#technical-architecture"></a></h3>

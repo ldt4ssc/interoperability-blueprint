@@ -1,0 +1,5 @@
+# Workflows using reference architectures # {#workflows-architectures}
+
+## Adding a new Surface-level component to an existing LDT ## {#workflow-architecture-adding-new-slc-existing-ldt}
+
+## Discovering which Surface-level components work on an existing LDT ## {#workflow-architecture-discover-slc-existing-ldt}

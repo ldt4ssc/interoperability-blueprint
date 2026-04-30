@@ -3,6 +3,10 @@ img {
     height: auto;
 }
 
+#workflow-1 {
+    width: 90%;
+}
+
 #high-level-ldt,
 #ldt-add-new-slc,
 #ldt-discovery,
@@ -11,6 +15,10 @@ img {
 #connect-ldts-via-ds-2
 {
     width: 70%;
+}
+
+#workflow-2 {
+    width: 50%;
 }
 
 #blueprints {

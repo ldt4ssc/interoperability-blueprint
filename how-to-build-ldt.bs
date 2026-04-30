@@ -1,0 +1,17 @@
+# How to build an LDT # {#how-to-build-ldt}
+
+## Explore and validate ## {#explore-validate}
+
+## Define and implement ## {#define-implement}
+
+### How to build a Data Acquisition component ### {#how-to-build-data-acquisition}
+
+### How to build a Data Management component ### {#how-to-build-data-management}
+
+### How to build a Connectivity component ### {#how-to-build-connectivity}
+
+### How to build Decision-Making components ### {#how-to-build-decision-making}
+
+### How to build Analysis components ### {#how-to-build-analysis}
+
+### How to build Visualisations ### {#how-to-build-visualisations}

@@ -1,0 +1,44 @@
+# Reference architectures # {#reference-architectures}
+
+## Business and organisational architecture ## {#business-organisational-architecture}
+
+## Technical architecture ## {#technical-architecture}
+
+<figure>
+<img alt="TO-DO" src="img/architecture-everything.jpg">
+<figcaption>Test</figcaption>
+</figure>
+
+### Support different data models ### {#support-different-data-models}
+
+<figure>
+<img id="focus-on-data-models" alt="TO-DO" src="img/focus-on-data-models.jpg">
+<figcaption>Test</figcaption>
+</figure>
+
+### Support different data exchange types ### {#support-different-data-exchange-types}
+
+<figure>
+<img id="focus-on-data-exchange-types" alt="TO-DO" src="img/focus-on-data-exchange-types.jpg">
+<figcaption>Test</figcaption>
+</figure>
+
+### Support for the usage of data from different LDTs ### {#support-different-data}
+
+<figure>
+<img id="focus-on-sharing-data-between-ldts" alt="TO-DO" src="img/focus-on-sharing-data-between-ldts.jpg">
+<figcaption>Test</figcaption>
+</figure>
+
+### Support for working with different AI models ### {#support-different-ai-models}
+
+<figure>
+<img id="how-ai-components-work" alt="TO-DO" src="img/how-ai-components-work.jpg">
+<figcaption>Test</figcaption>
+</figure>
+
+### Standards and protocols ### {#standards-protocols}
+
+#### Artefacts #### {#artefacts}
+
+#### Interaction between components #### {#interaction-components}
