@@ -24,7 +24,65 @@ Dark Mode: no
 
 # Introduction # {#introduction}
 
+The Interoperability Blueprint provides business, organisational, and technical guidelines for
+building our own Local Digital Twin (LDT) and interconnecting with other LDTs.
+An LDT is a digital representation of physical assets, systems, or processes in a defined local context
+(for example, city, district, building, industry, port, and airport).
+LDTs are based on structured data models and contextualised data.
+They leverage either historical data, near real-time data, or real-time data, and
+they enable visualisation, analysis, simulation, and reasoning services
+that support decision-making.
+First, we will elaborate on [why LDTs can be useful](#why-use-an-ldt),
+followed by a [high-level overview of an LDT](#high-level-overview-ldt).
+Next, we will explain the importance of being able to add new components to an LDT (Section 1.3) and
+discover existing components that can be added to an LDT (Section 1.4).
+Finally, we will discuss how this blueprint aligns with Minimum Interoperability Mechanisms (MIMs) Plus (Section 1.5)
+and how data spaces and LDTs are related (Section 1.6).
+The remainder of this deliverable is structured as follows:
+
+- Chapter 2: The business and organisational building blocks and the technical building blocks.
+- Chapter 3: The workflows an LDT should support.
+- Chapter 4: The technical architecture and the business and organisational overview.
+- Chapter 5: How the business and organisational architecture and technical architecture support the workflows.
+- Chapter 6: How to build an LDT based on the other chapters.
+
+Although this blueprint mainly guides us through the process of building a new LDT with the focus on interoperability,
+we can also use its recommendations for updating an existing LDT and interlinking LDTs.
+The scope of the blueprint isn’t to offer guidelines for every use case in
+which an LDT is being built or has been built, as every LDT operates in a very specific context.
+
 ## Why use an LDT ## {#why-use-an-ldt}
+
+An LDT is a virtual replica of a territory based on structured data models, real-time data
+feeds, and potentially 3D representations,
+which can integrate simulation models (flows, usage, impacts, and so on).
+It aims to dynamically represent the territory at various spatial
+and temporal scales to analyse, understand, anticipate, and simulate the effects of public
+policies, environmental hazards, climate change, development projects or disruptions.
+The digital twin supports strategic decision-making, consultation, foresight, and scenario design.
+It can even include automated decision-making and execution.
+It can incorporate historical datasets, time-delayed data, Building Information Modelling (BIM),
+Geographic Information Systems (GIS), and/or specific models (mobility, climate, energy, and so on).
+LDTs can offer
+the [following capabilities](https://www.etsi.org/deliver/etsi_gr/CIM/001_099/017/01.01.01_60/gr_CIM017v010101p.pdf)
+to users:
+
+- Descriptive: Current (and past) state of the real-world asset - static and dynamic.
+    Bidirectional connection between real-world assets and the LDT.
+- Predictive: Extends the descriptive capability by providing predictions on the way the real asset could evolve
+    in the future, using predictive models to envision possible futures.
+- Prospective: Conducts "what-if" analyses to evaluate the potential consequences of actions.
+- Prescriptive: Extends (or, in extreme cases, executes) the prospective capability with suggested actions on
+    the real system to achieve a given objective based on the analysis.
+- Diagnostic: Explains situations or alerts about deviations from expected conditions.
+    Capability for evaluating what happened, especially in the case of a malfunction of the real asset.
+
+Note that we do not derive this definition of an LDT from a formal international standard.
+Instead, it is a project-specific conceptualisation influenced by existing frameworks such as
+Digital Twins, the EU LDT Toolbox, MIMs Plus 8 on Local Digital Twins, Smart City models,
+and Data Spaces. While relevant standards (for example, ISO 23247, ISO/IEC 30182, and
+ISO 30173) provide partial guidance, there is currently no universally accepted standard
+definition for LDTs in the context of urban or territorial systems.
 
 ## High-level overview of an LDT ## {#high-level-overview-ldt}
 

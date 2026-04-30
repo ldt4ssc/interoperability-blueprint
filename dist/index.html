@@ -1490,7 +1490,7 @@ Possible extra rowspan handling
 </style>
   <meta content="Bikeshed version 945dae3, updated Fri Apr 17 02:01:25 2026 +0000" name="generator">
   <link href="_ORCHESTRATOR_CURRENT_BUILD_FULL_LINK_" rel="canonical">
-  <meta content="8b0729d700d7a5f3285681cb9c106faecb954c53" name="revision">
+  <meta content="690b45fe1d2f7041ccce5d690ce8c3a08472bff8" name="revision">
   <link href="css/style.css" rel="stylesheet">
 <style>/* Boilerplate: style-autolinks */
 .css.css, .property.property, .descriptor.descriptor {
@@ -1787,7 +1787,7 @@ dfn > a.self-link::before      { content: "#"; }
 </p>
    <h1 class="no-ref p-name" id="title">LDT Interoperability Blueprint</h1>
    <h2 class="heading no-num no-ref no-toc settled" id="profile-and-date"><span class="content">Living Document,
-    <time class="dt-updated" datetime="2026-04-24">24 April 2026</time></span></h2>
+    <time class="dt-updated" datetime="2026-04-30">30 April 2026</time></span></h2>
    <div data-fill-with="spec-metadata">
     <dl>
      <dt>This version:
@@ -1894,7 +1894,73 @@ dfn > a.self-link::before      { content: "#"; }
   </nav>
   <main>
    <h2 class="heading settled" data-level="1" id="introduction"><span class="secno">1. </span><span class="content">Introduction</span><a class="self-link" href="#introduction"></a></h2>
+   <p>The Interoperability Blueprint provides business, organisational, and technical guidelines for
+building our own Local Digital Twin (LDT) and interconnecting with other LDTs.
+An LDT is a digital representation of physical assets, systems, or processes in a defined local context
+(for example, city, district, building, industry, port, and airport).
+LDTs are based on structured data models and contextualised data.
+They leverage either historical data, near real-time data, or real-time data, and
+they enable visualisation, analysis, simulation, and reasoning services
+that support decision-making.
+First, we will elaborate on <a href="#why-use-an-ldt">why LDTs can be useful</a>,
+followed by a <a href="#high-level-overview-ldt">high-level overview of an LDT</a>.
+Next, we will explain the importance of being able to add new components to an LDT (Section 1.3) and
+discover existing components that can be added to an LDT (Section 1.4).
+Finally, we will discuss how this blueprint aligns with Minimum Interoperability Mechanisms (MIMs) Plus (Section 1.5)
+and how data spaces and LDTs are related (Section 1.6).
+The remainder of this deliverable is structured as follows:</p>
+   <ul>
+    <li data-md>
+     <p>Chapter 2: The business and organisational building blocks and the technical building blocks.</p>
+    <li data-md>
+     <p>Chapter 3: The workflows an LDT should support.</p>
+    <li data-md>
+     <p>Chapter 4: The technical architecture and the business and organisational overview.</p>
+    <li data-md>
+     <p>Chapter 5: How the business and organisational architecture and technical architecture support the workflows.</p>
+    <li data-md>
+     <p>Chapter 6: How to build an LDT based on the other chapters.</p>
+   </ul>
+   <p>Although this blueprint mainly guides us through the process of building a new LDT with the focus on interoperability,
+we can also use its recommendations for updating an existing LDT and interlinking LDTs.
+The scope of the blueprint isn’t to offer guidelines for every use case in
+which an LDT is being built or has been built, as every LDT operates in a very specific context.</p>
    <h3 class="heading settled" data-level="1.1" id="why-use-an-ldt"><span class="secno">1.1. </span><span class="content">Why use an LDT</span><a class="self-link" href="#why-use-an-ldt"></a></h3>
+   <p>An LDT is a virtual replica of a territory based on structured data models, real-time data
+feeds, and potentially 3D representations,
+which can integrate simulation models (flows, usage, impacts, and so on).
+It aims to dynamically represent the territory at various spatial
+and temporal scales to analyse, understand, anticipate, and simulate the effects of public
+policies, environmental hazards, climate change, development projects or disruptions.
+The digital twin supports strategic decision-making, consultation, foresight, and scenario design.
+It can even include automated decision-making and execution.
+It can incorporate historical datasets, time-delayed data, Building Information Modelling (BIM),
+Geographic Information Systems (GIS), and/or specific models (mobility, climate, energy, and so on).
+LDTs can offer
+the <a href="https://www.etsi.org/deliver/etsi_gr/CIM/001_099/017/01.01.01_60/gr_CIM017v010101p.pdf">following capabilities</a>
+to users:</p>
+   <ul>
+    <li data-md>
+     <p>Descriptive: Current (and past) state of the real-world asset - static and dynamic.
+Bidirectional connection between real-world assets and the LDT.</p>
+    <li data-md>
+     <p>Predictive: Extends the descriptive capability by providing predictions on the way the real asset could evolve
+in the future, using predictive models to envision possible futures.</p>
+    <li data-md>
+     <p>Prospective: Conducts "what-if" analyses to evaluate the potential consequences of actions.</p>
+    <li data-md>
+     <p>Prescriptive: Extends (or, in extreme cases, executes) the prospective capability with suggested actions on
+the real system to achieve a given objective based on the analysis.</p>
+    <li data-md>
+     <p>Diagnostic: Explains situations or alerts about deviations from expected conditions.
+Capability for evaluating what happened, especially in the case of a malfunction of the real asset.</p>
+   </ul>
+   <p>Note that we do not derive this definition of an LDT from a formal international standard.
+Instead, it is a project-specific conceptualisation influenced by existing frameworks such as
+Digital Twins, the EU LDT Toolbox, MIMs Plus 8 on Local Digital Twins, Smart City models,
+and Data Spaces. While relevant standards (for example, ISO 23247, ISO/IEC 30182, and
+ISO 30173) provide partial guidance, there is currently no universally accepted standard
+definition for LDTs in the context of urban or territorial systems.</p>
    <h3 class="heading settled" data-level="1.2" id="high-level-overview-ldt"><span class="secno">1.2. </span><span class="content">High-level overview of an LDT</span><a class="self-link" href="#high-level-overview-ldt"></a></h3>
    <figure id="fig-high-level-ldt">
     
@@ -1947,14 +2013,14 @@ dfn > a.self-link::before      { content: "#"; }
    <h3 class="heading settled" data-level="4.2" id="technical-architecture"><span class="secno">4.2. </span><span class="content">Technical architecture</span><a class="self-link" href="#technical-architecture"></a></h3>
    <figure>
     
-<img alt="TO-DO" height="3967" src="img/architecture-everything.jpg" width="3800">
+<img alt="TO-DO" height="3859" src="img/architecture-everything.jpg" width="3942">
 
     <figcaption>Test</figcaption>
    </figure>
    <h4 class="heading settled" data-level="4.2.1" id="support-different-data-models"><span class="secno">4.2.1. </span><span class="content">Support different data models</span><a class="self-link" href="#support-different-data-models"></a></h4>
    <figure>
     
-<img alt="TO-DO" height="2162" id="focus-on-data-models" src="img/focus-on-data-models.jpg" width="6496">
+<img alt="TO-DO" height="2165" id="focus-on-data-models" src="img/focus-on-data-models.jpg" width="6529">
 
     <figcaption>Test</figcaption>
    </figure>
@@ -1968,7 +2034,7 @@ dfn > a.self-link::before      { content: "#"; }
    <h4 class="heading settled" data-level="4.2.3" id="support-different-data"><span class="secno">4.2.3. </span><span class="content">Support for the usage of data from different LDTs</span><a class="self-link" href="#support-different-data"></a></h4>
    <figure>
     
-<img alt="TO-DO" height="3268" id="focus-on-sharing-data-between-ldts" src="img/focus-on-sharing-data-between-ldts.jpg" width="4423">
+<img alt="TO-DO" height="3272" id="focus-on-sharing-data-between-ldts" src="img/focus-on-sharing-data-between-ldts.jpg" width="4417">
 
     <figcaption>Test</figcaption>
    </figure>
