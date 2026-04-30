@@ -1490,7 +1490,7 @@ Possible extra rowspan handling
 </style>
   <meta content="Bikeshed version 945dae3, updated Fri Apr 17 02:01:25 2026 +0000" name="generator">
   <link href="_ORCHESTRATOR_CURRENT_BUILD_FULL_LINK_" rel="canonical">
-  <meta content="89fe636f13747d0cc6f0661a66c1e743ad6ef7f0" name="revision">
+  <meta content="942dc82a7c8c7b4d381f001b809bbe83df5367d6" name="revision">
   <link href="css/style.css" rel="stylesheet">
 <style>/* Boilerplate: style-autolinks */
 .css.css, .property.property, .descriptor.descriptor {
@@ -2657,7 +2657,130 @@ we still have to take into account the business and organisational aspects,
 such as legal checks and signing of necessary agreements or budgetary assessments,
 but it allows us to speed up the process.</p>
    <h2 class="heading settled" data-level="4" id="reference-architectures"><span class="secno">4. </span><span class="content">Reference architectures</span><a class="self-link" href="#reference-architectures"></a></h2>
+   <p>In this section,
+we discuss the <a href="#business-organisational-architecture">business and organisational architecture</a>,
+including how it aligns with the business and organisational building blocks.
+Next, we discuss the <a href="#technical-architecture">technical architecture</a>,
+including how it aligns with the technical building blocks, and
+the standards and protocols that we recommend.</p>
    <h3 class="heading settled" data-level="4.1" id="business-organisational-architecture"><span class="secno">4.1. </span><span class="content">Business and organisational architecture</span><a class="self-link" href="#business-organisational-architecture"></a></h3>
+   <p>The business and organisational architecture of LDTs builds on
+the building blocks of <a href="#business-organisational-building-blocks">§ 2.1 Business and organisational building blocks</a>.
+<a href>Figure ??</a> provides the schematic overview of
+the interrelations of various business and organisational building blocks,
+specific to developing and operating an LDT.
+Note that building blocks are not specific assets or components,
+as these are deployed based on particular implementation contexts.
+However, as the LDT4SSC project’s aim is to support the development of an LDT ecosystem,
+<a href>Figure ??</a> introduces further the business and organisational building blocks necessary for fostering
+the connections between various LDTs, and
+the sharing of data products and LDT services.</p>
+   <p>Figures <a href="#fig-bo-architecture-1">??</a> and <a href="fig-bo-architecture-2">??</a> consist of five major clusters:</p>
+   <ol>
+    <li data-md>
+     <p><strong>An LDT</strong> (dark grey), including data products and LDT services.</p>
+    <li data-md>
+     <p><strong>LDT ecosystem</strong> (light grey, only in <a href="#fig-bo-architecture-1">Figure ??</a>) refers to the overarching framework for
+connecting LDTs and sharing resources (data products and/or services) among them.</p>
+    <li data-md>
+     <p><strong>Participants in their specific roles</strong> (blue), emphasising especially data providers,
+data consumers, intermediaries/operators and/or a governance authority
+(even though there may be additional roles, defined by LDT’s governance framework).
+Note that these are not mutually exclusive, and participants may carry one or multiple roles.
+All participants must adhere to the governance framework, ensure regulatory compliance, and
+are expected to participate in the respective use cases.
+Note that single participants (legal bodies) have their own organisational form and business model, and
+their interests, rights and responsibilities must be accounted for when designing the data cooperation model.</p>
+    <li data-md>
+     <p><strong>Business and organisational building blocks</strong> (green) that are necessary either for
+the design, governance or operations of the LDT and/or LDT ecosystem.</p>
+    <li data-md>
+     <p><strong>Urban and community processes</strong> (yellow) layer emphasises the importance of integrating LDT services into
+specific urban and community processes,
+such as smart governance, administration, specific urban or community services or others.
+This fosters practical value creation and increases the relevance of LDTs in the respective local community,
+showing how LDTs help address local needs and achieve specific objectives.</p>
+   </ol>
+   <figure id="fig-bo-architecture-1">
+    
+  <img alt="TO-DO" id="bo-architecture-1" src="img/bo-architecture-1.jpg">
+  
+    <figcaption>
+    High-level architecture of the business and organisational building blocks for developing and operating an LDT.
+  </figcaption>
+   </figure>
+   <p>Following <a href="#fig-bo-architecture-1">Figure ??</a>,
+the development and use of an LDT is dependent on a specific <strong>use case(s)</strong>,
+which identifies the need for specific <strong>LDT services</strong> and <strong>data products</strong>.
+That use case must address local needs and integrate the LDT into <strong>urban processes</strong>.
+In doing so,
+the LDT’s <strong>user experience</strong> should be carefully considered and monitored to foster adoption.
+To sustain the use of LDTs and the respective use cases,
+one needs to ensure a feasible <strong>business model</strong> (short- and long-term),
+which is aligned with the strategic business incentives of all engaged participants.</p>
+   <p>Various <strong>participants</strong> engage/participate in the use case in different ways:</p>
+   <ul>
+    <li data-md>
+     <p>The <strong>governance authority of an LDT</strong> maintains the <strong>governance framework</strong>,
+which defines the rules, processes, standards, and so on, of an LDT,
+including the promotion of <strong>responsible digital practices</strong>.
+All participants need to adhere to that governance framework to participate in the LDT development/operations and
+in the specific use case.</p>
+    <li data-md>
+     <p>A <strong>data provider</strong> provides data products for the LDT, which are then consumed by
+<strong>data consumers</strong> (often the provider of the LDT services).</p>
+    <li data-md>
+     <p>To support the integration of additional data sources,
+the builders and/or owners of the LDT may cooperate with <strong>intermediaries or operators</strong>,
+who may facilitate the exchange and/or preparation of the data products.</p>
+   </ul>
+   <p>While collecting,
+sharing and processing data (as well as any other business activity),
+all participants must ensure <strong>regulatory compliance</strong> in their actions.
+Relatedly, the <strong>contractual framework</strong> will give a legal ground to the established governance framework and
+ensure legal certainty and alignment with various regulations.</p>
+   <p>Depending on whether the participants have an <strong>organisational form</strong> or not,
+data sharing and engagement in the LDT may vary
+(for example, whether individuals could engage with the LDT by providing data directly).
+Also, if the LDT is co-developed by multiple actors, it may be co-governed through a specific organisational form
+(either incorporated, such as an association, or unincorporated, such as a consortium or joint venture).</p>
+   <p>In addition to the perspective of necessary building blocks for the single LDT,
+<a href="#fig-bo-architecture-2">Figure ??</a> provides an overview of the building blocks (and relationships between them)
+that shape how several LDTs connect with one another and exchange assets among themselves.
+LDTs may leverage the interoperability framework of data spaces and
+the guidelines from DSSC and DS4SSCC-DEP,
+as discussed in <a href="#building-blocks">§ 2 LDT building blocks based on DSSC &amp; DS4SSCC-DEP building blocks</a>.</p>
+   <figure id="fig-bo-architecture-2">
+    
+  <img alt="TO-DO" id="bo-architecture-2" src="img/bo-architecture-2.jpg">
+  
+    <figcaption>
+    High-level architecture of the business and organisational building blocks for
+    developing and operating an LDT-ecosystem,
+    with the aim of sharing data products and/or LDT services among different LDTs.
+  </figcaption>
+   </figure>
+   <p>The central focus point is again on the <strong>use case</strong>,
+which identifies the need for sharing specific data products or LDT services.
+Furthermore, the use case identifies mandatory <strong>functionalities (capabilities)</strong> for the functioning of the LDT ecosystem
+(for example, exchange of assets, brokering, and so on) that may be provided by a <strong>data space</strong>.
+A data space is defined by the <strong>rulebook</strong> (essentially a documented governance framework),
+which includes a structured set of principles, processes, standards, protocols, rules and practices that
+guide and regulate the governance, management and operations within a data space to
+ensure effective and responsible leadership, control, and oversight.
+It also defines the functionalities the data space provides and the associated data space roles,
+including the data space governance authority and participants.
+The rulebook is maintained by a <strong>data space’s (DS) governance authority</strong>,
+which also decides on the <strong>participants' management</strong>,
+in other words, the onboarding, continuous facilitation of participants, and offboarding.
+Relatedly, LDT-ecosystem is not an intellectual construct -
+it has tangible interfaces through which <strong>users experience</strong> the ecosystem and the interactions within.</p>
+   <p>It’s worth noting that an operational data space (LDT ecosystem) also has a <strong>business model</strong> to
+sustain its activities and fulfil its purpose.
+It also takes an <strong>organisational form</strong> (incorporated or unincorporated),
+which influences several business and organisational considerations
+(such as what agreements/contracts should be established,
+what its decision-making processes will look like, and so on).</p>
    <h3 class="heading settled" data-level="4.2" id="technical-architecture"><span class="secno">4.2. </span><span class="content">Technical architecture</span><a class="self-link" href="#technical-architecture"></a></h3>
    <figure>
     
