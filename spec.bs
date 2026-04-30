@@ -550,12 +550,94 @@ emphasising their connections and relevance for LDTs interoperability.
 
 ## Technical building blocks ## {#technical-building-blocks}
 
+This section explains what technical pillars and building blocks are required to build an LDT.
+[Figure 9](#fig-img-technical-building-blocks) contains a graphical overview of these pillars and blocks,
+which we will discuss in detail next.
+
 <figure id="fig-img-technical-building-blocks">
   <img id="img-technical-building-blocks" alt="TO-DO" src="img/technical-building-blocks.jpg">
   <figcaption>
-
+    Technical LDT building blocks aligned with the LDT levels,
+    based on the DSSC/DS4SSCC-DEP building blocks.
   </figcaption>
 </figure>
+
+The **Data Interoperability pillar** contains the capabilities needed for data acquisition,
+data exchange, semantic models, data formats, and application interfaces.
+This also includes functionalities for provenance and traceability.
+This pillar has the following building blocks,
+which apply to interactions within a single LDT and between LDTs:
+
+- [**Data Models**](https://blueprint.dssc.eu/?pane=technical&technical=data-models) (Core and Surface):
+    Capabilities to define and use shared semantics.
+- [**Data Exchange**](https://blueprint.dssc.eu/?pane=technical&technical=data-exchange) (Core and Surface):
+    Capabilities relating to the actual exchange and sharing of data.
+- [**Provenance, Traceability & Observability**](https://blueprint.dssc.eu/?pane=technical&technical=provenance-traceability-observability)
+    (Core and Surface):
+    Capabilities for tracking the data sharing process so
+    it becomes traceable and can be checked for compliance purposes.
+- **Data Acquisition** (Base and Core):
+    Capabilities to extract, transform, and load data from multiple data sources, while assuring data quality.
+    This is a new LDT-specific  building block,
+    because the Data Model block only considers the semantics of then data, and the Data Exchange block only considers
+    the exchange and sharing of data after the LDT has acquired it.
+    The concrete capabilities are
+    - Data extraction: Extra data from multiple data sources that might use different formats and data models.
+    - Data transformation: Transform data to different data formats and data models.
+    - Data loading: Load and store the data so that other components of the LDT can use it.
+
+The **Data Sovereignty and Trust pillar** contains the capabilities needed for
+identifying components and assets that interact within an LDT and between LDTs.
+This allows establishing trust and the possibility of defining and enforcing policies for access and usage control.
+This pillar has the following building blocks:
+
+- [**Identity and Attestation Management**](https://blueprint.dssc.eu/?pane=technical&technical=identity-attestation-management)
+    (Core and Surface):
+    Capabilities to manage identities and attestations of components to ensure
+    the reliability and integrity of components' information.
+- [**Trust Framework**](https://blueprint.dssc.eu/?pane=technical&technical=trust-framework) (Core and Surface):
+    Capabilities to verify that a component adheres to certain rules.
+- [**Access and Usage Policies Enforcement**](https://blueprint.dssc.eu/?pane=technical&technical=access-usage-policies-enforcement)
+    (Core):
+    Capabilities to specify and enforce access and usage policies.
+
+The **Data Value Creation Enablers pillar** contains the capabilities for enabling value creation on top of LDTs:
+providing metadata on data products and publishing them in catalogues.
+This pillar has the following building blocks:
+
+- [**Data, Services and Offering Descriptions**](https://blueprint.dssc.eu/?pane=technical&technical=data-services-and-offerings-descriptions)
+    (Core and Surface):
+    Capabilities to describe data, services and offerings in a manner that will be understandable by
+    any component that interacts with(in) LDTs.
+- [**Publication and Discovery**](https://blueprint.dssc.eu/?pane=technical&technical=publication-and-discovery)
+    (Core and Surface):
+    Capabilities to publish the description of data, services and offerings so that
+    they can be discovered by potential data users.
+
+The **Service Creation Enablers pillar** contains the capabilities for enabling service creation on top of LDTs:
+ensuring accessibility and inclusive user experience (UX)/user interface (UI),
+developing and deploying AI models, and running simulations.
+This is a new LDT-specific pillar, because creating service is as important as the data itself.
+It's based on the
+[Value Creation Services building block of data spaces](https://blueprint.dssc.eu/?pane=technical&technical=value-creation-services),
+which we don't include in the Data Value Creation Enablers pillar for an LDT.
+The new Service Creation Enablers pillar has the following building blocks:
+
+- **Visualisation** (Surface):
+    Capability to develop visualisations of the data while ensuring their accessibility and the inclusiveness of the UI.
+- **Analysis** (Surface):
+    Capabilities to develop and deploy AI models, and to enable the exploration of dynamic behaviours and scenarios within LDTs.
+    This supports testing of policies, systems, or interventions under different assumptions.
+    This is a new LDT-specific building block due to the importance of AI and the consequences of its usage, and
+    the importance of running simulations on an LDT's data. The concrete capabilities are
+    - AI model development: Develop and manage AI models on top of the LDT's data.
+    - AI model deployment: Deploy AI models, either developed by the LDT or by external parties,
+        on top of the LDT's data.
+- **Decision-Making** (Surface):
+    Capability to support decision-making, such as planning,
+    participation channels, and notifications.
+    This is a new LDT-specific building block due to the importance of supporting decision-making when
+    creating a service on top of an LDT.
 
 # Workflows # {#workflows}
 

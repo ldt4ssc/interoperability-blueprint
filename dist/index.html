@@ -1490,7 +1490,7 @@ Possible extra rowspan handling
 </style>
   <meta content="Bikeshed version 945dae3, updated Fri Apr 17 02:01:25 2026 +0000" name="generator">
   <link href="_ORCHESTRATOR_CURRENT_BUILD_FULL_LINK_" rel="canonical">
-  <meta content="ca46e379862906d84ed500b7c9d5d651a4a7b981" name="revision">
+  <meta content="f7b8985f976272a7f7ae70b8e7824a5bb2ab5ccf" name="revision">
   <link href="css/style.css" rel="stylesheet">
 <style>/* Boilerplate: style-autolinks */
 .css.css, .property.property, .descriptor.descriptor {
@@ -2457,12 +2457,116 @@ inter alia the
 Organisational Architecture in <a href="#business-organisational-architecture">§ 4.1 Business and organisational architecture</a>,
 emphasising their connections and relevance for LDTs interoperability.</p>
    <h3 class="heading settled" data-level="2.2" id="technical-building-blocks"><span class="secno">2.2. </span><span class="content">Technical building blocks</span><a class="self-link" href="#technical-building-blocks"></a></h3>
+   <p>This section explains what technical pillars and building blocks are required to build an LDT.
+<a href="#fig-img-technical-building-blocks">Figure 9</a> contains a graphical overview of these pillars and blocks,
+which we will discuss in detail next.</p>
    <figure id="fig-img-technical-building-blocks">
     
   <img alt="TO-DO" height="1885" id="img-technical-building-blocks" src="img/technical-building-blocks.jpg" width="6301">
   
-    <figcaption></figcaption>
+    <figcaption>
+    Technical LDT building blocks aligned with the LDT levels,
+    based on the DSSC/DS4SSCC-DEP building blocks.
+  </figcaption>
    </figure>
+   <p>The <strong>Data Interoperability pillar</strong> contains the capabilities needed for data acquisition,
+data exchange, semantic models, data formats, and application interfaces.
+This also includes functionalities for provenance and traceability.
+This pillar has the following building blocks,
+which apply to interactions within a single LDT and between LDTs:</p>
+   <ul>
+    <li data-md>
+     <p><a href="https://blueprint.dssc.eu/?pane=technical&amp;technical=data-models"><strong>Data Models</strong></a> (Core and Surface):
+Capabilities to define and use shared semantics.</p>
+    <li data-md>
+     <p><a href="https://blueprint.dssc.eu/?pane=technical&amp;technical=data-exchange"><strong>Data Exchange</strong></a> (Core and Surface):
+Capabilities relating to the actual exchange and sharing of data.</p>
+    <li data-md>
+     <p><a href="https://blueprint.dssc.eu/?pane=technical&amp;technical=provenance-traceability-observability"><strong>Provenance, Traceability &amp; Observability</strong></a>
+(Core and Surface):
+Capabilities for tracking the data sharing process so
+it becomes traceable and can be checked for compliance purposes.</p>
+    <li data-md>
+     <p><strong>Data Acquisition</strong> (Base and Core):
+Capabilities to extract, transform, and load data from multiple data sources, while assuring data quality.
+This is a new LDT-specific  building block,
+because the Data Model block only considers the semantics of then data, and the Data Exchange block only considers
+the exchange and sharing of data after the LDT has acquired it.
+The concrete capabilities are</p>
+     <ul>
+      <li data-md>
+       <p>Data extraction: Extra data from multiple data sources that might use different formats and data models.</p>
+      <li data-md>
+       <p>Data transformation: Transform data to different data formats and data models.</p>
+      <li data-md>
+       <p>Data loading: Load and store the data so that other components of the LDT can use it.</p>
+     </ul>
+   </ul>
+   <p>The <strong>Data Sovereignty and Trust pillar</strong> contains the capabilities needed for
+identifying components and assets that interact within an LDT and between LDTs.
+This allows establishing trust and the possibility of defining and enforcing policies for access and usage control.
+This pillar has the following building blocks:</p>
+   <ul>
+    <li data-md>
+     <p><a href="https://blueprint.dssc.eu/?pane=technical&amp;technical=identity-attestation-management"><strong>Identity and Attestation Management</strong></a>
+(Core and Surface):
+Capabilities to manage identities and attestations of components to ensure
+the reliability and integrity of components' information.</p>
+    <li data-md>
+     <p><a href="https://blueprint.dssc.eu/?pane=technical&amp;technical=trust-framework"><strong>Trust Framework</strong></a> (Core and Surface):
+Capabilities to verify that a component adheres to certain rules.</p>
+    <li data-md>
+     <p><a href="https://blueprint.dssc.eu/?pane=technical&amp;technical=access-usage-policies-enforcement"><strong>Access and Usage Policies Enforcement</strong></a>
+(Core):
+Capabilities to specify and enforce access and usage policies.</p>
+   </ul>
+   <p>The <strong>Data Value Creation Enablers pillar</strong> contains the capabilities for enabling value creation on top of LDTs:
+providing metadata on data products and publishing them in catalogues.
+This pillar has the following building blocks:</p>
+   <ul>
+    <li data-md>
+     <p><a href="https://blueprint.dssc.eu/?pane=technical&amp;technical=data-services-and-offerings-descriptions"><strong>Data, Services and Offering Descriptions</strong></a>
+(Core and Surface):
+Capabilities to describe data, services and offerings in a manner that will be understandable by
+any component that interacts with(in) LDTs.</p>
+    <li data-md>
+     <p><a href="https://blueprint.dssc.eu/?pane=technical&amp;technical=publication-and-discovery"><strong>Publication and Discovery</strong></a>
+(Core and Surface):
+Capabilities to publish the description of data, services and offerings so that
+they can be discovered by potential data users.</p>
+   </ul>
+   <p>The <strong>Service Creation Enablers pillar</strong> contains the capabilities for enabling service creation on top of LDTs:
+ensuring accessibility and inclusive user experience (UX)/user interface (UI),
+developing and deploying AI models, and running simulations.
+This is a new LDT-specific pillar, because creating service is as important as the data itself.
+It’s based on the
+<a href="https://blueprint.dssc.eu/?pane=technical&amp;technical=value-creation-services">Value Creation Services building block of data spaces</a>,
+which we don’t include in the Data Value Creation Enablers pillar for an LDT.
+The new Service Creation Enablers pillar has the following building blocks:</p>
+   <ul>
+    <li data-md>
+     <p><strong>Visualisation</strong> (Surface):
+Capability to develop visualisations of the data while ensuring their accessibility and the inclusiveness of the UI.</p>
+    <li data-md>
+     <p><strong>Analysis</strong> (Surface):
+Capabilities to develop and deploy AI models, and to enable the exploration of dynamic behaviours and scenarios within LDTs.
+This supports testing of policies, systems, or interventions under different assumptions.
+This is a new LDT-specific building block due to the importance of AI and the consequences of its usage, and
+the importance of running simulations on an LDT’s data. The concrete capabilities are</p>
+     <ul>
+      <li data-md>
+       <p>AI model development: Develop and manage AI models on top of the LDT’s data.</p>
+      <li data-md>
+       <p>AI model deployment: Deploy AI models, either developed by the LDT or by external parties,
+on top of the LDT’s data.</p>
+     </ul>
+    <li data-md>
+     <p><strong>Decision-Making</strong> (Surface):
+Capability to support decision-making, such as planning,
+participation channels, and notifications.
+This is a new LDT-specific building block due to the importance of supporting decision-making when
+creating a service on top of an LDT.</p>
+   </ul>
    <h2 class="heading settled" data-level="3" id="workflows"><span class="secno">3. </span><span class="content">Workflows</span><a class="self-link" href="#workflows"></a></h2>
    <h3 class="heading settled" data-level="3.1" id="workflow-adding-new-slc-existing-ldt"><span class="secno">3.1. </span><span class="content">Adding a new Surface-level component to an existing LDT</span><a class="self-link" href="#workflow-adding-new-slc-existing-ldt"></a></h3>
    <h3 class="heading settled" data-level="3.2" id="workflow-discover-slc-existing-ldt"><span class="secno">3.2. </span><span class="content">Discovering which Surface-level components work on an existing LDT</span><a class="self-link" href="#workflow-discover-slc-existing-ldt"></a></h3>
