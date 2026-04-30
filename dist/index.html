@@ -1490,7 +1490,7 @@ Possible extra rowspan handling
 </style>
   <meta content="Bikeshed version 945dae3, updated Fri Apr 17 02:01:25 2026 +0000" name="generator">
   <link href="_ORCHESTRATOR_CURRENT_BUILD_FULL_LINK_" rel="canonical">
-  <meta content="690b45fe1d2f7041ccce5d690ce8c3a08472bff8" name="revision">
+  <meta content="015966d2d02e53cb9f6862481178329013e93890" name="revision">
   <link href="css/style.css" rel="stylesheet">
 <style>/* Boilerplate: style-autolinks */
 .css.css, .property.property, .descriptor.descriptor {
@@ -1833,8 +1833,8 @@ dfn > a.self-link::before      { content: "#"; }
      <ol class="toc">
       <li><a href="#why-use-an-ldt"><span class="secno">1.1</span> <span class="content">Why use an LDT</span></a>
       <li><a href="#high-level-overview-ldt"><span class="secno">1.2</span> <span class="content">High-level overview of an LDT</span></a>
-      <li><a href="#adding-new-slc-to-existing-ldt"><span class="secno">1.3</span> <span class="content">Adding a new Surface-level component to an existing LDT</span></a>
-      <li><a href="#discover-slc-existing-ldt"><span class="secno">1.4</span> <span class="content">Discovering which Surface-level components work on which existing LDTs</span></a>
+      <li><a href="#adding-new-slc-to-existing-ldt"><span class="secno">1.3</span> <span class="content">Adding a new Surface-level component to an existing LDT, reusing Core and Base-level components</span></a>
+      <li><a href="#discover-slc-existing-ldt"><span class="secno">1.4</span> <span class="content">Discovering which Surface-level components work on which existing LDTs and exchanging components through interconnected LDTs</span></a>
       <li><a href="#alignment-mims"><span class="secno">1.5</span> <span class="content">Alignment with MIMs Plus</span></a>
       <li><a href="#relationship-data-spaces"><span class="secno">1.6</span> <span class="content">Relationship between data spaces and LDTs</span></a>
      </ol>
@@ -1941,15 +1941,15 @@ the <a href="https://www.etsi.org/deliver/etsi_gr/CIM/001_099/017/01.01.01_60/gr
 to users:</p>
    <ul>
     <li data-md>
-     <p>Descriptive: Current (and past) state of the real-world asset - static and dynamic.
+     <p><strong>Descriptive</strong>: Current (and past) state of the real-world asset - static and dynamic.
 Bidirectional connection between real-world assets and the LDT.</p>
     <li data-md>
-     <p>Predictive: Extends the descriptive capability by providing predictions on the way the real asset could evolve
+     <p><strong>Predictive</strong>: Extends the descriptive capability by providing predictions on the way the real asset could evolve
 in the future, using predictive models to envision possible futures.</p>
     <li data-md>
-     <p>Prospective: Conducts "what-if" analyses to evaluate the potential consequences of actions.</p>
+     <p><strong>Prospective</strong>: Conducts "what-if" analyses to evaluate the potential consequences of actions.</p>
     <li data-md>
-     <p>Prescriptive: Extends (or, in extreme cases, executes) the prospective capability with suggested actions on
+     <p><strong>Prescriptive</strong>: Extends (or, in extreme cases, executes) the prospective capability with suggested actions on
 the real system to achieve a given objective based on the analysis.</p>
     <li data-md>
      <p>Diagnostic: Explains situations or alerts about deviations from expected conditions.
@@ -1962,33 +1962,235 @@ and Data Spaces. While relevant standards (for example, ISO 23247, ISO/IEC 30182
 ISO 30173) provide partial guidance, there is currently no universally accepted standard
 definition for LDTs in the context of urban or territorial systems.</p>
    <h3 class="heading settled" data-level="1.2" id="high-level-overview-ldt"><span class="secno">1.2. </span><span class="content">High-level overview of an LDT</span><a class="self-link" href="#high-level-overview-ldt"></a></h3>
+   <p>An LDT has three levels, Base, Core, and Surface (see <a href="#fig-high-level-ldt">Figure 1</a>),
+representing a logical data pipeline from raw data ingestion to end-user interaction,
+as proposed in Deliverable 3.8:</p>
+   <ul>
+    <li data-md>
+     <p><strong>LDT Base</strong> contains the foundational connection to the territory through sensor data
+(for example, IoT), modelled assets (for example, BIM), other external information
+(for example, socio-economic data or from external systems) and potentially even actuators such as APIs.
+This level uses the component Data Sources.</p>
+    <li data-md>
+     <p><strong>LDT Core</strong> contains the technical components that enable data exchange,
+contextualisation, and transformation into usable digital representations.
+This level uses the components Data Acquisition, Data Management, and Connectivity.</p>
+    <li data-md>
+     <p><strong>LDT Surface</strong> contains the analysis components, visualisations, and
+supporting human-interaction tools for decision-making within a service.
+This level uses the components Connectivity, Analysis, Visualisations, and Decision-Making.</p>
+   </ul>
    <figure id="fig-high-level-ldt">
     
 <img alt="TO-DO" height="3596" id="high-level-ldt" src="img/high-level-ldt.jpg" width="3633">
 
-    <figcaption>Test</figcaption>
+    <figcaption>High-level overview of an LDT. An LDT contains 7 high-level components:
+Data sources, Data Acquisition, Data management, Analysis, Visualisations,
+Decision-making, and Connectivity.</figcaption>
    </figure>
-   <h3 class="heading settled" data-level="1.3" id="adding-new-slc-to-existing-ldt"><span class="secno">1.3. </span><span class="content">Adding a new Surface-level component to an existing LDT</span><a class="self-link" href="#adding-new-slc-to-existing-ldt"></a></h3>
-   <figure>
+   <p>We describe each component below:</p>
+   <ul>
+    <li data-md>
+     <p><strong>Data Sources</strong> (grey) comprise the sources of information describing the territory,
+including physical sensors, administrative systems, external datasets, and modelling frameworks
+such as BIM or simulation models.
+These sources include those accessible through (local) data spaces.
+A data space is
+an <a href="https://www.cencenelec.eu/media/CEN-CENELEC/CWAs/RI/2024/cwa18125_2024.pdf">interoperable framework</a>
+for data exchange, based on common governance principles, standards, practices and enabling services,
+that enables trusted data transactions between participants.</p>
+    <li data-md>
+     <p><strong>Data Acquisition</strong> (green) collects data from sources (arrows 1a and 1b in <a href="#fig-high-level-ldt">Figure 1</a>) and
+prepares it for use through ingestion pipelines, syntactic transformations, quality checks, buffering, and
+staging mechanisms, ensuring data is available, reliable, and ready for contextualisation.</p>
+    <li data-md>
+     <p><strong>Connectivity</strong> (orange) enables secure and interoperable data exchange across components and LDTs through
+interfaces, connectors, access control mechanisms, and
+federation services that support controlled sharing and discovery.</p>
+    <li data-md>
+     <p><strong>Data Management</strong> (purple) manages the representation, linking, and persistence of contextual information coming from
+the Data acquisition component (arrow 2 in <a href="#fig-high-level-ldt">Figure 1</a>) through ontologies, data models, and
+data management services that support semantic alignment and the storage of historical or evolving states.</p>
+    <li data-md>
+     <p><strong>Analysis</strong> (yellow) provides analytical, simulation, and AI capabilities that augment
+data coming from the Data Management component (arrow 3 in <a href="#fig-high-level-ldt">Figure 1</a>).
+These augmentations include insights, predictions, and inferences, including algorithms for
+pattern detection, forecasting, optimisation, and decision support.</p>
+    <li data-md>
+     <p><strong>Visualisations</strong> (blue) provide dashboards, spatial and temporal views, and
+interactive interfaces that enable end-users to explore, interpret, and interact with
+he outputs of services and analyses within an LDT (arrows 4 and 6a in <a href="#fig-high-level-ldt">Figure 1</a>).</p>
+    <li data-md>
+     <p><strong>Decision-Making</strong> (red) provides supporting tools for planning, participation channels, and
+ notifications (arrows 5 and 6b in <a href="#fig-high-level-ldt">Figure 1</a>).</p>
+   </ul>
+   <p>A <strong>Service</strong> is not a standalone component itself, but consists of a logical composition of
+the analysis, visualisations, and decision-making tools.
+A single service may include multiple visualisations, while individual components
+(for example, visualisations or analysis modules) can be reused across multiple services.
+A Service represents a higher-level abstraction that delivers value to
+end-users by orchestrating multiple underlying components.</p>
+   <h3 class="heading settled" data-level="1.3" id="adding-new-slc-to-existing-ldt"><span class="secno">1.3. </span><span class="content">Adding a new Surface-level component to an existing LDT, reusing Core and Base-level components</span><a class="self-link" href="#adding-new-slc-to-existing-ldt"></a></h3>
+   <p>Once we have built an LDT,
+it’s important that we can still add new Surface-level components (SLCs) to ensure that new needs,
+coming from new and updated use cases, can be fulfilled (see <a href="#fig-ldt-add-new-slc">Figure 2</a>).
+While adding new SLCs, we want to</p>
+   <ul>
+    <li data-md>
+     <p>keep the LDT’s architecture/design as is,</p>
+    <li data-md>
+     <p>keep support for existing components, if desirable,</p>
+    <li data-md>
+     <p>limit the changes to these existing components, and</p>
+    <li data-md>
+     <p>limit the effects on other components if existing components need to be replaced.</p>
+   </ul>
+   <figure id="fig-ldt-add-new-slc">
     
 <img alt="TO-DO" height="3609" id="ldt-add-new-slc" src="img/ldt-add-new-slc.jpg" width="3651">
 
-    <figcaption>Test</figcaption>
+    <figcaption>We design an LDT in such a way that we can easily add new visualisations, new analysis, and new decision-making tools.</figcaption>
    </figure>
-   <h3 class="heading settled" data-level="1.4" id="discover-slc-existing-ldt"><span class="secno">1.4. </span><span class="content">Discovering which Surface-level components work on which existing LDTs</span><a class="self-link" href="#discover-slc-existing-ldt"></a></h3>
-   <figure>
+   <p>Each SLC might have specific requirements regarding different aspects, including, but not
+limited to</p>
+   <ul>
+    <li data-md>
+     <p>data models,</p>
+    <li data-md>
+     <p>data exchange types,</p>
+    <li data-md>
+     <p>provenance, traceability, and observability,</p>
+    <li data-md>
+     <p>access and usage policies,</p>
+    <li data-md>
+     <p>which party deploys and maintains the component, and</p>
+    <li data-md>
+     <p>regulatory compliance.</p>
+   </ul>
+   <p>Our LDT might not meet these requirements out of the box,
+but the LDT’s design should limit the necessary changes to business, organisational, and
+technical aspects to fulfil these requirements.
+Some examples of new SLCs are</p>
+   <ul>
+    <li data-md>
+     <p>energy consumption prediction of buildings,</p>
+    <li data-md>
+     <p>air pollution and urban heat island maps, and</p>
+    <li data-md>
+     <p>traffic congestion or flooding prediction and corresponding impact analysis.</p>
+   </ul>
+   <h3 class="heading settled" data-level="1.4" id="discover-slc-existing-ldt"><span class="secno">1.4. </span><span class="content">Discovering which Surface-level components work on which existing LDTs and exchanging components through interconnected LDTs</span><a class="self-link" href="#discover-slc-existing-ldt"></a></h3>
+   <p>While <a href="#adding-new-slc-to-existing-ldt">§ 1.3 Adding a new Surface-level component to an existing LDT, reusing Core and Base-level components</a> focuses on
+integrating a selected Surface-level component (SLC) into an existing LDT,
+interoperability should also support an earlier step:
+identifying which SLCs are suitable candidates in the first place.
+As increasing numbers of SLCs are developed by cities, service providers, and research initiatives,
+ideally, LDTs should be able to discover which of these components are compatible with
+their existing Base and Core-level components, and
+what adaptations would be required where full compatibility is not available (see <a href="#fig-ldt-discovery">Figure 3</a>).</p>
+   <figure id="fig-ldt-discovery">
     
 <img alt="TO-DO" height="4287" id="ldt-discovery" src="img/ldt-discovery.jpg" width="3156">
 
-    <figcaption>Test</figcaption>
+    <figcaption>We want to be able to automatically discover which new SLCs can work on top of an existing LDT.</figcaption>
    </figure>
+   <p>This is important because testing and deploying a new SLC can be costly in terms of time, effort, and governance.
+Before starting integration work,
+an LDT should therefore be able to assess whether a candidate SLC is likely to work with
+its available data, interfaces, policies, and organisational conditions.
+Such an assessment may consider, for example, the data models used, supported data exchange types, provenance and
+observability requirements, access and usage policies, and deployment responsibilities.
+Rather than repeating the full integration process for every candidate,
+the LDT should be able to compare its existing capabilities with the requirements published by the SLC and
+determine whether the component is</p>
+   <ul>
+    <li data-md>
+     <p>compatible out of the box,</p>
+    <li data-md>
+     <p>compatible with limited adaptations, or</p>
+    <li data-md>
+     <p>not currently compatible.</p>
+   </ul>
+   <p>This discoverability is especially valuable in interconnected LDT ecosystems,
+where components developed in one context may be reused in another.
+For example, air pollution or urban heat island visualisations developed for one city could be reused by other cities if
+those LDTs can determine that the required data and interfaces are available.
+Similarly, AI models for traffic congestion prediction and impact analysis may be useful beyond the city in
+which they were originally developed,
+provided that other LDTs can assess whether their data, policies, and deployment conditions are
+sufficient to support them.</p>
+   <p>At the same time, discoverability is not only beneficial for city-to-city reuse.
+It can also support the emergence of an ecosystem in which external service providers offer new
+capabilities to existing LDTs.
+If an LDT describes the requirements, interfaces, and policies of SLCs in a consistent and machine-readable way,
+providers can develop reusable components that are easier to adopt across multiple LDTs.
+Additionally, LDT operators can more easily identify which offerings match their needs and constraints.
+In this way,
+interoperability helps create the conditions for a broader market of reusable LDT services and components,
+reducing duplication of effort and accelerating innovation.</p>
+   <p>By enabling this kind of discovery and compatibility assessment,
+the LDT reduces the cost and uncertainty of experimentation,
+supports both public-sector reuse and market-based innovation, and
+strengthens interoperability across interconnected LDTs.</p>
    <h3 class="heading settled" data-level="1.5" id="alignment-mims"><span class="secno">1.5. </span><span class="content">Alignment with MIMs Plus</span><a class="self-link" href="#alignment-mims"></a></h3>
-   <figure>
+   <p>The MIMs Plus emerged as part of the Living-in.EU movement to enable a minimal but
+sufficient level of interoperability of data, systems, and services,
+particularly in the context of smart city solutions.
+By facilitating this minimum level,
+MIMs Plus contributes to the development of a coherent global market and collaboration focused on
+solutions, services, and data.
+They are not closed standards,
+but evolving recommendations, co-developed with local and regional authorities and interested stakeholders, and
+aligned with European frameworks.</p>
+   <p>Each of the 9 MIMs identifies an area in which interoperable mechanisms need to be put in place.
+At the time of publication of this deliverable,
+the <a href="https://mims.oascities.org/">MIMs Plus' framework</a> is at version 8
+and distinguishes between two main categories:
+foundational MIMs, which provide essential functionality for data interoperability within a city’s data ecosystem;
+application-specific MIMs, which will enhance the functionality of the data ecosystem by
+introducing interoperability in specific application areas.
+For this deliverable, it is important to highlight the application-based
+<a href="https://mims.oascities.org/local-digital-twins/">MIM8 - Local Digital Twin</a>.
+MIM8 describes the following 6 layers:</p>
+   <ul>
+    <li data-md>
+     <p>Layer 1: Data acquisition (historic/near real-time/real-time data),
+including sensing, extraction, and synthetic data generation.</p>
+    <li data-md>
+     <p>Layer 2: Connectivity, including APIs, protocols, and file sharing.</p>
+    <li data-md>
+     <p>Layer 3: Data pre-processing, including semantics, interoperability, and aggregation.</p>
+    <li data-md>
+     <p>Layer 4: Analysis and simulation, including AI Models and physics-based simulations.</p>
+    <li data-md>
+     <p>Layer 5: Communication of results (visualisation), including dashboards,
+multi-dimensional visualisations, natural language interfaces (like chatbots), and virtual reality.</p>
+    <li data-md>
+     <p>Layer 6: Decision-making, including prescription, support, and automation.</p>
+   </ul>
+   <p>Layer 1 (Data acquisition) aligns with the Data Acquisition component of our high-level overview of an LDT;
+layer 2 (Connectivity) with the Connectivity and Data Management component;
+layer 3 (Data pre-processing) with the Data acquisition and Data Management components;
+layer 4 (Analysis and simulation) with the Analysis component, which includes simulation;
+layer 5 (Communication of results) with the Visualisation component; and
+layer 6  (Decision-making) with the Visualisations (support), Analysis (automation), and
+Decision-Making (prescription, support) components (see <a href="#fig-ldt-mim8">Figure 4</a>).</p>
+   <figure id="fig-ldt-mim8">
     
 <img alt="TO-DO" height="3549" id="ldt-mim8" src="img/ldt-mim8.jpg" width="3857">
 
-    <figcaption>Test</figcaption>
+    <figcaption>The high-level components align with the MIMs.</figcaption>
    </figure>
+   <p>Next to defining the typical layers of an LDT, MIM8 provides more details on an LDT’s capabilities:
+LDTs are able to share data with other data ecosystems,
+LDTs are able to share services, and LDTs are able to share SLCs.
+Moreover, other MIMs, notably the Foundational MIMs,
+provide interoperability mechanisms dealing with Accessing Data (MIM0),
+which aligns with the Data Acquisition component;
+Interlinking Data (MIM1) and Representing Data (MIM2),
+which align with the Data Acquisition and Data Management components;
+Sharing Data (MIM3) and Securing Data (MIM6),
+which align with the Data Management and Connectivity component.</p>
    <h3 class="heading settled" data-level="1.6" id="relationship-data-spaces"><span class="secno">1.6. </span><span class="content">Relationship between data spaces and LDTs</span><a class="self-link" href="#relationship-data-spaces"></a></h3>
    <h2 class="heading settled" data-level="2" id="building-blocks"><span class="secno">2. </span><span class="content">LDT building blocks based on DSSC &amp; DS4SSCC-DEP building blocks</span><a class="self-link" href="#building-blocks"></a></h2>
    <h3 class="heading settled" data-level="2.1" id="business-organisational-building-blocks"><span class="secno">2.1. </span><span class="content">Business and organisational building blocks</span><a class="self-link" href="#business-organisational-building-blocks"></a></h3>

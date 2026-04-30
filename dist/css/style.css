@@ -12,6 +12,8 @@ img {
 
 figcaption {
     font-style: normal;
+    text-align: left;
+    margin-left: 50px;
 }
 
 h5 {
