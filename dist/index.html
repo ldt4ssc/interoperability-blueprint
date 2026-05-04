@@ -1490,7 +1490,7 @@ Possible extra rowspan handling
 </style>
   <meta content="Bikeshed version 945dae3, updated Fri Apr 17 02:01:25 2026 +0000" name="generator">
   <link href="_ORCHESTRATOR_CURRENT_BUILD_FULL_LINK_" rel="canonical">
-  <meta content="87c649100ee1f9e50d16af74dc61c59bc9308c06" name="revision">
+  <meta content="b538bb5acbaa362547db0de68f0701470e4f7e8c" name="revision">
   <link href="css/style.css" rel="stylesheet">
 <style>/* Boilerplate: style-autolinks */
 .css.css, .property.property, .descriptor.descriptor {
@@ -3513,8 +3513,62 @@ such as the <a href="https://gitlab.com/gaia-x/lab/compliance/gx-registry/-/blob
 the <a href="https://hub.ebsi.eu/apis/pilot/trusted-issuers-registry/v5">EBSI Trusted Issuers Registry</a>, and
 the <a href="https://kserve.github.io/website/docs/concepts/architecture/data-plane/v2-protocol">Open Inference Protocol</a>.</p>
    <h2 class="heading settled" data-level="5" id="workflows-architectures"><span class="secno">5. </span><span class="content">Workflows using reference architectures</span><a class="self-link" href="#workflows-architectures"></a></h2>
+   <p>In this chapter,
+we discuss how the <a href="#business-organisational-architecture">business and organisational architecture</a>
+and <a href="#technical-architecture">technical architecture</a> support the <a href="#workflows">workflows</a>.
+First, we discuss
+the workflow for <a href="#workflow-architecture-adding-new-slc-existing-ldt">adding a new SLC to an existing LDT</a>.
+Next, we discuss the workflow for
+<a href="#workflow-architecture-discover-slc-existing-ldt">discovering which SLCs work on an existing LDT</a>.</p>
    <h3 class="heading settled" data-level="5.1" id="workflow-architecture-adding-new-slc-existing-ldt"><span class="secno">5.1. </span><span class="content">Adding a new Surface-level component to an existing LDT</span><a class="self-link" href="#workflow-architecture-adding-new-slc-existing-ldt"></a></h3>
+   <p>The goal of this workflow is to <a href="#workflow-adding-new-slc-existing-ldt">add a new SLC to an existing LDT</a>.
+First, we discuss how the technical steps T1-T5 are supported by
+the <a href="#technical-architecture">technical architecture</a> while minimising the integration effort.
+Next, we discuss how the business and organisational steps BO1-BO11 are supported by
+the <a href="#business-organisational-architecture">business and organisational architecture</a>.</p>
+   <p>We cover <strong>T1</strong> in the technical architecture because
+we can add new Visualisations, AI models, Simulations, and Decision-Making tools
+on top of an LDT to implement a service.
+There are no functional limitations on how many of these we can add and how they work together and
+share data with each other.</p>
+   <p>We cover <strong>T2</strong> because the SLCs publish their details through a Catalogue.
+This includes,
+for example, what type of data they need to function and through which interface the data should be exchanged.</p>
+   <p>We cover <strong>T3</strong> and <strong>T4</strong> because both the LDTs and the SLCs publish their details through a Catalogue.
+We can then compare these details to determine where the technical gaps are.
+For example, does the LDT offer the interface that the SLC requires?
+Additionally, we reduce the number of technical gaps through the design of the architecture.
+The Data Exchange Component offers a single point where we add new interfaces, avoiding changes in other components.
+The Data Model Mediator offers a single point where we add new Data Models,
+avoiding any changes to how the data is handled during the data acquisition.
+The Data Space Connector offers a single point where we read and write data to a data space in a standard way,
+reducing the changes that are needed to incorporate new data.</p>
+   <p>The required changes and effort of <strong>T5</strong> depend on the decisions made in T1-T4.
+Because of the different components supporting T1-T4 and the architecture’s overall design,
+these changes and efforts are only applicable to a limited number of components, without any architectural changes.</p>
+   <p>The input from Use case development and Urban services supports <strong>BO1</strong>.
+The discussions about a new SLC with the Participants support <strong>BO2</strong> and <strong>BO3</strong>.
+These Participants must also ensure Regulatory Compliance,
+which supports <strong>BO4</strong>.
+Organisational participants have a Business model that is also dependent on the use case,
+which affects <strong>BO5</strong>.
+We might also need to change or add new Participants when we need new data providers, intermediaries or operators,
+which is determined by <strong>BO6</strong>.
+These changes might affect the Governance Framework,
+as determined by <strong>BO7</strong>,
+which, in turn, might affect the Contractual Framework (<strong>BO8</strong>),
+leading to the Participants signing new agreements and contracts (<strong>BO9</strong>), and
+being onboarded (<strong>BO10</strong>) as described in the Governance Framework.
+Throughout the design and implementation phases of adding a new SLC to the LDT,
+deploy participatory and service design methods (<strong>BO11</strong>) addressing responsible digital practices,
+to ensure sustainable and human-centric implementation of the LDT.</p>
    <h3 class="heading settled" data-level="5.2" id="workflow-architecture-discover-slc-existing-ldt"><span class="secno">5.2. </span><span class="content">Discovering which Surface-level components work on an existing LDT</span><a class="self-link" href="#workflow-architecture-discover-slc-existing-ldt"></a></h3>
+   <p>The goal of this workflow is to <a href="workflow-discover-slc-existing-ldt">automate the technical requirements of an SLC (T1) and
+its technical gaps with an existing LDT (T2)</a>.
+We cover <strong>T1</strong> because the Discovery Service can query the SLCs' details through their corresponding Catalogues.
+We cover <strong>T2</strong>
+because the Discovery Service can compare these details with the details of the LDT,
+which are also published through a Catalogue.</p>
    <h2 class="heading settled" data-level="6" id="how-to-build-ldt"><span class="secno">6. </span><span class="content">How to build an LDT</span><a class="self-link" href="#how-to-build-ldt"></a></h2>
    <h3 class="heading settled" data-level="6.1" id="explore-validate"><span class="secno">6.1. </span><span class="content">Explore and validate</span><a class="self-link" href="#explore-validate"></a></h3>
    <h3 class="heading settled" data-level="6.2" id="define-implement"><span class="secno">6.2. </span><span class="content">Define and implement</span><a class="self-link" href="#define-implement"></a></h3>

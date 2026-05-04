@@ -1,5 +1,67 @@
 # Workflows using reference architectures # {#workflows-architectures}
 
+In this chapter,
+we discuss how the [business and organisational architecture](#business-organisational-architecture)
+and [technical architecture](#technical-architecture) support the [workflows](#workflows).
+First, we discuss
+the workflow for [adding a new SLC to an existing LDT](#workflow-architecture-adding-new-slc-existing-ldt).
+Next, we discuss the workflow for
+[discovering which SLCs work on an existing LDT](#workflow-architecture-discover-slc-existing-ldt).
+
 ## Adding a new Surface-level component to an existing LDT ## {#workflow-architecture-adding-new-slc-existing-ldt}
 
+The goal of this workflow is to [add a new SLC to an existing LDT](#workflow-adding-new-slc-existing-ldt).
+First, we discuss how the technical steps T1-T5 are supported by
+the [technical architecture](#technical-architecture) while minimising the integration effort.
+Next, we discuss how the business and organisational steps BO1-BO11 are supported by
+the [business and organisational architecture](#business-organisational-architecture).
+
+We cover **T1** in the technical architecture because
+we can add new Visualisations, AI models, Simulations, and Decision-Making tools
+on top of an LDT to implement a service.
+There are no functional limitations on how many of these we can add and how they work together and
+share data with each other.
+
+We cover **T2** because the SLCs publish their details through a Catalogue.
+This includes,
+for example, what type of data they need to function and through which interface the data should be exchanged.
+
+We cover **T3** and **T4** because both the LDTs and the SLCs publish their details through a Catalogue.
+We can then compare these details to determine where the technical gaps are.
+For example, does the LDT offer the interface that the SLC requires?
+Additionally, we reduce the number of technical gaps through the design of the architecture.
+The Data Exchange Component offers a single point where we add new interfaces, avoiding changes in other components.
+The Data Model Mediator offers a single point where we add new Data Models,
+avoiding any changes to how the data is handled during the data acquisition.
+The Data Space Connector offers a single point where we read and write data to a data space in a standard way,
+reducing the changes that are needed to incorporate new data.
+
+The required changes and effort of **T5** depend on the decisions made in T1-T4.
+Because of the different components supporting T1-T4 and the architecture’s overall design,
+these changes and efforts are only applicable to a limited number of components, without any architectural changes.
+
+The input from Use case development and Urban services supports **BO1**.
+The discussions about a new SLC with the Participants support **BO2** and **BO3**.
+These Participants must also ensure Regulatory Compliance,
+which supports **BO4**.
+Organisational participants have a Business model that is also dependent on the use case,
+which affects **BO5**.
+We might also need to change or add new Participants when we need new data providers, intermediaries or operators,
+which is determined by **BO6**.
+These changes might affect the Governance Framework,
+as determined by **BO7**,
+which, in turn, might affect the Contractual Framework (**BO8**),
+leading to the Participants signing new agreements and contracts (**BO9**), and
+being onboarded (**BO10**) as described in the Governance Framework.
+Throughout the design and implementation phases of adding a new SLC to the LDT,
+deploy participatory and service design methods (**BO11**) addressing responsible digital practices,
+to ensure sustainable and human-centric implementation of the LDT.
+
 ## Discovering which Surface-level components work on an existing LDT ## {#workflow-architecture-discover-slc-existing-ldt}
+
+The goal of this workflow is to [automate the technical requirements of an SLC (T1) and
+its technical gaps with an existing LDT (T2)](workflow-discover-slc-existing-ldt).
+We cover **T1** because the Discovery Service can query the SLCs' details through their corresponding Catalogues.
+We cover **T2**
+because the Discovery Service can compare these details with the details of the LDT,
+which are also published through a Catalogue.
