@@ -1,8 +1,8 @@
 # Workflows # {#workflows}
 
 Once we have built an LDT, the LDT should support the following workflows:
-adding a new SLC to an existing LDT ([[#workflow-adding-new-slc-existing-ldt]]) and
-discovering which SLCs work on an existing LDT ([[#workflow-discover-slc-existing-ldt]]).
+[adding a new SLC to an existing LDT](#workflow-adding-new-slc-existing-ldt) and
+[discovering which SLCs work on an existing LDT](#workflow-discover-slc-existing-ldt).
 We include both technical steps, which are labelled starting with "T", and
 business and organisational steps,
 which are labelled starting with "BO".
@@ -13,8 +13,7 @@ including requirements and restrictions.
 ## Adding a new Surface-level component to an existing LDT ## {#workflow-adding-new-slc-existing-ldt}
 
 In this section,
-we describe the workflow for adding a new SLC to an existing LDT,
-as mentioned in [[#adding-new-slc-to-existing-ldt]].
+we describe the workflow for [adding a new SLC to an existing LDT](#adding-new-slc-to-existing-ldt).
 We visualise this in [Figure 10](#workflow-1),
 where technical steps are blue with rounded corners and business and organisational steps are green with square corners.
 
@@ -74,7 +73,7 @@ either with respect to the technical aspects or the business and organisational 
 ## Discovering which Surface-level components work on an existing LDT ## {#workflow-discover-slc-existing-ldt}
 
 In the previous workflow, we manually executed the steps T2 and T3,
-but it should be possible to automate these steps, as mentioned in [[#discover-slc-existing-ldt]].
+but it should be possible to [automate these steps](#discover-slc-existing-ldt).
 This is the goal of this section's workflow (see [Figure 11](#fig-workflow-2)).
 
 <figure id="fig-workflow-2">

@@ -10,7 +10,7 @@ organisational steps are green with square corners.
 
 After the EXPLORE and VALIDATE steps,
 we determine the LDT’s technical requirements (T3) to make the functional requirements (T2) a reality.
-To do this, we refer to the following [[#how-to-build-data-acquisition]] through [[#how-to-build-visualisations]],
+To do this, we refer to [[#how-to-build-data-acquisition]] to [[#how-to-build-visualisations]],
 which contain recommendations for tools that implement one or more features of the components.
 Note that, to the best of our knowledge, for some components,
 there are no tools available (yet) that implement one or more of their features.

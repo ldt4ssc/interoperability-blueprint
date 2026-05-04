@@ -2,20 +2,20 @@
 
 The business and organisational architecture of LDTs builds on
 the building blocks of [[#business-organisational-building-blocks]].
-[Figure ??]() provides the schematic overview of
+[Figure 12](#fig-bo-architecture-1) provides the schematic overview of
 the interrelations of various business and organisational building blocks,
 specific to developing and operating an LDT.
 Note that building blocks are not specific assets or components,
 as these are deployed based on particular implementation contexts.
 However, as the LDT4SSC project's aim is to support the development of an LDT ecosystem,
-[Figure ??]() introduces further the business and organisational building blocks necessary for fostering
+[Figure 13](#fig-bo-architecture-2) introduces further the business and organisational building blocks necessary for fostering
 the connections between various LDTs, and
 the sharing of data products and LDT services.
 
-Figures [12](#fig-bo-architecture-1) and [13](fig-bo-architecture-2) consist of five major clusters:
+Figures [12](#fig-bo-architecture-1) and [13](#fig-bo-architecture-2) consist of five major clusters:
 
 1. **An LDT** (dark grey), including data products and LDT services.
-2. **LDT ecosystem** (light grey, only in [Figure ??](#fig-bo-architecture-1)) refers to the overarching framework for
+2. **LDT ecosystem** (light grey, only in [Figure 12](#fig-bo-architecture-1)) refers to the overarching framework for
     connecting LDTs and sharing resources (data products and/or services) among them.
 3. **Participants in their specific roles** (blue), emphasising especially data providers,
     data consumers, intermediaries/operators and/or a governance authority
@@ -40,7 +40,7 @@ Figures [12](#fig-bo-architecture-1) and [13](fig-bo-architecture-2) consist of 
   </figcaption>
 </figure>
 
-Following [Figure ??](#fig-bo-architecture-1),
+Following [Figure 12](#fig-bo-architecture-1),
 the development and use of an LDT is dependent on a specific **use case(s)**,
 which identifies the need for specific **LDT services** and **data products**.
 That use case must address local needs and integrate the LDT into **urban processes**.
@@ -76,7 +76,7 @@ Also, if the LDT is co-developed by multiple actors, it may be co-governed throu
 (either incorporated, such as an association, or unincorporated, such as a consortium or joint venture).
 
 In addition to the perspective of necessary building blocks for the single LDT,
-[Figure ??](#fig-bo-architecture-2) provides an overview of the building blocks (and relationships between them)
+[Figure 13](#fig-bo-architecture-2) provides an overview of the building blocks (and relationships between them)
 that shape how several LDTs connect with one another and exchange assets among themselves.
 LDTs may leverage the interoperability framework of data spaces and
 the guidelines from DSSC and DS4SSCC-DEP,

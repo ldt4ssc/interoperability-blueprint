@@ -158,7 +158,7 @@ Some examples of new SLCs are
 
 ## Discovering which Surface-level components work on which existing LDTs and exchanging components through interconnected LDTs ## {#discover-slc-existing-ldt}
 
-While [[#adding-new-slc-to-existing-ldt]] focuses on
+While [the previous section](#adding-new-slc-to-existing-ldt) focuses on
 integrating a selected Surface-level component (SLC) into an existing LDT,
 interoperability should also support an earlier step:
 identifying which SLCs are suitable candidates in the first place.
