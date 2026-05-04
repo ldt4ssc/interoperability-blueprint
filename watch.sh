@@ -1,2 +1,2 @@
 ./pre.sh
-bikeshed watch spec.bs dist/index.html
+bikeshed watch src/spec.bs dist/index.html

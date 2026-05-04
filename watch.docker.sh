@@ -1,2 +1,2 @@
 ./pre.sh
-docker run --rm -v $(pwd):/data smessie/bikeshed:latest bikeshed watch /data/spec.bs /data/dist/index.html
+docker run --rm -v $(pwd)/src:/src -v $(pwd)/dist:/dist smessie/bikeshed:latest bikeshed watch /src/spec.bs /dist/index.html

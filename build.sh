@@ -1,2 +1,2 @@
 ./pre.sh
-bikeshed spec spec.bs dist/index.html
+bikeshed spec src/spec.bs dist/index.html
