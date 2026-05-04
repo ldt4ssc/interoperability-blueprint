@@ -4,7 +4,7 @@ Support for different SLCs using different data models is achieved in the Data M
 by using the **Data Model Mediator**.
 After the data from the different data sources is materialised using
 their corresponding rich data model in the Data Acquisition component,
-the Data model mediator maps the data to one of the common data models.
+the Data Model Mediator maps the data to one of the common data models.
 The mediator does this by using the corresponding data model mappings.
 The LDT can support new rich and common data models by adding mappings for the relevant models.
 Consequently, the LDT supports semantic interoperability.

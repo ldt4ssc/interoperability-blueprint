@@ -21,7 +21,7 @@ the components of which the tool (partly) implements the features.
       </td>
       <td colspan="1" rowspan="1">This is a serving framework for deploying ML models as APIs. It enables AI inference services to be exposed consistently.
       </td>
-      <td colspan="1" rowspan="1">AI model catalogue, AI model manager, AI model provider, AI model runner
+      <td colspan="1" rowspan="1">AI Model Catalogue, AI Model Manager, AI Model Provider, AI Model Runner
       </td>
     </tr>
     <tr>
@@ -29,7 +29,7 @@ the components of which the tool (partly) implements the features.
       </td>
       <td colspan="1" rowspan="1">This is an open-source platform for ML and MLOps on Kubernetes introduced by Google. It supports AI services leveraging graph representations of LDT data.
       </td>
-      <td colspan="1" rowspan="1">AI model catalogue, AI model manager, AI model provider, AI model runner
+      <td colspan="1" rowspan="1">AI Model Catalogue, AI Model Manager, AI Model Provider, AI Model Runner
       </td>
     </tr>
     <tr>
@@ -37,7 +37,7 @@ the components of which the tool (partly) implements the features.
       </td>
       <td colspan="1" rowspan="1">This component of the EU LDT Toolbox allows developers to develop new algorithms and models for their digital twins.
       </td>
-      <td colspan="1" rowspan="1">AI model catalogue, AI model manager, AI model provider, AI model runner
+      <td colspan="1" rowspan="1">AI Model Catalogue, AI Model Manager, AI Model Provider, AI Model Runner
       </td>
     </tr>
     <tr>
@@ -67,7 +67,7 @@ the components of which the tool (partly) implements the features.
       <td colspan="1" rowspan="1">This component of the EU LDT Toolbox allows developers to train new models in a federated environment.
       </td>
       <td colspan="1" rowspan="1">
-        AI model manager, AI model provider, AI model runner.</td>
+        AI Model Manager, AI Model Provider, AI Model Runner</td>
     </tr>
     </tbody>
   </table>

@@ -21,7 +21,7 @@ tool (partly) implements the features.
       </td>
       <td colspan="1" rowspan="1">This is a participatory democracy framework, written in Ruby on Rails, originally developed for the Barcelona City government&rsquo;s online and offline participation website.
       </td>
-      <td colspan="1" rowspan="1">Decision support channels
+      <td colspan="1" rowspan="1">Decision Support Channels
       </td>
     </tr>
     <tr>
@@ -29,28 +29,28 @@ tool (partly) implements the features.
       </td>
       <td colspan="1" rowspan="1">This is a digital democratic participation enabler that provides both public and civil society organisations with digital democratic processes.
       </td>
-      <td colspan="1" rowspan="1">Decision support channels</td>
+      <td colspan="1" rowspan="1">Decision Support Channels</td>
     </tr>
     <tr>
       <td colspan="1" rowspan="1"><a href="https://github.com/LimeSurvey/LimeSurvey">LimeSurvey</a>
       </td>
       <td colspan="1" rowspan="1">This is a powerful, open-source survey platform. It&rsquo;s a free alternative to SurveyMonkey, Typeform, Qualtrics, and Google Forms, making it simple to create online surveys and forms with flexibility.
       </td>
-      <td colspan="1" rowspan="1">Decision support channels</td>
+      <td colspan="1" rowspan="1">Decision Support Channels</td>
     </tr>
     <tr>
       <td colspan="1" rowspan="1">&nbsp;<a href="https://wirecloud.readthedocs.io/en/stable/">Wirecloud</a>
       </td>
       <td colspan="1" rowspan="1">This is a user-development tool aimed at easily creating web applications and dashboards/cockpits. It consists of a mash-up platform that allows users to compose dashboards by wiring together heterogeneous widgets and data sources via configurable operators.
       </td>
-      <td colspan="1" rowspan="1">Application composition</td>
+      <td colspan="1" rowspan="1">Application Composition</td>
     </tr>
     <tr>
       <td colspan="1" rowspan="1"><a href="https://nodered.org/">Node-RED</a>
       </td>
       <td colspan="1" rowspan="1">Based on Node.js, it enables low-code application building for event-driven applications.
       </td>
-      <td colspan="1" rowspan="1">Application composition, Notifications
+      <td colspan="1" rowspan="1">Application Composition, Notifications
       </td>
     </tr>
     <tr>
@@ -73,7 +73,7 @@ tool (partly) implements the features.
       </td>
       <td colspan="1" rowspan="1">This component of the EU LDT Toolbox allows municipalities to provide mechanisms to engage with their citizens to provide feedback on different scenarios.
       </td>
-      <td colspan="1" rowspan="1">Decision support channels</td>
+      <td colspan="1" rowspan="1">Decision Support Channels</td>
     </tr>
     <tr>
       <td colspan="1" rowspan="1"><a
@@ -81,7 +81,7 @@ tool (partly) implements the features.
       </td>
       <td colspan="1" rowspan="1">This component of the EU LDT Toolbox allows municipalities to monitor and manage their adoption of the different tools and use cases based on their goals and using standardised maturity frameworks.
       </td>
-      <td colspan="1" rowspan="1">Decision support channels</td>
+      <td colspan="1" rowspan="1">Decision Support Channels</td>
     </tr>
     </tbody>
   </table>

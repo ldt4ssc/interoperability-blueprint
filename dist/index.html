@@ -1490,7 +1490,7 @@ Possible extra rowspan handling
 </style>
   <meta content="Bikeshed version 945dae3, updated Fri Apr 17 02:01:25 2026 +0000" name="generator">
   <link href="_ORCHESTRATOR_CURRENT_BUILD_FULL_LINK_" rel="canonical">
-  <meta content="58b242684b7c10215652a4a79f6160c0d952ded5" name="revision">
+  <meta content="3e83df6f57f86ed4fcaff5b59801e5b9c011f001" name="revision">
   <link href="css/style.css" rel="stylesheet">
 <style>/* Boilerplate: style-autolinks */
 .css.css, .property.property, .descriptor.descriptor {
@@ -3240,7 +3240,7 @@ we explain the recommended standards and protocols for the artefacts and the int
 by using the <strong>Data Model Mediator</strong>.
 After the data from the different data sources is materialised using
 their corresponding rich data model in the Data Acquisition component,
-the Data model mediator maps the data to one of the common data models.
+the Data Model Mediator maps the data to one of the common data models.
 The mediator does this by using the corresponding data model mappings.
 The LDT can support new rich and common data models by adding mappings for the relevant models.
 Consequently, the LDT supports semantic interoperability.</p>
@@ -3789,49 +3789,49 @@ implements the features.</p>
        <td colspan="1" rowspan="1">It is a relational database for structured data persistence. It commonly backs context brokers and supports LDT state storage. Its capabilities are enhanced by the geospatial analysis library PostGIS and the time-series analysis library TimescaleDB.
       
        <td colspan="1" rowspan="1">N/A
-       <td colspan="1" rowspan="1">Data storage
+       <td colspan="1" rowspan="1">Data Storage
       <tr>
        <td colspan="1" rowspan="1"><a href="https://github.com/mongodb/mongo">MongoDB</a>
       
        <td colspan="1" rowspan="1">It is a document-oriented database for flexible data models. It can store semi-structured data used by LDT services.
       
        <td colspan="1" rowspan="1">N/A
-       <td colspan="1" rowspan="1">Data storage
+       <td colspan="1" rowspan="1">Data Storage
       <tr>
        <td colspan="1" rowspan="1"><a href="https://ldes.tech">LDES</a>
       
        <td colspan="1" rowspan="1">Linked Data Event Streams (LDES) is an initiative to help data publishers find a balance between publishing data through an as-complete-as-possible set of querying APIs and providing a simple data dump. They propose an event stream as the base API, and want to make it as lightweight as possible to host one.
       
        <td colspan="1" rowspan="1">RDF
-       <td colspan="1" rowspan="1">Data storage
+       <td colspan="1" rowspan="1">Data Storage
       <tr>
        <td colspan="1" rowspan="1"><a href="https://linkeddatafragments.org/in-depth/">LDF</a>
       
        <td colspan="1" rowspan="1">Linked Data Fragments (LDF) provides lightweight, uniform interfaces that let query workloads for linked data be distributed between clients and servers.
       
        <td colspan="1" rowspan="1">RDF
-       <td colspan="1" rowspan="1">Data storage
+       <td colspan="1" rowspan="1">Data Storage
       <tr>
        <td colspan="1" rowspan="1"><a href="https://www.stardog.com/">Stardog</a>
       
        <td colspan="1" rowspan="1">It is a knowledge graph platform, with support for SPARQL, that enables the management, querying, virtualisation, inferring, constraining, and learning of data.
       
        <td colspan="1" rowspan="1">RDF
-       <td colspan="1" rowspan="1">Data storage
+       <td colspan="1" rowspan="1">Data Storage
       <tr>
        <td colspan="1" rowspan="1"><a href="https://jena.apache.org/documentation/fuseki2/">Apache Jena Fuseki</a>
       
        <td colspan="1" rowspan="1">It is a SPARQL server that Fuseki provides the SPARQL 1.1 protocols for query and update, as well as the SPARQL Graph Store protocol.
       It is integrated with <a href="https://jena.apache.org/documentation/tdb/index.html">TDB</a> to provide a robust, transactional, persistent storage layer.
        <td colspan="1" rowspan="1">RDF
-       <td colspan="1" rowspan="1">Data storage
+       <td colspan="1" rowspan="1">Data Storage
       <tr>
        <td colspan="1" rowspan="1"><a href="https://virtuoso.openlinksw.com/">Virtuoso</a>
       
        <td colspan="1" rowspan="1">It is a platform for creating and managing semantically harmonised databases, knowledge bases/graphs, filesystems, and APIs that are loosely coupled with AI Agents, Large Language Models, and other client environments.
       
        <td colspan="1" rowspan="1">RDF
-       <td colspan="1" rowspan="1">Data storage
+       <td colspan="1" rowspan="1">Data Storage
       <tr>
        <td colspan="1" rowspan="1"><a href="https://interoperable-europe.ec.europa.eu/collection/ldttoolbox/solution/eu-ldt-data-platform">EU LDT Data Platform</a>
       
@@ -3839,77 +3839,77 @@ implements the features.</p>
         <p>This component of the EU LDT Toolbox allows municipalities to connect their LDTs with their databases and sensors, integrating data in standard formats and giving it context.
       </p>
        <td colspan="1" rowspan="1">N/A
-       <td colspan="1" rowspan="1">Data storage
+       <td colspan="1" rowspan="1">Data Storage
       <tr>
        <td colspan="1" rowspan="1"><a href="https://stellio.readthedocs.io/en/latest/">Stellio Context Broker</a>
       
        <td colspan="1" rowspan="1">It is an open-source NGSI-LD-compliant context broker. It enables management of entities, relationships, and subscriptions. It is built around a Kafka message broker, embeds a PostgreSQL database for context management, with enhanced timeseries (TimescaleDB) and geospatial (PostGIS) capabilities. It is built on a Spring Boot microservices architecture. It embeds an optional Keycloak connection and security API, allowing fine-grained access definition and control to the NGSI-LD entities, based on ODRL definitions. Grafana is integrated for monitoring and alerting purposes.
       
        <td colspan="1" rowspan="1">NGSI-LD
-       <td colspan="1" rowspan="1">Data exchange component, Data model mediator
+       <td colspan="1" rowspan="1">Data Exchange Component, Data Model Mediator
       <tr>
        <td colspan="1" rowspan="1"><a href="https://scorpio.readthedocs.io/en/latest/">Scorpio Broker</a>
       
        <td colspan="1" rowspan="1">It is an open-source NGSI-LD-compliant context broker. It integrates well with FIWARE components to enable cross-domain context management. It relies on PostgreSQL database management and Apache Kafka (with Zookeeper) for communication and notifications. It is built on a Spring Boot microservices architecture, and may be complemented by Keycloak for identity and access management, and Grafana or Kibana for monitoring and visualisation.
       
        <td colspan="1" rowspan="1">NGSI-LD
-       <td colspan="1" rowspan="1">Data exchange component, Data model mediator
+       <td colspan="1" rowspan="1">Data Exchange Component, Data Model Mediator
       <tr>
        <td colspan="1" rowspan="1"><a href="https://github.com/FIWARE/context.Orion-LD/tree/develop/doc/manuals-ld">Orion-LD</a>
       
        <td colspan="1" rowspan="1">It is an open-source NGSI-LD-compliant context broker. It supports Linked Data entities, JSON-LD serialisation, and NGSI-LD API operations. It uses MongoDB as primary data storage. It can be complemented by Keycloak for authentication, and Cygnus or Kafka for data persistence.
       
        <td colspan="1" rowspan="1">NGSI-LD
-       <td colspan="1" rowspan="1">Data exchange component, Data model mediator
+       <td colspan="1" rowspan="1">Data Exchange Component, Data Model Mediator
       <tr>
        <td colspan="1" rowspan="1"><a href="https://ldes.tech">LDES</a>
       
        <td colspan="1" rowspan="1">Linked Data Event Streams (LDES) is an initiative to help data publishers find a balance between publishing data through an as-complete-as-possible set of querying APIs and providing a simple data dump. They propose an event stream as the base API, and want to make it as lightweight as possible to host one.
       
        <td colspan="1" rowspan="1">RDF
-       <td colspan="1" rowspan="1">Data exchange component
+       <td colspan="1" rowspan="1">Data Exchange Component
       <tr>
        <td colspan="1" rowspan="1"><a href="https://linkeddatafragments.org/in-depth/">LDF</a>
       
        <td colspan="1" rowspan="1">Linked Data Fragments (LDF) provides lightweight, uniform interfaces that let query workloads for linked data be distributed between clients and servers.
       
        <td colspan="1" rowspan="1">RDF
-       <td colspan="1" rowspan="1">Data exchange component
+       <td colspan="1" rowspan="1">Data Exchange Component
       <tr>
        <td colspan="1" rowspan="1"><a href="https://www.stardog.com/">Stardog</a>
       
        <td colspan="1" rowspan="1">It is a knowledge graph platform, with support for SPARQL, that enables the management, querying, virtualisation, inferring, constraining, and learning of data.
       
        <td colspan="1" rowspan="1">RDF
-       <td colspan="1" rowspan="1">Data exchange component, Data model mediator
+       <td colspan="1" rowspan="1">Data Exchange Component, Data Model Mediator
       <tr>
        <td colspan="1" rowspan="1"><a href="https://jena.apache.org/documentation/fuseki2/">Apache Jena Fuseki</a>
       
        <td colspan="1" rowspan="1">It is a SPARQL server that provides the SPARQL 1.1 protocols for query and update, as well as the SPARQL Graph Store protocol. It is integrated with
       <a href="https://jena.apache.org/documentation/tdb/index.html">TDB</a> to provide a robust, transactional, persistent storage layer.
        <td colspan="1" rowspan="1">RDF
-       <td colspan="1" rowspan="1">Data exchange component, Data model mediator
+       <td colspan="1" rowspan="1">Data Exchange Component, Data Model Mediator
       <tr>
        <td colspan="1" rowspan="1"><a href="https://virtuoso.openlinksw.com/">Virtuoso</a>
       
        <td colspan="1" rowspan="1">It is a platform for creating and managing semantically harmonised databases, knowledge bases/graphs, filesystems, and APIs that are loosely coupled with AI Agents, Large Language Models, and other client environments.
       
        <td colspan="1" rowspan="1">RDF
-       <td colspan="1" rowspan="1">Data exchange component, Data model mediator
+       <td colspan="1" rowspan="1">Data Exchange Component, Data Model Mediator
       <tr>
        <td colspan="1" rowspan="1"><a href="https://rml.io">RML.io</a>
       
        <td colspan="1" rowspan="1">It allows for generating knowledge graphs from both static and dynamic data sources, including relational databases, APIs, files, and data streams.
       
        <td colspan="1" rowspan="1">RDF
-       <td colspan="1" rowspan="1">Data model mediator
+       <td colspan="1" rowspan="1">Data Model Mediator
       <tr>
        <td colspan="1" rowspan="1"><a href="https://github.com/eyereasoner/eyeling/">Eyeling</a>
       
        <td colspan="1" rowspan="1">It is an N3 reasoner in JavaScript.
       
        <td colspan="1" rowspan="1">RDF
-       <td colspan="1" rowspan="1">Data model mediator
+       <td colspan="1" rowspan="1">Data Model Mediator
       <tr>
        <td colspan="1" rowspan="1"><a href="https://eclipse-edc.github.io/documentation/for-adopters/federated-catalog/">Federated Catalog of Eclipse Data Space Components Connector</a>
       
@@ -3952,57 +3952,57 @@ The table contains the name of each tool, linked to its website, a description, 
 			
        <td colspan="1" rowspan="1">It is an open-source implementation of the Data Space Protocol within the Eclipse ecosystem. It allows organisations to connect securely to federated data spaces.
 			
-       <td colspan="1" rowspan="1">Data space connector, Trust services
+       <td colspan="1" rowspan="1">Data Space Connector, Trust Services
 			
       <tr>
        <td colspan="1" rowspan="1"><a href="https://github.com/FIWARE/data-space-connector">FIWARE Data Space Connector</a>
 			
        <td colspan="1" rowspan="1">It is FIWARE’s implementation of a data space connector based on the EDC. It bridges the FIWARE components (using NGSI-LD) with federated data spaces, allowing organisations to share contextual data under defined policies.
 			
-       <td colspan="1" rowspan="1">Data space connector
+       <td colspan="1" rowspan="1">Data Space Connector
       <tr>
        <td colspan="1" rowspan="1"><a href="https://code.europa.eu/simpl/simpl-open/documentation/user-manual%23simpl-open-agents">SIMPL-Open Agent</a>
 			
        <td colspan="1" rowspan="1">It is a middleware that acts as a local gateway for secure communication within a Data Space.
 			
-       <td colspan="1" rowspan="1">Data space connector
+       <td colspan="1" rowspan="1">Data Space Connector
       <tr>
        <td colspan="1" rowspan="1"><a href="https://interoperable-europe.ec.europa.eu/collection/ldttoolbox/solution/eu-ldt-data-space-ready">EU LDT Data Space Ready</a>
 			
        <td colspan="1" rowspan="1">
         <p class="c0">This component of the EU LDT Toolbox allows municipalities to create and connect to data spaces to publish and consume data.
 			</p>
-       <td colspan="1" rowspan="1">Data space connector
+       <td colspan="1" rowspan="1">Data Space Connector
       <tr>
        <td colspan="1" rowspan="1"><a href="https://www.keycloak.org/documentation.html">Keycloak</a>
 			
        <td colspan="1" rowspan="1">It is an open-source identity and access management tool supporting OAuth2 and OpenID Connect. It provides single sign-on, user federation, and token-based security for APIs and services.
 			
-       <td colspan="1" rowspan="1">Trust services
+       <td colspan="1" rowspan="1">Trust Services
       <tr>
        <td colspan="1" rowspan="1"><a href="https://fiware-idm.readthedocs.io/en/latest/index.html">Keyrock</a>
 			
        <td colspan="1" rowspan="1">It is part of the FIWARE ecosystem. It manages identity and access control through OAuth2-compliant APIs. It allows seamless integration with other FIWARE generic enablers.
 			
-       <td colspan="1" rowspan="1">Trust services
+       <td colspan="1" rowspan="1">Trust Services
       <tr>
        <td colspan="1" rowspan="1"><a href="https://gaia-x.eu/">Gaia-X</a>
 			
        <td colspan="1" rowspan="1">It is a European-level framework that defines governance for federated cloud and data ecosystems. It enforces transparency, sovereignty, and compliance services.
 			
-       <td colspan="1" rowspan="1">Trust services
+       <td colspan="1" rowspan="1">Trust Services
       <tr>
        <td colspan="1" rowspan="1"><a href="https://framework.ishare.eu/">iSHARE Trust Framework</a>
 			
        <td colspan="1" rowspan="1">It is a framework for trusted data sharing, defining roles, identity management, and access protocols between organisations. It ensures that participants in a data space can verify each other’s identities and data usage rights, complementing OAuth/OpenID mechanisms.
 			
-       <td colspan="1" rowspan="1">Trust services
+       <td colspan="1" rowspan="1">Trust Services
       <tr>
        <td colspan="1" rowspan="1"><a href="https://interoperable-europe.ec.europa.eu/collection/ldttoolbox/solution/eu-ldt-identity-management">EU LDT Identity Manager</a>
 			
        <td colspan="1" rowspan="1">This component of the EU LDT Toolbox allows the municipalities to manage the roles and permissions that users and applications have within all the other tools of the toolbox.
 			
-       <td colspan="1" rowspan="1">Trust services
+       <td colspan="1" rowspan="1">Trust Services
     </table>
     <figcaption>
       These are tools that implement Connectivity features.
@@ -4029,32 +4029,32 @@ tool (partly) implements the features.</p>
       
        <td colspan="1" rowspan="1">This is a participatory democracy framework, written in Ruby on Rails, originally developed for the Barcelona City government’s online and offline participation website.
       
-       <td colspan="1" rowspan="1">Decision support channels
+       <td colspan="1" rowspan="1">Decision Support Channels
       
       <tr>
        <td colspan="1" rowspan="1"><a href="https://consuldemocracy.org/">Consul Democracy</a>
       
        <td colspan="1" rowspan="1">This is a digital democratic participation enabler that provides both public and civil society organisations with digital democratic processes.
       
-       <td colspan="1" rowspan="1">Decision support channels
+       <td colspan="1" rowspan="1">Decision Support Channels
       <tr>
        <td colspan="1" rowspan="1"><a href="https://github.com/LimeSurvey/LimeSurvey">LimeSurvey</a>
       
        <td colspan="1" rowspan="1">This is a powerful, open-source survey platform. It’s a free alternative to SurveyMonkey, Typeform, Qualtrics, and Google Forms, making it simple to create online surveys and forms with flexibility.
       
-       <td colspan="1" rowspan="1">Decision support channels
+       <td colspan="1" rowspan="1">Decision Support Channels
       <tr>
        <td colspan="1" rowspan="1"> <a href="https://wirecloud.readthedocs.io/en/stable/">Wirecloud</a>
       
        <td colspan="1" rowspan="1">This is a user-development tool aimed at easily creating web applications and dashboards/cockpits. It consists of a mash-up platform that allows users to compose dashboards by wiring together heterogeneous widgets and data sources via configurable operators.
       
-       <td colspan="1" rowspan="1">Application composition
+       <td colspan="1" rowspan="1">Application Composition
       <tr>
        <td colspan="1" rowspan="1"><a href="https://nodered.org/">Node-RED</a>
       
        <td colspan="1" rowspan="1">Based on Node.js, it enables low-code application building for event-driven applications.
       
-       <td colspan="1" rowspan="1">Application composition, Notifications
+       <td colspan="1" rowspan="1">Application Composition, Notifications
       
       <tr>
        <td colspan="1" rowspan="1"><a href="https://ntfy.sh/">ntfy</a>
@@ -4073,13 +4073,13 @@ tool (partly) implements the features.</p>
       
        <td colspan="1" rowspan="1">This component of the EU LDT Toolbox allows municipalities to provide mechanisms to engage with their citizens to provide feedback on different scenarios.
       
-       <td colspan="1" rowspan="1">Decision support channels
+       <td colspan="1" rowspan="1">Decision Support Channels
       <tr>
        <td colspan="1" rowspan="1"><a href="https://interoperable-europe.ec.europa.eu/collection/ldttoolbox/solution/eu-ldt-city-innovation-planner">EU LDT City Innovation Planner</a>
       
        <td colspan="1" rowspan="1">This component of the EU LDT Toolbox allows municipalities to monitor and manage their adoption of the different tools and use cases based on their goals and using standardised maturity frameworks.
       
-       <td colspan="1" rowspan="1">Decision support channels
+       <td colspan="1" rowspan="1">Decision Support Channels
     </table>
     <figcaption>
     These are tools that implement Decision-Making features.
@@ -4106,21 +4106,21 @@ the components of which the tool (partly) implements the features.</p>
       
        <td colspan="1" rowspan="1">This is a serving framework for deploying ML models as APIs. It enables AI inference services to be exposed consistently.
       
-       <td colspan="1" rowspan="1">AI model catalogue, AI model manager, AI model provider, AI model runner
+       <td colspan="1" rowspan="1">AI Model Catalogue, AI Model Manager, AI Model Provider, AI Model Runner
       
       <tr>
        <td colspan="1" rowspan="1"><a href="https://www.kubeflow.org/docs/">Kubeflow</a>
       
        <td colspan="1" rowspan="1">This is an open-source platform for ML and MLOps on Kubernetes introduced by Google. It supports AI services leveraging graph representations of LDT data.
       
-       <td colspan="1" rowspan="1">AI model catalogue, AI model manager, AI model provider, AI model runner
+       <td colspan="1" rowspan="1">AI Model Catalogue, AI Model Manager, AI Model Provider, AI Model Runner
       
       <tr>
        <td colspan="1" rowspan="1"><a href="https://interoperable-europe.ec.europa.eu/collection/ldttoolbox/solution/eu-ldt-ai-notebook">EU LDT AI Notebook</a>
       
        <td colspan="1" rowspan="1">This component of the EU LDT Toolbox allows developers to develop new algorithms and models for their digital twins.
       
-       <td colspan="1" rowspan="1">AI model catalogue, AI model manager, AI model provider, AI model runner
+       <td colspan="1" rowspan="1">AI Model Catalogue, AI Model Manager, AI Model Provider, AI Model Runner
       
       <tr>
        <td colspan="1" rowspan="1"><a href="https://carla.readthedocs.io/en/latest/">CARLA Simulator</a>
@@ -4146,7 +4146,7 @@ the components of which the tool (partly) implements the features.</p>
        <td colspan="1" rowspan="1">This component of the EU LDT Toolbox allows developers to train new models in a federated environment.
       
        <td colspan="1" rowspan="1">
-        AI model manager, AI model provider, AI model runner.
+        AI Model Manager, AI Model Provider, AI Model Runner
     </table>
     <figcaption>
     These are tools that implement Analysis features.
@@ -4261,7 +4261,7 @@ The table contains the name of each tool, linked to its website, a description, 
       
        <td colspan="1" rowspan="1">This component of the EU LDT Toolbox allows municipalities to visualise and interact with their LDTs.
       
-       <td colspan="1" rowspan="1">dashboard
+       <td colspan="1" rowspan="1">Dashboard
     </table>
     <figcaption>
 		These are tools that implement Visualisation features.

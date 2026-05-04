@@ -123,7 +123,7 @@ The table contains the name of each tool, linked to its website, a description, 
       </td>
       <td colspan="1" rowspan="1">This component of the EU LDT Toolbox allows municipalities to visualise and interact with their LDTs.
       </td>
-      <td colspan="1" rowspan="1">dashboard</td>
+      <td colspan="1" rowspan="1">Dashboard</td>
     </tr>
     </tbody>
   </table>

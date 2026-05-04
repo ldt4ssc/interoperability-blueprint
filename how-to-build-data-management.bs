@@ -23,7 +23,7 @@ implements the features.
       <td colspan="1" rowspan="1">It is a relational database for structured data persistence. It commonly backs context brokers and supports LDT state storage. Its capabilities are enhanced by the geospatial analysis library PostGIS and the time-series analysis library TimescaleDB.
       </td>
       <td colspan="1" rowspan="1">N/A</td>
-      <td colspan="1" rowspan="1">Data storage</td>
+      <td colspan="1" rowspan="1">Data Storage</td>
     </tr>
     <tr>
       <td colspan="1" rowspan="1"><a href="https://github.com/mongodb/mongo">MongoDB</a>
@@ -31,7 +31,7 @@ implements the features.
       <td colspan="1" rowspan="1">It is a document-oriented database for flexible data models. It can store semi-structured data used by LDT services.
       </td>
       <td colspan="1" rowspan="1">N/A</td>
-      <td colspan="1" rowspan="1">Data storage</td>
+      <td colspan="1" rowspan="1">Data Storage</td>
     </tr>
     <tr>
       <td colspan="1" rowspan="1"><a href="https://ldes.tech">LDES</a>
@@ -39,7 +39,7 @@ implements the features.
       <td colspan="1" rowspan="1">Linked Data Event Streams (LDES) is an initiative to help data publishers find a balance between publishing data through an as-complete-as-possible set of querying APIs and providing a simple data dump. They propose an event stream as the base API, and want to make it as lightweight as possible to host one.
       </td>
       <td colspan="1" rowspan="1">RDF</td>
-      <td colspan="1" rowspan="1">Data storage</td>
+      <td colspan="1" rowspan="1">Data Storage</td>
     </tr>
     <tr>
       <td colspan="1" rowspan="1"><a href="https://linkeddatafragments.org/in-depth/">LDF</a>
@@ -47,7 +47,7 @@ implements the features.
       <td colspan="1" rowspan="1">Linked Data Fragments (LDF) provides lightweight, uniform interfaces that let query workloads for linked data be distributed between clients and servers.
       </td>
       <td colspan="1" rowspan="1">RDF</td>
-      <td colspan="1" rowspan="1">Data storage</td>
+      <td colspan="1" rowspan="1">Data Storage</td>
     </tr>
     <tr>
       <td colspan="1" rowspan="1"><a href="https://www.stardog.com/">Stardog</a>
@@ -55,7 +55,7 @@ implements the features.
       <td colspan="1" rowspan="1">It is a knowledge graph platform, with support for SPARQL, that enables the management, querying, virtualisation, inferring, constraining, and learning of data.
       </td>
       <td colspan="1" rowspan="1">RDF</td>
-      <td colspan="1" rowspan="1">Data storage</td>
+      <td colspan="1" rowspan="1">Data Storage</td>
     </tr>
     <tr>
       <td colspan="1" rowspan="1"><a href="https://jena.apache.org/documentation/fuseki2/">Apache Jena Fuseki</a>
@@ -63,7 +63,7 @@ implements the features.
       <td colspan="1" rowspan="1">It is a SPARQL server that Fuseki provides the SPARQL 1.1 protocols for query and update, as well as the SPARQL Graph Store protocol.
       It is integrated with <a href="https://jena.apache.org/documentation/tdb/index.html">TDB</a> to provide a robust, transactional, persistent storage layer.</td>
       <td colspan="1" rowspan="1">RDF</td>
-      <td colspan="1" rowspan="1">Data storage</td>
+      <td colspan="1" rowspan="1">Data Storage</td>
     </tr>
     <tr>
       <td colspan="1" rowspan="1"><a href="https://virtuoso.openlinksw.com/">Virtuoso</a>
@@ -71,7 +71,7 @@ implements the features.
       <td colspan="1" rowspan="1">It is a platform for creating and managing semantically harmonised databases, knowledge bases/graphs, filesystems, and APIs that are loosely coupled with AI Agents, Large Language Models, and other client environments.
       </td>
       <td colspan="1" rowspan="1">RDF</td>
-      <td colspan="1" rowspan="1">Data storage</td>
+      <td colspan="1" rowspan="1">Data Storage</td>
     </tr>
     <tr>
       <td colspan="1" rowspan="1"><a href="https://interoperable-europe.ec.europa.eu/collection/ldttoolbox/solution/eu-ldt-data-platform">EU LDT Data Platform</a>
@@ -79,7 +79,7 @@ implements the features.
       <td colspan="1" rowspan="1"><p >This component of the EU LDT Toolbox allows municipalities to connect their LDTs with their databases and sensors, integrating data in standard formats and giving it context.
       </td>
       <td colspan="1" rowspan="1">N/A</td>
-      <td colspan="1" rowspan="1">Data storage</td>
+      <td colspan="1" rowspan="1">Data Storage</td>
     </tr>
     <tr>
       <td colspan="1" rowspan="1"><a href="https://stellio.readthedocs.io/en/latest/">Stellio Context Broker</a>
@@ -87,7 +87,7 @@ implements the features.
       <td colspan="1" rowspan="1">It is an open-source NGSI-LD-compliant context broker. It enables management of entities, relationships, and subscriptions. It is built around a Kafka message broker, embeds a PostgreSQL database for context management, with enhanced timeseries (TimescaleDB) and geospatial (PostGIS) capabilities. It is built on a Spring Boot microservices architecture. It embeds an optional Keycloak connection and security API, allowing fine-grained access definition and control to the NGSI-LD entities, based on ODRL definitions. Grafana is integrated for monitoring and alerting purposes.
       </td>
       <td colspan="1" rowspan="1">NGSI-LD</td>
-      <td colspan="1" rowspan="1">Data exchange component, Data model mediator</td>
+      <td colspan="1" rowspan="1">Data Exchange Component, Data Model Mediator</td>
     </tr>
     <tr>
       <td colspan="1" rowspan="1"><a href="https://scorpio.readthedocs.io/en/latest/">Scorpio Broker</a>
@@ -95,7 +95,7 @@ implements the features.
       <td colspan="1" rowspan="1">It is an open-source NGSI-LD-compliant context broker. It integrates well with FIWARE components to enable cross-domain context management. It relies on PostgreSQL database management and Apache Kafka (with Zookeeper) for communication and notifications. It is built on a Spring Boot microservices architecture, and may be complemented by Keycloak for identity and access management, and Grafana or Kibana for monitoring and visualisation.
       </td>
       <td colspan="1" rowspan="1">NGSI-LD</td>
-      <td colspan="1" rowspan="1">Data exchange component, Data model mediator</td>
+      <td colspan="1" rowspan="1">Data Exchange Component, Data Model Mediator</td>
     </tr>
     <tr>
       <td colspan="1" rowspan="1"><a href="https://github.com/FIWARE/context.Orion-LD/tree/develop/doc/manuals-ld">Orion-LD</a>
@@ -103,7 +103,7 @@ implements the features.
       <td colspan="1" rowspan="1">It is an open-source NGSI-LD-compliant context broker. It supports Linked Data entities, JSON-LD serialisation, and NGSI-LD API operations. It uses MongoDB as primary data storage. It can be complemented by Keycloak for authentication, and Cygnus or Kafka for data persistence.
       </td>
       <td colspan="1" rowspan="1">NGSI-LD</td>
-      <td colspan="1" rowspan="1">Data exchange component, Data model mediator</td>
+      <td colspan="1" rowspan="1">Data Exchange Component, Data Model Mediator</td>
     </tr>
     <tr>
       <td colspan="1" rowspan="1"><a href="https://ldes.tech">LDES</a>
@@ -111,7 +111,7 @@ implements the features.
       <td colspan="1" rowspan="1">Linked Data Event Streams (LDES) is an initiative to help data publishers find a balance between publishing data through an as-complete-as-possible set of querying APIs and providing a simple data dump. They propose an event stream as the base API, and want to make it as lightweight as possible to host one.
       </td>
       <td colspan="1" rowspan="1">RDF</td>
-      <td colspan="1" rowspan="1">Data exchange component</td>
+      <td colspan="1" rowspan="1">Data Exchange Component</td>
     </tr>
     <tr>
       <td colspan="1" rowspan="1"><a href="https://linkeddatafragments.org/in-depth/">LDF</a>
@@ -119,7 +119,7 @@ implements the features.
       <td colspan="1" rowspan="1">Linked Data Fragments (LDF) provides lightweight, uniform interfaces that let query workloads for linked data be distributed between clients and servers.
       </td>
       <td colspan="1" rowspan="1">RDF</td>
-      <td colspan="1" rowspan="1">Data exchange component</td>
+      <td colspan="1" rowspan="1">Data Exchange Component</td>
     </tr>
     <tr>
       <td colspan="1" rowspan="1"><a href="https://www.stardog.com/">Stardog</a>
@@ -127,7 +127,7 @@ implements the features.
       <td colspan="1" rowspan="1">It is a knowledge graph platform, with support for SPARQL, that enables the management, querying, virtualisation, inferring, constraining, and learning of data.
       </td>
       <td colspan="1" rowspan="1">RDF</td>
-      <td colspan="1" rowspan="1">Data exchange component, Data model mediator</td>
+      <td colspan="1" rowspan="1">Data Exchange Component, Data Model Mediator</td>
     </tr>
     <tr>
       <td colspan="1" rowspan="1"><a href="https://jena.apache.org/documentation/fuseki2/">Apache Jena Fuseki</a>
@@ -135,7 +135,7 @@ implements the features.
       <td colspan="1" rowspan="1">It is a SPARQL server that provides the SPARQL 1.1 protocols for query and update, as well as the SPARQL Graph Store protocol. It is integrated with
       <a href="https://jena.apache.org/documentation/tdb/index.html">TDB</a> to provide a robust, transactional, persistent storage layer.</td>
       <td colspan="1" rowspan="1">RDF</td>
-      <td colspan="1" rowspan="1">Data exchange component, Data model mediator</td>
+      <td colspan="1" rowspan="1">Data Exchange Component, Data Model Mediator</td>
     </tr>
     <tr>
       <td colspan="1" rowspan="1"><a href="https://virtuoso.openlinksw.com/">Virtuoso</a>
@@ -143,7 +143,7 @@ implements the features.
       <td colspan="1" rowspan="1">It is a platform for creating and managing semantically harmonised databases, knowledge bases/graphs, filesystems, and APIs that are loosely coupled with AI Agents, Large Language Models, and other client environments.
       </td>
       <td colspan="1" rowspan="1">RDF</td>
-      <td colspan="1" rowspan="1">Data exchange component, Data model mediator</td>
+      <td colspan="1" rowspan="1">Data Exchange Component, Data Model Mediator</td>
     </tr>
     <tr>
       <td colspan="1" rowspan="1"><a href="https://rml.io">RML.io</a>
@@ -151,7 +151,7 @@ implements the features.
       <td colspan="1" rowspan="1">It allows for generating knowledge graphs from both static and dynamic data sources, including relational databases, APIs, files, and data streams.
       </td>
       <td colspan="1" rowspan="1">RDF</td>
-      <td colspan="1" rowspan="1">Data model mediator</td>
+      <td colspan="1" rowspan="1">Data Model Mediator</td>
     </tr>
     <tr>
       <td colspan="1" rowspan="1"><a href="https://github.com/eyereasoner/eyeling/">Eyeling</a>
@@ -159,7 +159,7 @@ implements the features.
       <td colspan="1" rowspan="1">It is an N3 reasoner in JavaScript.
       </td>
       <td colspan="1" rowspan="1">RDF</td>
-      <td colspan="1" rowspan="1">Data model mediator</td>
+      <td colspan="1" rowspan="1">Data Model Mediator</td>
     </tr>
     <tr>
       <td colspan="1" rowspan="1"><a href="https://eclipse-edc.github.io/documentation/for-adopters/federated-catalog/">Federated Catalog of Eclipse Data Space Components Connector</a>
