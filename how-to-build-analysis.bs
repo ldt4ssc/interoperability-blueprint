@@ -1,0 +1,79 @@
+### How to build Analysis components ### {#how-to-build-analysis}
+
+In this section,
+we list the different tools that we can use for the implementation of
+the components of the Analysis component of an LDT in [Table 7](#table-analysis).
+The table contains the name of the tool, linked to its website, a description, and
+the components of which the tool (partly) implements the features.
+
+<figure id="table-analysis" class="table">
+  <table>
+    <thead>
+    <tr>
+      <th colspan="1" rowspan="1">Tool</th>
+      <th colspan="1" rowspan="1">Description</th>
+      <th colspan="1" rowspan="1">Component</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <td colspan="1" rowspan="1"><a href="https://kserve.github.io/website/docs/intro">KServe</a>
+      </td>
+      <td colspan="1" rowspan="1">This is a serving framework for deploying ML models as APIs. It enables AI inference services to be exposed consistently.
+      </td>
+      <td colspan="1" rowspan="1">AI model catalogue, AI model manager, AI model provider, AI model runner
+      </td>
+    </tr>
+    <tr>
+      <td colspan="1" rowspan="1"><a href="https://www.kubeflow.org/docs/">Kubeflow</a>
+      </td>
+      <td colspan="1" rowspan="1">This is an open-source platform for ML and MLOps on Kubernetes introduced by Google. It supports AI services leveraging graph representations of LDT data.
+      </td>
+      <td colspan="1" rowspan="1">AI model catalogue, AI model manager, AI model provider, AI model runner
+      </td>
+    </tr>
+    <tr>
+      <td colspan="1" rowspan="1"><a href="https://interoperable-europe.ec.europa.eu/collection/ldttoolbox/solution/eu-ldt-ai-notebook">EU LDT AI Notebook</a>
+      </td>
+      <td colspan="1" rowspan="1">This component of the EU LDT Toolbox allows developers to develop new algorithms and models for their digital twins.
+      </td>
+      <td colspan="1" rowspan="1">AI model catalogue, AI model manager, AI model provider, AI model runner
+      </td>
+    </tr>
+    <tr>
+      <td colspan="1" rowspan="1"><a href="https://carla.readthedocs.io/en/latest/">CARLA Simulator</a>
+      </td>
+      <td colspan="1" rowspan="1">It is a toolbox based on <a href="https://dev.epicgames.com/documentation/en-us/unreal-engine">Unreal Engine</a> to implement driving simulations on LDTs. It uses the ASAM OpenDRIVE standard to define roads and urban settings.
+      </td>
+      <td colspan="1" rowspan="1">Simulation</td>
+    </tr>
+    <tr>
+      <td colspan="1" rowspan="1"><a href="https://docs.unity3d.com/Packages/com.unity.ml-agents@4.0/manual/index.html">Unity ML Agents</a>
+      </td>
+      <td colspan="1" rowspan="1">It is a toolkit for training intelligent agents in simulated environments. It enables reinforcement learning scenarios linked to LDT data
+      </td>
+      <td colspan="1" rowspan="1">Simulation</td>
+    </tr>
+    <tr>
+      <td colspan="1" rowspan="1"><a href="https://interoperable-europe.ec.europa.eu/collection/ldttoolbox/solution/eu-ldt-data-modeller">EU LDT Data Modeller</a>
+      </td>
+      <td colspan="1" rowspan="1">This component of the EU LDT Toolbox allows developers to create synthetic data to simulate scenarios.
+      </td>
+      <td colspan="1" rowspan="1">Simulation</td>
+    </tr>
+    <tr>
+      <td colspan="1" rowspan="1"><a href="https://interoperable-europe.ec.europa.eu/collection/ldttoolbox/solution/eu-ldt-federated-learning">EU LDT Federated Learning</a>
+      </td>
+      <td colspan="1" rowspan="1">This component of the EU LDT Toolbox allows developers to train new models in a federated environment.
+      </td>
+      <td colspan="1" rowspan="1">
+        AI model manager, AI model provider, AI model runner.</td>
+    </tr>
+    </tbody>
+  </table>
+  <figcaption>
+    These are tools that implement Analysis features.
+    We list the name of each tool, linked to its website, a description, and
+    the components of which the tool (partly) implements the features.
+  </figcaption>
+</figure>

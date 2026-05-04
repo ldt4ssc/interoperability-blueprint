@@ -102,7 +102,7 @@ Next to this model, the provider also deploys the third version of AI model 2
 (bottom-right diagram, arrow 3).
 
 <figure id="fig-how-ai-components-works">
-  <<img id="how-ai-components-work" alt="TO-DO" src="img/how-ai-components-work.jpg">
+  <img id="how-ai-components-work" alt="TO-DO" src="img/how-ai-components-work.jpg">
 	<figcaption>
 		The AI Model Manager, AI Model Catalogue, AI Model Provider, and AI Model Runner work together to support
 		working with different AI models.

@@ -1,0 +1,93 @@
+### How to build Decision-Making components ### {#how-to-build-decision-making}
+
+In this section,
+we list the different tools that we can use for the implementation of
+the components of the Decision-Making component of an LDT in [Table 6](#table-decision-making).
+The table contains the name of each tool, linked to its website, a description, and the components of which the
+tool (partly) implements the features.
+
+<figure id="table-decision-making" class="table">
+  <table>
+    <thead>
+    <tr>
+      <th colspan="1" rowspan="1">Tool</th>
+      <th colspan="1" rowspan="1">Description</th>
+      <th colspan="1" rowspan="1">Component</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <td colspan="1" rowspan="1"><a href="https://docs.decidim.org/en/develop/index.html">Decidim</a>
+      </td>
+      <td colspan="1" rowspan="1">This is a participatory democracy framework, written in Ruby on Rails, originally developed for the Barcelona City government&rsquo;s online and offline participation website.
+      </td>
+      <td colspan="1" rowspan="1">Decision support channels
+      </td>
+    </tr>
+    <tr>
+      <td colspan="1" rowspan="1"><a href="https://consuldemocracy.org/">Consul Democracy</a>
+      </td>
+      <td colspan="1" rowspan="1">This is a digital democratic participation enabler that provides both public and civil society organisations with digital democratic processes.
+      </td>
+      <td colspan="1" rowspan="1">Decision support channels</td>
+    </tr>
+    <tr>
+      <td colspan="1" rowspan="1"><a href="https://github.com/LimeSurvey/LimeSurvey">LimeSurvey</a>
+      </td>
+      <td colspan="1" rowspan="1">This is a powerful, open-source survey platform. It&rsquo;s a free alternative to SurveyMonkey, Typeform, Qualtrics, and Google Forms, making it simple to create online surveys and forms with flexibility.
+      </td>
+      <td colspan="1" rowspan="1">Decision support channels</td>
+    </tr>
+    <tr>
+      <td colspan="1" rowspan="1">&nbsp;<a href="https://wirecloud.readthedocs.io/en/stable/">Wirecloud</a>
+      </td>
+      <td colspan="1" rowspan="1">This is a user-development tool aimed at easily creating web applications and dashboards/cockpits. It consists of a mash-up platform that allows users to compose dashboards by wiring together heterogeneous widgets and data sources via configurable operators.
+      </td>
+      <td colspan="1" rowspan="1">Application composition</td>
+    </tr>
+    <tr>
+      <td colspan="1" rowspan="1"><a href="https://nodered.org/">Node-RED</a>
+      </td>
+      <td colspan="1" rowspan="1">Based on Node.js, it enables low-code application building for event-driven applications.
+      </td>
+      <td colspan="1" rowspan="1">Application composition, Notifications
+      </td>
+    </tr>
+    <tr>
+      <td colspan="1" rowspan="1"><a href="https://ntfy.sh/">ntfy</a>
+      </td>
+      <td colspan="1" rowspan="1">This is a pub-sub notification service. It allows subscribers (end-users of an LDT, for instance) to receive phone or desktop notifications using a REST API.
+      </td>
+      <td colspan="1" rowspan="1">Notifications</td>
+    </tr>
+    <tr>
+      <td colspan="1" rowspan="1"><a href="https://github.com/caronc/apprise">Apprise</a>
+      </td>
+      <td colspan="1" rowspan="1">This allows sending notifications to end-users via multiple popular notification services (Telegram, Discord, Slack, and so on), asynchronously.
+      </td>
+      <td colspan="1" rowspan="1">Notifications</td>
+    </tr>
+    <tr>
+      <td colspan="1" rowspan="1"><a
+          href="https://interoperable-europe.ec.europa.eu/collection/ldttoolbox/solution/eu-ldt-participate">EU LDT Participate</a>
+      </td>
+      <td colspan="1" rowspan="1">This component of the EU LDT Toolbox allows municipalities to provide mechanisms to engage with their citizens to provide feedback on different scenarios.
+      </td>
+      <td colspan="1" rowspan="1">Decision support channels</td>
+    </tr>
+    <tr>
+      <td colspan="1" rowspan="1"><a
+          href="https://interoperable-europe.ec.europa.eu/collection/ldttoolbox/solution/eu-ldt-city-innovation-planner">EU LDT City Innovation Planner</a>
+      </td>
+      <td colspan="1" rowspan="1">This component of the EU LDT Toolbox allows municipalities to monitor and manage their adoption of the different tools and use cases based on their goals and using standardised maturity frameworks.
+      </td>
+      <td colspan="1" rowspan="1">Decision support channels</td>
+    </tr>
+    </tbody>
+  </table>
+  <figcaption>
+    These are tools that implement Decision-Making features.
+    We list the name of each tool, linked to its website, a description, and
+    the components of which the tool (partly) implements the features.
+  </figcaption>
+</figure>

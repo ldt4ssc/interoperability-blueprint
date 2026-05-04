@@ -12,8 +12,7 @@ img {
 #ldt-discovery,
 #focus-on-data-exchange-types,
 #connect-ldts-via-ds-1,
-#connect-ldts-via-ds-2
-{
+#connect-ldts-via-ds-2 {
     width: 70%;
 }
 
@@ -41,4 +40,27 @@ figcaption:not(.no-marker)::before {
 
 figure.table figcaption:not(.no-marker)::before {
     content: "Table " counter(table) ". " !important;
+}
+
+table {
+    margin-bottom: 10px !important;
+}
+
+table, th, td {
+    border: 1px solid;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+th {
+    background-color: #1E75D6;
+    color: white;
+    border-color: black;
 }

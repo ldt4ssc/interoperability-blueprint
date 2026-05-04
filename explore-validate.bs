@@ -1,0 +1,36 @@
+## Explore and validate ## {#explore-validate}
+
+This stage of building an LDT refers to the EXPLORE and VALIDATE steps of the LDT4SSC Methodology
+(see [Figure 19](#fig-how-to-build-an-ldt)).
+Once we identify a shared local challenge that could become an LDT use case,
+the objectives of the EXPLORE step are to
+
+- **Identify partners** to build the LDT with, as well as the **stakeholders of the use case**,
+    to align them and ensure shared motivation (BO2);
+- **Create a shared understanding of the use case**, its pain points, purpose and envisioned solutions and
+    have clear project objectives and alignment with public policy goals (with our key stakeholders) (BO1);
+- **Map out costs and benefits** that will then guide
+    decision-making across economic, social and environmental dimensions (BO3).
+
+Following this first step comes the VALIDATE step,
+where we build the specifications for the LDT.
+It provides the link between the vision that emerges from the ideation and the actual
+implementation of the project.
+On the technical side,
+the goal of this step is to specify **functional requirements** (indicators, visualisations, and so on)
+to address the local challenge (T2).
+We must do this with a user-centric and needs-based approach by
+determining user-personas, for instance (T1).
+On the non-technical side, the objective is to
+
+- Set up Data Governance and governance framework inventorying data, its lifecycle
+      and its multi-stakeholder governance scheme (BO4);
+- Set up a legal framework that takes into account the regulatory constraints (BO5) and;
+- Set up the organisational form and the supporting contractual framework to
+    initiate the building of the LDT (legal clauses) (BO6).
+
+This step offers the LDT a strong legal and governance base to be built on.
+
+Once we've performed these two steps and the resulting specifications provide a solution to
+the identified local challenge, and the balance between the cost and benefits is positive,
+we can move on to defining and implementing the LDT.

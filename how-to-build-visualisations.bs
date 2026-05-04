@@ -1,0 +1,135 @@
+### How to build Visualisations ### {#how-to-build-visualisations}
+
+In this section,
+we list the different tools that we can use for the implementation of
+the components of the Visualisation component of an LDT in [Table 8](#table-visualisations).
+We categorise the tools
+based on whether they have features for 3D, dashboards, geo, augmented reality (AR), or
+extended reality (XR).
+The table contains the name of each tool, linked to its website, a description, and its categories.
+
+<figure id="table-visualisations" class="table">
+  <table>
+    <thead>
+    <tr>
+      <th colspan="1" rowspan="1">Tool</th>
+      <th colspan="1" rowspan="1">Description</th>
+      <th colspan="1" rowspan="1">Category</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <td colspan="1" rowspan="1"><a href="https://docs.unity.com/en-us">Unity</a>
+      </td>
+      <td colspan="1" rowspan="1">It is a widely used 3D platform primarily for creating 2D, 3D, AR, and VR applications. As a popular real-time 3D development engine, we can use Unity to produce applications for any immersive scenario. The bundled support for AI and simulations can be particularly useful for enhanced AI-based services for LDTs.
+      </td>
+      <td colspan="1" rowspan="1">3D, AR</td>
+    </tr>
+    <tr>
+      <td colspan="1" rowspan="1"><a href="https://dev.epicgames.com/documentation/en-us/unreal-engine">Unreal Engine</a>
+      </td>
+      <td colspan="1" rowspan="1">It is another widely used real-time 3D creation platform. Known for its high-performance graphics, scalability, and versatility, it is particularly useful for game development, film production, architecture visualisation, automotive simulations, VR, and AR applications. It can be a viable tool for creating immersive Smart City applications that require high-quality visual details.
+
+
+        </td>
+      <td colspan="1" rowspan="1">3D, AR</td>
+    </tr>
+    <tr>
+      <td colspan="1" rowspan="1"><a href="https://cesium.com/platform/cesium-for-unreal/">Cesium for Unreal</a>
+      </td>
+      <td colspan="1" rowspan="1">Built on open standards and APIs, it combines the 3D geospatial capability of Cesium with the high-fidelity rendering power of Unreal Engine, unlocking the 3D geospatial ecosystem for game engines. It provides full-scale WGS84 global level 3-dimensional tiling to be used in 3D visualisations.
+      </td>
+      <td colspan="1" rowspan="1">3D</td>
+    </tr>
+    <tr>
+      <td colspan="1" rowspan="1"><a href="https://www.blender.org/download/">Blender</a>
+      </td>
+      <td colspan="1" rowspan="1">It is a free and open-source 3D creation suite used for modelling computer graphics. It comes with a large suite of functions and features that are constantly being extended by the open-source community. We can use Blender for modelling assets for 3D visualisations of cities in LDTs. It also allows importing scanned assets for cleaning and post-processing, which can later be exported into XR applications.
+      </td>
+      <td colspan="1" rowspan="1">3D</td>
+    </tr>
+    <tr>
+      <td colspan="1" rowspan="1"><a href="https://grafana.com/docs/">Grafana</a>
+      </td>
+      <td colspan="1" rowspan="1">It is an open-source analytics and visualisation platform. Within NGSI-LD or FIWARE-based architectures, it is commonly used to visualise contextual data or performance metrics exposed via APIs, well-adapted to real-time observations.
+      </td>
+      <td colspan="1" rowspan="1">Dashboard</td>
+    </tr>
+    <tr>
+      <td colspan="1" rowspan="1"><a href="https://superset.apache.org/docs/6.0.0/intro">Apache Superset</a>
+      </td>
+      <td colspan="1" rowspan="1">It is an open-source business intelligence and visualisation tool that can connect to NGSI-LD-backed data stores or data space connectors for dashboarding and exploration of contextual or federated datasets. It is particularly user-oriented, allowing end-users to easily create their own visualisations.
+      </td>
+      <td colspan="1" rowspan="1">Dashboard</td>
+    </tr>
+    <tr>
+      <td colspan="1" rowspan="1"><a href="http://deck.gl">deck.gl</a>
+      </td>
+      <td colspan="1" rowspan="1">It is a WebGL-based library for large-scale geospatial visualisation. It supports high-performance spatial views of LDT data.
+      </td>
+      <td colspan="1" rowspan="1">Geo</td>
+    </tr>
+    <tr>
+      <td colspan="1" rowspan="1"><a href="https://maplibre.org/maplibre-gl-js/docs/">MapLibre GL JS</a>
+      </td>
+      <td colspan="1" rowspan="1">It is an open-source geospatial mapping library. It supports map-based visualisations of LDT spatial data.
+      </td>
+      <td colspan="1" rowspan="1">Geo</td>
+    </tr>
+    <tr>
+      <td colspan="1" rowspan="1"><a href="http://kepler.gl">kepler.gl</a>
+      </td>
+      <td colspan="1" rowspan="1">It is a geospatial analytics tool for large datasets. It enables the exploratory analysis of LDT spatial data.
+      </td>
+      <td colspan="1" rowspan="1">Geo</td>
+    </tr>
+    <tr>
+      <td colspan="1" rowspan="1"><a href="https://docs.godotengine.org/en/stable/">Godot</a>
+      </td>
+      <td colspan="1" rowspan="1">It is a free and open-source game engine known for its lightweight nature, flexibility, and strong community-driven development, opposite to Unreal Engine and Unity, which are both profit-seeking projects. For enhanced services for LDTs, Godot is a viable alternative for developing immersive applications that look for minimal footprint and development costs.
+      </td>
+      <td colspan="1" rowspan="1">AR, XR</td>
+    </tr>
+    <tr class="c103">
+      <td colspan="1" rowspan="1"><a href="https://developer.apple.com/documentation/arkit">ARKit</a>
+      </td>
+      <td colspan="1" rowspan="1">It is Apple&rsquo;s AR development framework, designed to create immersive and interactive AR experiences for iOS and iPadOS devices. ARKit is a mandatory tool for any development considered for AR in Apple devices.
+      </td>
+      <td colspan="1" rowspan="1">AR, XR</td>
+    </tr>
+    <tr>
+      <td colspan="1" rowspan="1"><a href="https://developers.google.com/ar">ARCore</a>
+      </td>
+      <td colspan="1" rowspan="1">It is Google&rsquo;s augmented reality development platform, designed to bring immersive AR experiences to Android and iOS devices. ARCore enables developers to create interactive AR applications by leveraging the device&rsquo;s camera, motion sensors, and artificial intelligence to understand its environment. Any application developer hoping to target Android devices must interact with ARCore.
+      </td>
+      <td colspan="1" rowspan="1">AR, XR</td>
+    </tr>
+    <tr>
+      <td colspan="1" rowspan="1"><a href="https://registry.khronos.org/OpenXR/%23apispecs">OpenXR</a>
+      </td>
+      <td colspan="1" rowspan="1">It is a royalty-free, open standard that provides a common set of APIs for developing XR applications that run across a wide range of AR and VR devices. It is a low-level tool that allows developers to target multiple different targets with the same API instead of writing code for every device and operating system separately.
+      </td>
+      <td colspan="1" rowspan="1">AR, XR</td>
+    </tr>
+    <tr>
+      <td colspan="1" rowspan="1"><a href="https://www.w3.org/TR/webxr/">WebXR</a>
+      </td>
+      <td colspan="1" rowspan="1">It is the web equivalent of the OpenXR APIs that works on the web platform (HTML5).
+      </td>
+      <td colspan="1" rowspan="1">AR, XR</td>
+    </tr>
+    <tr>
+      <td colspan="1" rowspan="1"><a href="https://interoperable-europe.ec.europa.eu/collection/ldttoolbox/solution/eu-ldt-play-visualise-1">EU LDT Play &amp; Visualise</a>
+      </td>
+      <td colspan="1" rowspan="1">This component of the EU LDT Toolbox allows municipalities to visualise and interact with their LDTs.
+      </td>
+      <td colspan="1" rowspan="1">dashboard</td>
+    </tr>
+    </tbody>
+  </table>
+  <figcaption>
+		These are tools that implement Visualisation features.
+		We list the name of each tool, linked to its website, a description, and its categories.
+	</figcaption>
+</figure>
+

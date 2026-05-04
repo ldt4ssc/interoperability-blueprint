@@ -1490,7 +1490,7 @@ Possible extra rowspan handling
 </style>
   <meta content="Bikeshed version 945dae3, updated Fri Apr 17 02:01:25 2026 +0000" name="generator">
   <link href="_ORCHESTRATOR_CURRENT_BUILD_FULL_LINK_" rel="canonical">
-  <meta content="b538bb5acbaa362547db0de68f0701470e4f7e8c" name="revision">
+  <meta content="58b242684b7c10215652a4a79f6160c0d952ded5" name="revision">
   <link href="css/style.css" rel="stylesheet">
 <style>/* Boilerplate: style-autolinks */
 .css.css, .property.property, .descriptor.descriptor {
@@ -3332,7 +3332,7 @@ Next to this model, the provider also deploys the third version of AI model 2
 (bottom-right diagram, arrow 3).</p>
    <figure id="fig-how-ai-components-works">
     
-  &lt;<img alt="TO-DO" height="3670" id="how-ai-components-work" src="img/how-ai-components-work.jpg" width="3870">
+  <img alt="TO-DO" height="3670" id="how-ai-components-work" src="img/how-ai-components-work.jpg" width="3870">
 	
     <figcaption>
 		The AI Model Manager, AI Model Catalogue, AI Model Provider, and AI Model Runner work together to support
@@ -3570,14 +3570,704 @@ We cover <strong>T2</strong>
 because the Discovery Service can compare these details with the details of the LDT,
 which are also published through a Catalogue.</p>
    <h2 class="heading settled" data-level="6" id="how-to-build-ldt"><span class="secno">6. </span><span class="content">How to build an LDT</span><a class="self-link" href="#how-to-build-ldt"></a></h2>
+   <p>In this chapter,
+we discuss how we can build an LDT based on the <a href="#reference-architectures">reference architectures</a>,
+following
+the <a href="https://knowledgehub.ldt4ssc.eu/resources_content/non_tech_resources/#the-ldt4ssc-methodology">LDT4SSC Methodology</a>
+(see <a href="#fig-how-to-build-an-ldt">Figure 19</a>.
+First, we discuss <a href="#explore-validate">how to explore and validate an LDT as a solution</a>.
+Next, we discuss <a href="#define-implement">how to define and implement an LDT</a>.
+Note that participatory, user-centred, and service design methods are used throughout the 4 steps.</p>
+   <figure id="fig-how-to-build-an-ldt">
+    
+  <img alt="TO-DO" height="5089" id="img-how-to-build-an-ldt" src="img/how-to-build-an-ldt.jpg" width="2889">
+	
+    <figcaption>
+		The LDT4SSC methodology for building an LDT consists of 4 steps
+    (EXPLORE, VALIDATE, DEFINE, and IMPLEMENT).
+	</figcaption>
+   </figure>
    <h3 class="heading settled" data-level="6.1" id="explore-validate"><span class="secno">6.1. </span><span class="content">Explore and validate</span><a class="self-link" href="#explore-validate"></a></h3>
+   <p>This stage of building an LDT refers to the EXPLORE and VALIDATE steps of the LDT4SSC Methodology
+(see <a href="#fig-how-to-build-an-ldt">Figure 19</a>).
+Once we identify a shared local challenge that could become an LDT use case,
+the objectives of the EXPLORE step are to</p>
+   <ul>
+    <li data-md>
+     <p><strong>Identify partners</strong> to build the LDT with, as well as the <strong>stakeholders of the use case</strong>,
+to align them and ensure shared motivation (BO2);</p>
+    <li data-md>
+     <p><strong>Create a shared understanding of the use case</strong>, its pain points, purpose and envisioned solutions and
+have clear project objectives and alignment with public policy goals (with our key stakeholders) (BO1);</p>
+    <li data-md>
+     <p><strong>Map out costs and benefits</strong> that will then guide
+decision-making across economic, social and environmental dimensions (BO3).</p>
+   </ul>
+   <p>Following this first step comes the VALIDATE step,
+where we build the specifications for the LDT.
+It provides the link between the vision that emerges from the ideation and the actual
+implementation of the project.
+On the technical side,
+the goal of this step is to specify <strong>functional requirements</strong> (indicators, visualisations, and so on)
+to address the local challenge (T2).
+We must do this with a user-centric and needs-based approach by
+determining user-personas, for instance (T1).
+On the non-technical side, the objective is to</p>
+   <ul>
+    <li data-md>
+     <p>Set up Data Governance and governance framework inventorying data, its lifecycle
+  and its multi-stakeholder governance scheme (BO4);</p>
+    <li data-md>
+     <p>Set up a legal framework that takes into account the regulatory constraints (BO5) and;</p>
+    <li data-md>
+     <p>Set up the organisational form and the supporting contractual framework to
+initiate the building of the LDT (legal clauses) (BO6).</p>
+   </ul>
+   <p>This step offers the LDT a strong legal and governance base to be built on.</p>
+   <p>Once we’ve performed these two steps and the resulting specifications provide a solution to
+the identified local challenge, and the balance between the cost and benefits is positive,
+we can move on to defining and implementing the LDT.</p>
    <h3 class="heading settled" data-level="6.2" id="define-implement"><span class="secno">6.2. </span><span class="content">Define and implement</span><a class="self-link" href="#define-implement"></a></h3>
+   <p>In this section,
+we discuss how to define and implement an LDT after having discussed
+<a href="#explore-validate">how to explore and validate it as a solution</a>.
+This stage of building an LDT refers to the DEFINE and IMPLEMENT steps of the LDT4SSC Methodology.
+We visualise this in <a href="#fig-how-to-build-an-ldt">Figure 19</a>,
+where technical steps are blue with rounded corners and business and
+organisational steps are green with square corners.</p>
+   <p>After the EXPLORE and VALIDATE steps,
+we determine the LDT’s technical requirements (T3) to make the functional requirements (T2) a reality.
+To do this, we refer to the following <a href="#how-to-build-data-acquisition">§ 6.2.1 How to build a Data Acquisition component</a> through <a href="#how-to-build-visualisations">§ 6.2.6 How to build Visualisations</a>,
+which contain recommendations for tools that implement one or more features of the components.
+Note that, to the best of our knowledge, for some components,
+there are no tools available (yet) that implement one or more of their features.
+It’s at this stage that we find, adapt or create data models for semantic interoperability.
+In parallel,
+we should determine how value is created and captured (BO8) and
+explore regulatory boundaries (BO9).
+We might need to do T3 with a service provider,
+which will impact the contractual and government framework (BO11).</p>
+   <p>Next, we determine the technical gaps between the LDT’s technical requirements and
+what the possibly already existing data platform (SIG, BIM, data dashboards, and so on) offers and
+the data available (T4).
+We follow this up, in parallel,
+with mapping out the costs and benefits and assessing the return on investment,
+building on the initial mapping (BO3) and recording all relevant baseline data.
+We then determine how we will deal with the technical gaps (T5).
+BO10 leads us to exploring if we need data providers and/or intermediaries and operators (BO6), and
+if we need to make changes to the existing initial governance and/or legal and contractual frameworks (BO11).
+BO10 and BO11 might influence each other,
+because, on the one side,
+the governance framework might affect the data providers and intermediaries we are allowed to interact with, and,
+on the other side,
+if we want to work with providers and intermediaries that don’t fit within the governance framework,
+we need to update the governance framework.
+BO10 and T5 might also influence each other,
+because, on the one hand,
+the technical gaps might influence which providers and intermediaries we need, and,
+on the other hand, the unavailability of certain providers and intermediaries might require
+additional actions to resolve a technical gap.
+Once this is done,
+we can build a prototype of the LDT (T6) and test it with users,
+making the process agile and this step tangible.
+The feedback we gather during these tests might require us to
+revisit previous elements from the EXPLORE and DEFINE steps to integrate the needed changes.
+Once the PROTOTYPE step is over, we can move on to the real-scale deployment in the IMPLEMENT step.
+We follow T4 by implementing and deploying the technical components.
+In parallel,
+we adapt the contractual framework to include
+the contractual arrangements for deployment (maintenance, security, and so on) (BO12),
+which requires parties to sign new agreements and/or contracts (BO13).
+This contractual framework must enable the sharing of results (data models, SLCs, and so on) back to the community and
+the replicability of the LDT (BO15).
+We need to onboard the users and participants alike in the LDT (BO14).
+Finally, we can start using the LDT (P6) and start creating the envisioned value for our beneficiaries.
+Note that this process might not be straightforward, and
+we might need to go back to previous steps to adapt or validate specific details,
+either with respect to the technical aspects or the business and organisational aspects, or both.
+In the following sections, <a href="#how-to-build-data-acquisition">§ 6.2.1 How to build a Data Acquisition component</a> to <a href="#how-to-build-visualisations">§ 6.2.6 How to build Visualisations</a>,
+we provide a non-exhaustive overview of tools we can use to implement the different components of an LDT.
+They are illustrative examples to support implementation choices, rather than as prescriptive solutions.
+We grouped the tools according to the components they support, and
+may implement all or only part of the required functionalities.
+In practice,
+multiple tools may be combined to implement a single component.</p>
    <h4 class="heading settled" data-level="6.2.1" id="how-to-build-data-acquisition"><span class="secno">6.2.1. </span><span class="content">How to build a Data Acquisition component</span><a class="self-link" href="#how-to-build-data-acquisition"></a></h4>
+   <p>In this section,
+we list the different tools that we can use for the implementation of
+the components of the Data Acquisition component of an LDT in <a href="#table-data-acquisition">Table 3</a>.
+The table contains the name of each tool, linked to its website, a description, and
+the component of which the tool (partly) implements the features.</p>
+   <figure class="table" id="table-data-acquisition">
+    <table>
+     <thead>
+      <tr>
+       <th colspan="1" rowspan="1">Tool
+       <th colspan="1" rowspan="1">Description
+       <th colspan="1" rowspan="1">Component
+     <tbody>
+      <tr>
+       <td colspan="1" rowspan="1"><a href="https://kafka.apache.org/41/">Apache Kafka</a>
+			
+       <td colspan="1" rowspan="1">It is a distributed event streaming platform for high-throughput data pipelines. It supports real-time ingestion and dissemination of LDT data.
+			
+       <td colspan="1" rowspan="1">ETL
+      <tr>
+       <td colspan="1" rowspan="1"><a href="https://github.com/redpanda-data/redpanda">Redpanda</a>
+			
+       <td colspan="1" rowspan="1">It is a Kafka-compatible event streaming platform. It provides an alternative runtime for event-driven LDT architectures.
+			
+       <td colspan="1" rowspan="1">ETL
+      <tr>
+       <td colspan="1" rowspan="1"><a href="https://www.google.com/url?q=https://pulsar.apache.org/docs/4.1.x/&amp;sa=D&amp;source=editors&amp;ust=1777879419825750&amp;usg=AOvVaw1Vfm8A_OaTACs_tR3xQ7i-">Apache Pulsar</a>
+			
+       <td colspan="1" rowspan="1">It is a distributed messaging and streaming platform with multi-tenant support. It can be used to scale event-based LDT ingestion and analytics.
+			
+       <td colspan="1" rowspan="1">ETL
+      <tr>
+       <td colspan="1" rowspan="1"><a href="https://debezium.io/documentation/reference/3.4/">Debezium</a>
+			
+       <td colspan="1" rowspan="1">It is a change data capture platform that streams row-level changes from databases into event streams in real time. It enables existing operational databases to be connected to the LDT without intrusive modifications, allowing updates in source systems to be reflected continuously in ingestion pipelines.
+			
+       <td colspan="1" rowspan="1">ETL
+      <tr>
+       <td colspan="1" rowspan="1"><a href="https://docs.confluent.io/platform/current/connect/index.html">Kafka Connect</a>
+			
+       <td colspan="1" rowspan="1">It is a framework for building and running reusable connectors that move data between Kafka and external systems such as databases, file systems, or APIs. It provides a standardised mechanism to integrate data sources and sinks into event-driven ingestion pipelines.
+			
+       <td colspan="1" rowspan="1">ETL
+      <tr>
+       <td colspan="1" rowspan="1"><a href="https://comunica.dev">Comunica</a>
+			
+       <td colspan="1" rowspan="1">It is a knowledge graph querying framework. It uses flexible SPARQL and GraphQL over decentralised RDF on the web.
+			
+       <td colspan="1" rowspan="1">ETL
+      <tr>
+       <td colspan="1" rowspan="1"><a href="https://rml.io">RML.io</a>
+			
+       <td colspan="1" rowspan="1">It allows for generating knowledge graphs from both static and dynamic data sources, including relational databases, APIs, files, and data streams.
+			
+       <td colspan="1" rowspan="1">ETL
+      <tr>
+       <td colspan="1" rowspan="1"><a href="https://etl.linkedpipes.com/documentation/">LinkedPipes ETL</a>
+			
+       <td colspan="1" rowspan="1">It allows the designing of pipelines, defined data transformation processes consisting of interconnected components.
+			
+       <td colspan="1" rowspan="1">ETL
+      <tr>
+       <td colspan="1" rowspan="1"><a href="https://interoperable-europe.ec.europa.eu/collection/ldttoolbox/solution/eu-ldt-data-platform">EU LDT Data Platform</a>
+			
+       <td colspan="1" rowspan="1">This component of the EU LDT Toolbox allows municipalities to connect their LDTs with their databases and sensors, integrating data in standard formats and giving it context.
+			
+       <td colspan="1" rowspan="1">ETL
+    </table>
+    <figcaption>
+    These are tools that implement Data Acquisition features.
+    We list the name of each tool, linked to its website, a description, and the component of which the tool
+    (partly) implements the features.
+  </figcaption>
+   </figure>
    <h4 class="heading settled" data-level="6.2.2" id="how-to-build-data-management"><span class="secno">6.2.2. </span><span class="content">How to build a Data Management component</span><a class="self-link" href="#how-to-build-data-management"></a></h4>
+   <p>In this section,
+we list the different tools that we can use for the implementation of
+the components of the Data Management component of an LDT in <a href="#table-data-management">Table 4</a>.
+The table contains the name of each tool, linked to its website, a description, whether it’s intended to be used
+with RDF-based or NGSI-LD-based systems, and the components of which the tool (partly)
+implements the features.</p>
+   <figure class="table" id="table-data-management">
+    <table>
+     <thead>
+      <tr>
+       <th colspan="1" rowspan="1">Tool
+       <th colspan="1" rowspan="1">Description
+       <th colspan="1" rowspan="1">RDF/NGSI-LD
+       <th colspan="1" rowspan="1">Component
+     <tbody>
+      <tr>
+       <td colspan="1" rowspan="1"><a href="https://www.postgresql.org/docs/18/index.html">PostgreSQL</a>
+      
+       <td colspan="1" rowspan="1">It is a relational database for structured data persistence. It commonly backs context brokers and supports LDT state storage. Its capabilities are enhanced by the geospatial analysis library PostGIS and the time-series analysis library TimescaleDB.
+      
+       <td colspan="1" rowspan="1">N/A
+       <td colspan="1" rowspan="1">Data storage
+      <tr>
+       <td colspan="1" rowspan="1"><a href="https://github.com/mongodb/mongo">MongoDB</a>
+      
+       <td colspan="1" rowspan="1">It is a document-oriented database for flexible data models. It can store semi-structured data used by LDT services.
+      
+       <td colspan="1" rowspan="1">N/A
+       <td colspan="1" rowspan="1">Data storage
+      <tr>
+       <td colspan="1" rowspan="1"><a href="https://ldes.tech">LDES</a>
+      
+       <td colspan="1" rowspan="1">Linked Data Event Streams (LDES) is an initiative to help data publishers find a balance between publishing data through an as-complete-as-possible set of querying APIs and providing a simple data dump. They propose an event stream as the base API, and want to make it as lightweight as possible to host one.
+      
+       <td colspan="1" rowspan="1">RDF
+       <td colspan="1" rowspan="1">Data storage
+      <tr>
+       <td colspan="1" rowspan="1"><a href="https://linkeddatafragments.org/in-depth/">LDF</a>
+      
+       <td colspan="1" rowspan="1">Linked Data Fragments (LDF) provides lightweight, uniform interfaces that let query workloads for linked data be distributed between clients and servers.
+      
+       <td colspan="1" rowspan="1">RDF
+       <td colspan="1" rowspan="1">Data storage
+      <tr>
+       <td colspan="1" rowspan="1"><a href="https://www.stardog.com/">Stardog</a>
+      
+       <td colspan="1" rowspan="1">It is a knowledge graph platform, with support for SPARQL, that enables the management, querying, virtualisation, inferring, constraining, and learning of data.
+      
+       <td colspan="1" rowspan="1">RDF
+       <td colspan="1" rowspan="1">Data storage
+      <tr>
+       <td colspan="1" rowspan="1"><a href="https://jena.apache.org/documentation/fuseki2/">Apache Jena Fuseki</a>
+      
+       <td colspan="1" rowspan="1">It is a SPARQL server that Fuseki provides the SPARQL 1.1 protocols for query and update, as well as the SPARQL Graph Store protocol.
+      It is integrated with <a href="https://jena.apache.org/documentation/tdb/index.html">TDB</a> to provide a robust, transactional, persistent storage layer.
+       <td colspan="1" rowspan="1">RDF
+       <td colspan="1" rowspan="1">Data storage
+      <tr>
+       <td colspan="1" rowspan="1"><a href="https://virtuoso.openlinksw.com/">Virtuoso</a>
+      
+       <td colspan="1" rowspan="1">It is a platform for creating and managing semantically harmonised databases, knowledge bases/graphs, filesystems, and APIs that are loosely coupled with AI Agents, Large Language Models, and other client environments.
+      
+       <td colspan="1" rowspan="1">RDF
+       <td colspan="1" rowspan="1">Data storage
+      <tr>
+       <td colspan="1" rowspan="1"><a href="https://interoperable-europe.ec.europa.eu/collection/ldttoolbox/solution/eu-ldt-data-platform">EU LDT Data Platform</a>
+      
+       <td colspan="1" rowspan="1">
+        <p>This component of the EU LDT Toolbox allows municipalities to connect their LDTs with their databases and sensors, integrating data in standard formats and giving it context.
+      </p>
+       <td colspan="1" rowspan="1">N/A
+       <td colspan="1" rowspan="1">Data storage
+      <tr>
+       <td colspan="1" rowspan="1"><a href="https://stellio.readthedocs.io/en/latest/">Stellio Context Broker</a>
+      
+       <td colspan="1" rowspan="1">It is an open-source NGSI-LD-compliant context broker. It enables management of entities, relationships, and subscriptions. It is built around a Kafka message broker, embeds a PostgreSQL database for context management, with enhanced timeseries (TimescaleDB) and geospatial (PostGIS) capabilities. It is built on a Spring Boot microservices architecture. It embeds an optional Keycloak connection and security API, allowing fine-grained access definition and control to the NGSI-LD entities, based on ODRL definitions. Grafana is integrated for monitoring and alerting purposes.
+      
+       <td colspan="1" rowspan="1">NGSI-LD
+       <td colspan="1" rowspan="1">Data exchange component, Data model mediator
+      <tr>
+       <td colspan="1" rowspan="1"><a href="https://scorpio.readthedocs.io/en/latest/">Scorpio Broker</a>
+      
+       <td colspan="1" rowspan="1">It is an open-source NGSI-LD-compliant context broker. It integrates well with FIWARE components to enable cross-domain context management. It relies on PostgreSQL database management and Apache Kafka (with Zookeeper) for communication and notifications. It is built on a Spring Boot microservices architecture, and may be complemented by Keycloak for identity and access management, and Grafana or Kibana for monitoring and visualisation.
+      
+       <td colspan="1" rowspan="1">NGSI-LD
+       <td colspan="1" rowspan="1">Data exchange component, Data model mediator
+      <tr>
+       <td colspan="1" rowspan="1"><a href="https://github.com/FIWARE/context.Orion-LD/tree/develop/doc/manuals-ld">Orion-LD</a>
+      
+       <td colspan="1" rowspan="1">It is an open-source NGSI-LD-compliant context broker. It supports Linked Data entities, JSON-LD serialisation, and NGSI-LD API operations. It uses MongoDB as primary data storage. It can be complemented by Keycloak for authentication, and Cygnus or Kafka for data persistence.
+      
+       <td colspan="1" rowspan="1">NGSI-LD
+       <td colspan="1" rowspan="1">Data exchange component, Data model mediator
+      <tr>
+       <td colspan="1" rowspan="1"><a href="https://ldes.tech">LDES</a>
+      
+       <td colspan="1" rowspan="1">Linked Data Event Streams (LDES) is an initiative to help data publishers find a balance between publishing data through an as-complete-as-possible set of querying APIs and providing a simple data dump. They propose an event stream as the base API, and want to make it as lightweight as possible to host one.
+      
+       <td colspan="1" rowspan="1">RDF
+       <td colspan="1" rowspan="1">Data exchange component
+      <tr>
+       <td colspan="1" rowspan="1"><a href="https://linkeddatafragments.org/in-depth/">LDF</a>
+      
+       <td colspan="1" rowspan="1">Linked Data Fragments (LDF) provides lightweight, uniform interfaces that let query workloads for linked data be distributed between clients and servers.
+      
+       <td colspan="1" rowspan="1">RDF
+       <td colspan="1" rowspan="1">Data exchange component
+      <tr>
+       <td colspan="1" rowspan="1"><a href="https://www.stardog.com/">Stardog</a>
+      
+       <td colspan="1" rowspan="1">It is a knowledge graph platform, with support for SPARQL, that enables the management, querying, virtualisation, inferring, constraining, and learning of data.
+      
+       <td colspan="1" rowspan="1">RDF
+       <td colspan="1" rowspan="1">Data exchange component, Data model mediator
+      <tr>
+       <td colspan="1" rowspan="1"><a href="https://jena.apache.org/documentation/fuseki2/">Apache Jena Fuseki</a>
+      
+       <td colspan="1" rowspan="1">It is a SPARQL server that provides the SPARQL 1.1 protocols for query and update, as well as the SPARQL Graph Store protocol. It is integrated with
+      <a href="https://jena.apache.org/documentation/tdb/index.html">TDB</a> to provide a robust, transactional, persistent storage layer.
+       <td colspan="1" rowspan="1">RDF
+       <td colspan="1" rowspan="1">Data exchange component, Data model mediator
+      <tr>
+       <td colspan="1" rowspan="1"><a href="https://virtuoso.openlinksw.com/">Virtuoso</a>
+      
+       <td colspan="1" rowspan="1">It is a platform for creating and managing semantically harmonised databases, knowledge bases/graphs, filesystems, and APIs that are loosely coupled with AI Agents, Large Language Models, and other client environments.
+      
+       <td colspan="1" rowspan="1">RDF
+       <td colspan="1" rowspan="1">Data exchange component, Data model mediator
+      <tr>
+       <td colspan="1" rowspan="1"><a href="https://rml.io">RML.io</a>
+      
+       <td colspan="1" rowspan="1">It allows for generating knowledge graphs from both static and dynamic data sources, including relational databases, APIs, files, and data streams.
+      
+       <td colspan="1" rowspan="1">RDF
+       <td colspan="1" rowspan="1">Data model mediator
+      <tr>
+       <td colspan="1" rowspan="1"><a href="https://github.com/eyereasoner/eyeling/">Eyeling</a>
+      
+       <td colspan="1" rowspan="1">It is an N3 reasoner in JavaScript.
+      
+       <td colspan="1" rowspan="1">RDF
+       <td colspan="1" rowspan="1">Data model mediator
+      <tr>
+       <td colspan="1" rowspan="1"><a href="https://eclipse-edc.github.io/documentation/for-adopters/federated-catalog/">Federated Catalog of Eclipse Data Space Components Connector</a>
+      
+       <td colspan="1" rowspan="1">This is responsible for crawling participant connectors, maintaining the aggregated catalogue cache, hosting a catalog and responding to catalogue requests.
+      
+       <td colspan="1" rowspan="1">N/A
+       <td colspan="1" rowspan="1">Catalogue
+      <tr>
+       <td colspan="1" rowspan="1"><a href="https://interoperable-europe.ec.europa.eu/collection/ldttoolbox/solution/eu-ldt-data-space-ready">EU LDT Data Space Ready</a>
+      
+       <td colspan="1" rowspan="1">
+        <p>This component of the EU LDT Toolbox enables municipalities to create and connect to data spaces to publish and consume data. It supports the federation of individual catalogues exposed by data space connectors.
+      </p>
+       <td colspan="1" rowspan="1">N/A
+       <td colspan="1" rowspan="1">Catalogue
+    </table>
+    <figcaption>
+		These are tools that implement Data Management features.
+		We list the name of each tool, linked to its website, a description,
+		whether it’s intended to be used with RDF-based or NGSI-LD-based systems, and
+		the components of which the tool (partly) implements the features.
+	</figcaption>
+   </figure>
    <h4 class="heading settled" data-level="6.2.3" id="how-to-build-connectivity"><span class="secno">6.2.3. </span><span class="content">How to build a Connectivity component</span><a class="self-link" href="#how-to-build-connectivity"></a></h4>
+   <p>In this section,
+we list the different tools that we can use for the implementation of
+the components of the Connectivity component of an LDT in <a href="#table-connectivity">Table 5</a>
+The table contains the name of each tool, linked to its website, a description, and the component of which the tool
+(partly) implements the features.</p>
+   <figure class="table" id="table-connectivity">
+    <table>
+     <thead>
+      <tr>
+       <th colspan="1" rowspan="1">Tool
+       <th colspan="1" rowspan="1">Description
+       <th colspan="1" rowspan="1">Component
+     <tbody>
+      <tr>
+       <td colspan="1" rowspan="1"><a href="https://eclipse-edc.github.io/">Eclipse Dataspace Components (EDC) Connector</a>
+			
+       <td colspan="1" rowspan="1">It is an open-source implementation of the Data Space Protocol within the Eclipse ecosystem. It allows organisations to connect securely to federated data spaces.
+			
+       <td colspan="1" rowspan="1">Data space connector, Trust services
+			
+      <tr>
+       <td colspan="1" rowspan="1"><a href="https://github.com/FIWARE/data-space-connector">FIWARE Data Space Connector</a>
+			
+       <td colspan="1" rowspan="1">It is FIWARE’s implementation of a data space connector based on the EDC. It bridges the FIWARE components (using NGSI-LD) with federated data spaces, allowing organisations to share contextual data under defined policies.
+			
+       <td colspan="1" rowspan="1">Data space connector
+      <tr>
+       <td colspan="1" rowspan="1"><a href="https://code.europa.eu/simpl/simpl-open/documentation/user-manual%23simpl-open-agents">SIMPL-Open Agent</a>
+			
+       <td colspan="1" rowspan="1">It is a middleware that acts as a local gateway for secure communication within a Data Space.
+			
+       <td colspan="1" rowspan="1">Data space connector
+      <tr>
+       <td colspan="1" rowspan="1"><a href="https://interoperable-europe.ec.europa.eu/collection/ldttoolbox/solution/eu-ldt-data-space-ready">EU LDT Data Space Ready</a>
+			
+       <td colspan="1" rowspan="1">
+        <p class="c0">This component of the EU LDT Toolbox allows municipalities to create and connect to data spaces to publish and consume data.
+			</p>
+       <td colspan="1" rowspan="1">Data space connector
+      <tr>
+       <td colspan="1" rowspan="1"><a href="https://www.keycloak.org/documentation.html">Keycloak</a>
+			
+       <td colspan="1" rowspan="1">It is an open-source identity and access management tool supporting OAuth2 and OpenID Connect. It provides single sign-on, user federation, and token-based security for APIs and services.
+			
+       <td colspan="1" rowspan="1">Trust services
+      <tr>
+       <td colspan="1" rowspan="1"><a href="https://fiware-idm.readthedocs.io/en/latest/index.html">Keyrock</a>
+			
+       <td colspan="1" rowspan="1">It is part of the FIWARE ecosystem. It manages identity and access control through OAuth2-compliant APIs. It allows seamless integration with other FIWARE generic enablers.
+			
+       <td colspan="1" rowspan="1">Trust services
+      <tr>
+       <td colspan="1" rowspan="1"><a href="https://gaia-x.eu/">Gaia-X</a>
+			
+       <td colspan="1" rowspan="1">It is a European-level framework that defines governance for federated cloud and data ecosystems. It enforces transparency, sovereignty, and compliance services.
+			
+       <td colspan="1" rowspan="1">Trust services
+      <tr>
+       <td colspan="1" rowspan="1"><a href="https://framework.ishare.eu/">iSHARE Trust Framework</a>
+			
+       <td colspan="1" rowspan="1">It is a framework for trusted data sharing, defining roles, identity management, and access protocols between organisations. It ensures that participants in a data space can verify each other’s identities and data usage rights, complementing OAuth/OpenID mechanisms.
+			
+       <td colspan="1" rowspan="1">Trust services
+      <tr>
+       <td colspan="1" rowspan="1"><a href="https://interoperable-europe.ec.europa.eu/collection/ldttoolbox/solution/eu-ldt-identity-management">EU LDT Identity Manager</a>
+			
+       <td colspan="1" rowspan="1">This component of the EU LDT Toolbox allows the municipalities to manage the roles and permissions that users and applications have within all the other tools of the toolbox.
+			
+       <td colspan="1" rowspan="1">Trust services
+    </table>
+    <figcaption>
+      These are tools that implement Connectivity features.
+      We list the name of each tool, linked to its website, a description, and
+      the component of which the tool (partly) implements the features.
+    </figcaption>
+   </figure>
    <h4 class="heading settled" data-level="6.2.4" id="how-to-build-decision-making"><span class="secno">6.2.4. </span><span class="content">How to build Decision-Making components</span><a class="self-link" href="#how-to-build-decision-making"></a></h4>
+   <p>In this section,
+we list the different tools that we can use for the implementation of
+the components of the Decision-Making component of an LDT in <a href="#table-decision-making">Table 6</a>.
+The table contains the name of each tool, linked to its website, a description, and the components of which the
+tool (partly) implements the features.</p>
+   <figure class="table" id="table-decision-making">
+    <table>
+     <thead>
+      <tr>
+       <th colspan="1" rowspan="1">Tool
+       <th colspan="1" rowspan="1">Description
+       <th colspan="1" rowspan="1">Component
+     <tbody>
+      <tr>
+       <td colspan="1" rowspan="1"><a href="https://docs.decidim.org/en/develop/index.html">Decidim</a>
+      
+       <td colspan="1" rowspan="1">This is a participatory democracy framework, written in Ruby on Rails, originally developed for the Barcelona City government’s online and offline participation website.
+      
+       <td colspan="1" rowspan="1">Decision support channels
+      
+      <tr>
+       <td colspan="1" rowspan="1"><a href="https://consuldemocracy.org/">Consul Democracy</a>
+      
+       <td colspan="1" rowspan="1">This is a digital democratic participation enabler that provides both public and civil society organisations with digital democratic processes.
+      
+       <td colspan="1" rowspan="1">Decision support channels
+      <tr>
+       <td colspan="1" rowspan="1"><a href="https://github.com/LimeSurvey/LimeSurvey">LimeSurvey</a>
+      
+       <td colspan="1" rowspan="1">This is a powerful, open-source survey platform. It’s a free alternative to SurveyMonkey, Typeform, Qualtrics, and Google Forms, making it simple to create online surveys and forms with flexibility.
+      
+       <td colspan="1" rowspan="1">Decision support channels
+      <tr>
+       <td colspan="1" rowspan="1"> <a href="https://wirecloud.readthedocs.io/en/stable/">Wirecloud</a>
+      
+       <td colspan="1" rowspan="1">This is a user-development tool aimed at easily creating web applications and dashboards/cockpits. It consists of a mash-up platform that allows users to compose dashboards by wiring together heterogeneous widgets and data sources via configurable operators.
+      
+       <td colspan="1" rowspan="1">Application composition
+      <tr>
+       <td colspan="1" rowspan="1"><a href="https://nodered.org/">Node-RED</a>
+      
+       <td colspan="1" rowspan="1">Based on Node.js, it enables low-code application building for event-driven applications.
+      
+       <td colspan="1" rowspan="1">Application composition, Notifications
+      
+      <tr>
+       <td colspan="1" rowspan="1"><a href="https://ntfy.sh/">ntfy</a>
+      
+       <td colspan="1" rowspan="1">This is a pub-sub notification service. It allows subscribers (end-users of an LDT, for instance) to receive phone or desktop notifications using a REST API.
+      
+       <td colspan="1" rowspan="1">Notifications
+      <tr>
+       <td colspan="1" rowspan="1"><a href="https://github.com/caronc/apprise">Apprise</a>
+      
+       <td colspan="1" rowspan="1">This allows sending notifications to end-users via multiple popular notification services (Telegram, Discord, Slack, and so on), asynchronously.
+      
+       <td colspan="1" rowspan="1">Notifications
+      <tr>
+       <td colspan="1" rowspan="1"><a href="https://interoperable-europe.ec.europa.eu/collection/ldttoolbox/solution/eu-ldt-participate">EU LDT Participate</a>
+      
+       <td colspan="1" rowspan="1">This component of the EU LDT Toolbox allows municipalities to provide mechanisms to engage with their citizens to provide feedback on different scenarios.
+      
+       <td colspan="1" rowspan="1">Decision support channels
+      <tr>
+       <td colspan="1" rowspan="1"><a href="https://interoperable-europe.ec.europa.eu/collection/ldttoolbox/solution/eu-ldt-city-innovation-planner">EU LDT City Innovation Planner</a>
+      
+       <td colspan="1" rowspan="1">This component of the EU LDT Toolbox allows municipalities to monitor and manage their adoption of the different tools and use cases based on their goals and using standardised maturity frameworks.
+      
+       <td colspan="1" rowspan="1">Decision support channels
+    </table>
+    <figcaption>
+    These are tools that implement Decision-Making features.
+    We list the name of each tool, linked to its website, a description, and
+    the components of which the tool (partly) implements the features.
+  </figcaption>
+   </figure>
    <h4 class="heading settled" data-level="6.2.5" id="how-to-build-analysis"><span class="secno">6.2.5. </span><span class="content">How to build Analysis components</span><a class="self-link" href="#how-to-build-analysis"></a></h4>
+   <p>In this section,
+we list the different tools that we can use for the implementation of
+the components of the Analysis component of an LDT in <a href="#table-analysis">Table 7</a>.
+The table contains the name of the tool, linked to its website, a description, and
+the components of which the tool (partly) implements the features.</p>
+   <figure class="table" id="table-analysis">
+    <table>
+     <thead>
+      <tr>
+       <th colspan="1" rowspan="1">Tool
+       <th colspan="1" rowspan="1">Description
+       <th colspan="1" rowspan="1">Component
+     <tbody>
+      <tr>
+       <td colspan="1" rowspan="1"><a href="https://kserve.github.io/website/docs/intro">KServe</a>
+      
+       <td colspan="1" rowspan="1">This is a serving framework for deploying ML models as APIs. It enables AI inference services to be exposed consistently.
+      
+       <td colspan="1" rowspan="1">AI model catalogue, AI model manager, AI model provider, AI model runner
+      
+      <tr>
+       <td colspan="1" rowspan="1"><a href="https://www.kubeflow.org/docs/">Kubeflow</a>
+      
+       <td colspan="1" rowspan="1">This is an open-source platform for ML and MLOps on Kubernetes introduced by Google. It supports AI services leveraging graph representations of LDT data.
+      
+       <td colspan="1" rowspan="1">AI model catalogue, AI model manager, AI model provider, AI model runner
+      
+      <tr>
+       <td colspan="1" rowspan="1"><a href="https://interoperable-europe.ec.europa.eu/collection/ldttoolbox/solution/eu-ldt-ai-notebook">EU LDT AI Notebook</a>
+      
+       <td colspan="1" rowspan="1">This component of the EU LDT Toolbox allows developers to develop new algorithms and models for their digital twins.
+      
+       <td colspan="1" rowspan="1">AI model catalogue, AI model manager, AI model provider, AI model runner
+      
+      <tr>
+       <td colspan="1" rowspan="1"><a href="https://carla.readthedocs.io/en/latest/">CARLA Simulator</a>
+      
+       <td colspan="1" rowspan="1">It is a toolbox based on <a href="https://dev.epicgames.com/documentation/en-us/unreal-engine">Unreal Engine</a> to implement driving simulations on LDTs. It uses the ASAM OpenDRIVE standard to define roads and urban settings.
+      
+       <td colspan="1" rowspan="1">Simulation
+      <tr>
+       <td colspan="1" rowspan="1"><a href="https://docs.unity3d.com/Packages/com.unity.ml-agents@4.0/manual/index.html">Unity ML Agents</a>
+      
+       <td colspan="1" rowspan="1">It is a toolkit for training intelligent agents in simulated environments. It enables reinforcement learning scenarios linked to LDT data
+      
+       <td colspan="1" rowspan="1">Simulation
+      <tr>
+       <td colspan="1" rowspan="1"><a href="https://interoperable-europe.ec.europa.eu/collection/ldttoolbox/solution/eu-ldt-data-modeller">EU LDT Data Modeller</a>
+      
+       <td colspan="1" rowspan="1">This component of the EU LDT Toolbox allows developers to create synthetic data to simulate scenarios.
+      
+       <td colspan="1" rowspan="1">Simulation
+      <tr>
+       <td colspan="1" rowspan="1"><a href="https://interoperable-europe.ec.europa.eu/collection/ldttoolbox/solution/eu-ldt-federated-learning">EU LDT Federated Learning</a>
+      
+       <td colspan="1" rowspan="1">This component of the EU LDT Toolbox allows developers to train new models in a federated environment.
+      
+       <td colspan="1" rowspan="1">
+        AI model manager, AI model provider, AI model runner.
+    </table>
+    <figcaption>
+    These are tools that implement Analysis features.
+    We list the name of each tool, linked to its website, a description, and
+    the components of which the tool (partly) implements the features.
+  </figcaption>
+   </figure>
    <h4 class="heading settled" data-level="6.2.6" id="how-to-build-visualisations"><span class="secno">6.2.6. </span><span class="content">How to build Visualisations</span><a class="self-link" href="#how-to-build-visualisations"></a></h4>
+   <p>In this section,
+we list the different tools that we can use for the implementation of
+the components of the Visualisation component of an LDT in <a href="#table-visualisations">Table 8</a>.
+We categorise the tools
+based on whether they have features for 3D, dashboards, geo, augmented reality (AR), or
+extended reality (XR).
+The table contains the name of each tool, linked to its website, a description, and its categories.</p>
+   <figure class="table" id="table-visualisations">
+    <table>
+     <thead>
+      <tr>
+       <th colspan="1" rowspan="1">Tool
+       <th colspan="1" rowspan="1">Description
+       <th colspan="1" rowspan="1">Category
+     <tbody>
+      <tr>
+       <td colspan="1" rowspan="1"><a href="https://docs.unity.com/en-us">Unity</a>
+      
+       <td colspan="1" rowspan="1">It is a widely used 3D platform primarily for creating 2D, 3D, AR, and VR applications. As a popular real-time 3D development engine, we can use Unity to produce applications for any immersive scenario. The bundled support for AI and simulations can be particularly useful for enhanced AI-based services for LDTs.
+      
+       <td colspan="1" rowspan="1">3D, AR
+      <tr>
+       <td colspan="1" rowspan="1"><a href="https://dev.epicgames.com/documentation/en-us/unreal-engine">Unreal Engine</a>
+      
+       <td colspan="1" rowspan="1">It is another widely used real-time 3D creation platform. Known for its high-performance graphics, scalability, and versatility, it is particularly useful for game development, film production, architecture visualisation, automotive simulations, VR, and AR applications. It can be a viable tool for creating immersive Smart City applications that require high-quality visual details.
+
+
+        
+       <td colspan="1" rowspan="1">3D, AR
+      <tr>
+       <td colspan="1" rowspan="1"><a href="https://cesium.com/platform/cesium-for-unreal/">Cesium for Unreal</a>
+      
+       <td colspan="1" rowspan="1">Built on open standards and APIs, it combines the 3D geospatial capability of Cesium with the high-fidelity rendering power of Unreal Engine, unlocking the 3D geospatial ecosystem for game engines. It provides full-scale WGS84 global level 3-dimensional tiling to be used in 3D visualisations.
+      
+       <td colspan="1" rowspan="1">3D
+      <tr>
+       <td colspan="1" rowspan="1"><a href="https://www.blender.org/download/">Blender</a>
+      
+       <td colspan="1" rowspan="1">It is a free and open-source 3D creation suite used for modelling computer graphics. It comes with a large suite of functions and features that are constantly being extended by the open-source community. We can use Blender for modelling assets for 3D visualisations of cities in LDTs. It also allows importing scanned assets for cleaning and post-processing, which can later be exported into XR applications.
+      
+       <td colspan="1" rowspan="1">3D
+      <tr>
+       <td colspan="1" rowspan="1"><a href="https://grafana.com/docs/">Grafana</a>
+      
+       <td colspan="1" rowspan="1">It is an open-source analytics and visualisation platform. Within NGSI-LD or FIWARE-based architectures, it is commonly used to visualise contextual data or performance metrics exposed via APIs, well-adapted to real-time observations.
+      
+       <td colspan="1" rowspan="1">Dashboard
+      <tr>
+       <td colspan="1" rowspan="1"><a href="https://superset.apache.org/docs/6.0.0/intro">Apache Superset</a>
+      
+       <td colspan="1" rowspan="1">It is an open-source business intelligence and visualisation tool that can connect to NGSI-LD-backed data stores or data space connectors for dashboarding and exploration of contextual or federated datasets. It is particularly user-oriented, allowing end-users to easily create their own visualisations.
+      
+       <td colspan="1" rowspan="1">Dashboard
+      <tr>
+       <td colspan="1" rowspan="1"><a href="http://deck.gl">deck.gl</a>
+      
+       <td colspan="1" rowspan="1">It is a WebGL-based library for large-scale geospatial visualisation. It supports high-performance spatial views of LDT data.
+      
+       <td colspan="1" rowspan="1">Geo
+      <tr>
+       <td colspan="1" rowspan="1"><a href="https://maplibre.org/maplibre-gl-js/docs/">MapLibre GL JS</a>
+      
+       <td colspan="1" rowspan="1">It is an open-source geospatial mapping library. It supports map-based visualisations of LDT spatial data.
+      
+       <td colspan="1" rowspan="1">Geo
+      <tr>
+       <td colspan="1" rowspan="1"><a href="http://kepler.gl">kepler.gl</a>
+      
+       <td colspan="1" rowspan="1">It is a geospatial analytics tool for large datasets. It enables the exploratory analysis of LDT spatial data.
+      
+       <td colspan="1" rowspan="1">Geo
+      <tr>
+       <td colspan="1" rowspan="1"><a href="https://docs.godotengine.org/en/stable/">Godot</a>
+      
+       <td colspan="1" rowspan="1">It is a free and open-source game engine known for its lightweight nature, flexibility, and strong community-driven development, opposite to Unreal Engine and Unity, which are both profit-seeking projects. For enhanced services for LDTs, Godot is a viable alternative for developing immersive applications that look for minimal footprint and development costs.
+      
+       <td colspan="1" rowspan="1">AR, XR
+      <tr class="c103">
+       <td colspan="1" rowspan="1"><a href="https://developer.apple.com/documentation/arkit">ARKit</a>
+      
+       <td colspan="1" rowspan="1">It is Apple’s AR development framework, designed to create immersive and interactive AR experiences for iOS and iPadOS devices. ARKit is a mandatory tool for any development considered for AR in Apple devices.
+      
+       <td colspan="1" rowspan="1">AR, XR
+      <tr>
+       <td colspan="1" rowspan="1"><a href="https://developers.google.com/ar">ARCore</a>
+      
+       <td colspan="1" rowspan="1">It is Google’s augmented reality development platform, designed to bring immersive AR experiences to Android and iOS devices. ARCore enables developers to create interactive AR applications by leveraging the device’s camera, motion sensors, and artificial intelligence to understand its environment. Any application developer hoping to target Android devices must interact with ARCore.
+      
+       <td colspan="1" rowspan="1">AR, XR
+      <tr>
+       <td colspan="1" rowspan="1"><a href="https://registry.khronos.org/OpenXR/%23apispecs">OpenXR</a>
+      
+       <td colspan="1" rowspan="1">It is a royalty-free, open standard that provides a common set of APIs for developing XR applications that run across a wide range of AR and VR devices. It is a low-level tool that allows developers to target multiple different targets with the same API instead of writing code for every device and operating system separately.
+      
+       <td colspan="1" rowspan="1">AR, XR
+      <tr>
+       <td colspan="1" rowspan="1"><a href="https://www.w3.org/TR/webxr/">WebXR</a>
+      
+       <td colspan="1" rowspan="1">It is the web equivalent of the OpenXR APIs that works on the web platform (HTML5).
+      
+       <td colspan="1" rowspan="1">AR, XR
+      <tr>
+       <td colspan="1" rowspan="1"><a href="https://interoperable-europe.ec.europa.eu/collection/ldttoolbox/solution/eu-ldt-play-visualise-1">EU LDT Play &amp; Visualise</a>
+      
+       <td colspan="1" rowspan="1">This component of the EU LDT Toolbox allows municipalities to visualise and interact with their LDTs.
+      
+       <td colspan="1" rowspan="1">dashboard
+    </table>
+    <figcaption>
+		These are tools that implement Visualisation features.
+		We list the name of each tool, linked to its website, a description, and its categories.
+	</figcaption>
+   </figure>
   </main>
 <script>
 (function() {

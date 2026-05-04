@@ -1,0 +1,97 @@
+### How to build a Data Acquisition component ### {#how-to-build-data-acquisition}
+
+In this section,
+we list the different tools that we can use for the implementation of
+the components of the Data Acquisition component of an LDT in [Table 3](#table-data-acquisition).
+The table contains the name of each tool, linked to its website, a description, and
+the component of which the tool (partly) implements the features.
+
+<figure id="table-data-acquisition" class="table">
+	<table>
+		<thead>
+		<tr>
+			<th colspan="1" rowspan="1">Tool</th>
+			<th colspan="1" rowspan="1">Description</th>
+			<th colspan="1" rowspan="1">Component</th>
+		</tr>
+		</thead>
+		<tbody>
+		<tr>
+			<td colspan="1" rowspan="1"><a href="https://kafka.apache.org/41/">Apache Kafka</a>
+			</td>
+			<td colspan="1" rowspan="1">It is a distributed event streaming platform for high-throughput data pipelines. It supports real-time ingestion and dissemination of LDT data.
+			</td>
+			<td colspan="1" rowspan="1">ETL</td>
+		</tr>
+		<tr>
+			<td colspan="1" rowspan="1"><a
+					href="https://github.com/redpanda-data/redpanda">Redpanda</a>
+			</td>
+			<td colspan="1" rowspan="1">It is a Kafka-compatible event streaming platform. It provides an alternative runtime for event-driven LDT architectures.
+			</td>
+			<td colspan="1" rowspan="1">ETL</td>
+		</tr>
+		<tr>
+			<td colspan="1" rowspan="1"><a
+					href="https://www.google.com/url?q=https://pulsar.apache.org/docs/4.1.x/&amp;sa=D&amp;source=editors&amp;ust=1777879419825750&amp;usg=AOvVaw1Vfm8A_OaTACs_tR3xQ7i-">Apache Pulsar</a>
+			</td>
+			<td colspan="1" rowspan="1">It is a distributed messaging and streaming platform with multi-tenant support. It can be used to scale event-based LDT ingestion and analytics.
+			</td>
+			<td colspan="1" rowspan="1">ETL</td>
+		</tr>
+		<tr>
+			<td colspan="1" rowspan="1"><a
+					href="https://debezium.io/documentation/reference/3.4/">Debezium</a>
+			</td>
+			<td colspan="1" rowspan="1">It is a change data capture platform that streams row-level changes from databases into event streams in real time. It enables existing operational databases to be connected to the LDT without intrusive modifications, allowing updates in source systems to be reflected continuously in ingestion pipelines.
+			</td>
+			<td colspan="1" rowspan="1">ETL</td>
+		</tr>
+		<tr>
+			<td colspan="1" rowspan="1"><a
+					href="https://docs.confluent.io/platform/current/connect/index.html">Kafka Connect</a>
+			</td>
+			<td colspan="1" rowspan="1">It is a framework for building and running reusable connectors that move data between Kafka and external systems such as databases, file systems, or APIs. It provides a standardised mechanism to integrate data sources and sinks into event-driven ingestion pipelines.
+			</td>
+			<td colspan="1" rowspan="1">ETL</td>
+		</tr>
+		<tr>
+			<td colspan="1" rowspan="1"><a
+					href="https://comunica.dev">Comunica</a>
+			</td>
+			<td colspan="1" rowspan="1">It is a knowledge graph querying framework. It uses flexible SPARQL and GraphQL over decentralised RDF on the web.
+			</td>
+			<td colspan="1" rowspan="1">ETL</td>
+		</tr>
+		<tr>
+			<td colspan="1" rowspan="1"><a
+					href="https://rml.io">RML.io</a>
+			</td>
+			<td colspan="1" rowspan="1">It allows for generating knowledge graphs from both static and dynamic data sources, including relational databases, APIs, files, and data streams.
+			</td>
+			<td colspan="1" rowspan="1">ETL</td>
+		</tr>
+		<tr>
+			<td colspan="1" rowspan="1"><a
+					href="https://etl.linkedpipes.com/documentation/">LinkedPipes ETL</a>
+			</td>
+			<td colspan="1" rowspan="1">It allows the designing of pipelines, defined data transformation processes consisting of interconnected components.
+			</td>
+			<td colspan="1" rowspan="1">ETL</td>
+		</tr>
+		<tr>
+			<td colspan="1" rowspan="1"><a
+					href="https://interoperable-europe.ec.europa.eu/collection/ldttoolbox/solution/eu-ldt-data-platform">EU LDT Data Platform</a>
+			</td>
+			<td colspan="1" rowspan="1">This component of the EU LDT Toolbox allows municipalities to connect their LDTs with their databases and sensors, integrating data in standard formats and giving it context.
+			</td>
+			<td colspan="1" rowspan="1">ETL</td>
+		</tr>
+		</tbody>
+	</table>
+	<figcaption>
+    These are tools that implement Data Acquisition features.
+    We list the name of each tool, linked to its website, a description, and the component of which the tool
+    (partly) implements the features.
+  </figcaption>
+</figure>

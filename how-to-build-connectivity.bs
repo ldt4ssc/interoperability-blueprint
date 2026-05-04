@@ -1,0 +1,91 @@
+### How to build a Connectivity component ### {#how-to-build-connectivity}
+
+In this section,
+we list the different tools that we can use for the implementation of
+the components of the Connectivity component of an LDT in [Table 5](#table-connectivity)
+The table contains the name of each tool, linked to its website, a description, and the component of which the tool
+(partly) implements the features.
+
+<figure id="table-connectivity" class="table">
+	<table>
+		<thead>
+		<tr>
+			<th colspan="1" rowspan="1">Tool</th>
+			<th colspan="1" rowspan="1">Description</th>
+			<th colspan="1" rowspan="1">Component</th>
+		</tr>
+		</thead>
+		<tbody>
+		<tr>
+			<td colspan="1" rowspan="1"><a href="https://eclipse-edc.github.io/">Eclipse Dataspace Components (EDC) Connector</a>
+			</td>
+			<td colspan="1" rowspan="1">It is an open-source implementation of the Data Space Protocol within the Eclipse ecosystem. It allows organisations to connect securely to federated data spaces.
+			</td>
+			<td colspan="1" rowspan="1">Data space connector, Trust services
+			</td>
+		</tr>
+		<tr>
+			<td colspan="1" rowspan="1"><a href="https://github.com/FIWARE/data-space-connector">FIWARE Data Space Connector</a>
+			</td>
+			<td colspan="1" rowspan="1">It is FIWARE&rsquo;s implementation of a data space connector based on the EDC. It bridges the FIWARE components (using NGSI-LD) with federated data spaces, allowing organisations to share contextual data under defined policies.
+			</td>
+			<td colspan="1" rowspan="1">Data space connector</td>
+		</tr>
+		<tr>
+			<td colspan="1" rowspan="1"><a href="https://code.europa.eu/simpl/simpl-open/documentation/user-manual%23simpl-open-agents">SIMPL-Open Agent</a>
+			</td>
+			<td colspan="1" rowspan="1">It is a middleware that acts as a local gateway for secure communication within a Data Space.
+			</td>
+			<td colspan="1" rowspan="1">Data space connector</td>
+		</tr>
+		<tr>
+			<td colspan="1" rowspan="1"><a href="https://interoperable-europe.ec.europa.eu/collection/ldttoolbox/solution/eu-ldt-data-space-ready">EU LDT Data Space Ready</a>
+			</td>
+			<td colspan="1" rowspan="1"><p class="c0">This component of the EU LDT Toolbox allows municipalities to create and connect to data spaces to publish and consume data.
+			</td>
+			<td colspan="1" rowspan="1">Data space connector</td>
+		</tr>
+		<tr>
+			<td colspan="1" rowspan="1"><a href="https://www.keycloak.org/documentation.html">Keycloak</a>
+			</td>
+			<td colspan="1" rowspan="1">It is an open-source identity and access management tool supporting OAuth2 and OpenID Connect. It provides single sign-on, user federation, and token-based security for APIs and services.
+			</td>
+			<td colspan="1" rowspan="1">Trust services</td>
+		</tr>
+		<tr>
+			<td colspan="1" rowspan="1"><a href="https://fiware-idm.readthedocs.io/en/latest/index.html">Keyrock</a>
+			</td>
+			<td colspan="1" rowspan="1">It is part of the FIWARE ecosystem. It manages identity and access control through OAuth2-compliant APIs. It allows seamless integration with other FIWARE generic enablers.
+			</td>
+			<td colspan="1" rowspan="1">Trust services</td>
+		</tr>
+		<tr>
+			<td colspan="1" rowspan="1"><a href="https://gaia-x.eu/">Gaia-X</a>
+			</td>
+			<td colspan="1" rowspan="1">It is a European-level framework that defines governance for federated cloud and data ecosystems. It enforces transparency, sovereignty, and compliance services.
+			</td>
+			<td colspan="1" rowspan="1">Trust services</td>
+		</tr>
+		<tr>
+			<td colspan="1" rowspan="1"><a href="https://framework.ishare.eu/">iSHARE Trust Framework</a>
+			</td>
+			<td colspan="1" rowspan="1">It is a framework for trusted data sharing, defining roles, identity management, and access protocols between organisations. It ensures that participants in a data space can verify each other&rsquo;s identities and data usage rights, complementing OAuth/OpenID mechanisms.
+			</td>
+			<td colspan="1" rowspan="1">Trust services</td>
+		</tr>
+		<tr>
+			<td colspan="1" rowspan="1"><a href="https://interoperable-europe.ec.europa.eu/collection/ldttoolbox/solution/eu-ldt-identity-management">EU LDT Identity Manager</a>
+			</td>
+			<td colspan="1" rowspan="1">This component of the EU LDT Toolbox allows the municipalities to manage the roles and permissions that users and applications have within all the other tools of the toolbox.
+			</td>
+			<td colspan="1" rowspan="1">Trust services</td>
+		</tr>
+		</tbody>
+	</table>
+  <figcaption>
+      These are tools that implement Connectivity features.
+      We list the name of each tool, linked to its website, a description, and
+      the component of which the tool (partly) implements the features.
+    </figcaption>
+</figure>
+

@@ -1,0 +1,92 @@
+## Define and implement ## {#define-implement}
+
+In this section,
+we discuss how to define and implement an LDT after having discussed
+[how to explore and validate it as a solution](#explore-validate).
+This stage of building an LDT refers to the DEFINE and IMPLEMENT steps of the LDT4SSC Methodology.
+We visualise this in [Figure 19](#fig-how-to-build-an-ldt),
+where technical steps are blue with rounded corners and business and
+organisational steps are green with square corners.
+
+After the EXPLORE and VALIDATE steps,
+we determine the LDT’s technical requirements (T3) to make the functional requirements (T2) a reality.
+To do this, we refer to the following [[#how-to-build-data-acquisition]] through [[#how-to-build-visualisations]],
+which contain recommendations for tools that implement one or more features of the components.
+Note that, to the best of our knowledge, for some components,
+there are no tools available (yet) that implement one or more of their features.
+It's at this stage that we find, adapt or create data models for semantic interoperability.
+In parallel,
+we should determine how value is created and captured (BO8) and
+explore regulatory boundaries (BO9).
+We might need to do T3 with a service provider,
+which will impact the contractual and government framework (BO11).
+
+Next, we determine the technical gaps between the LDT's technical requirements and
+what the possibly already existing data platform (SIG, BIM, data dashboards, and so on) offers and
+the data available (T4).
+We follow this up, in parallel,
+with mapping out the costs and benefits and assessing the return on investment,
+building on the initial mapping (BO3) and recording all relevant baseline data.
+We then determine how we will deal with the technical gaps (T5).
+BO10 leads us to exploring if we need data providers and/or intermediaries and operators (BO6), and
+if we need to make changes to the existing initial governance and/or legal and contractual frameworks (BO11).
+BO10 and BO11 might influence each other,
+because, on the one side,
+the governance framework might affect the data providers and intermediaries we are allowed to interact with, and,
+on the other side,
+if we want to work with providers and intermediaries that don't fit within the governance framework,
+we need to update the governance framework.
+BO10 and T5 might also influence each other,
+because, on the one hand,
+the technical gaps might influence which providers and intermediaries we need, and,
+on the other hand, the unavailability of certain providers and intermediaries might require
+additional actions to resolve a technical gap.
+Once this is done,
+we can build a prototype of the LDT (T6) and test it with users,
+making the process agile and this step tangible.
+The feedback we gather during these tests might require us to
+revisit previous elements from the EXPLORE and DEFINE steps to integrate the needed changes.
+Once the PROTOTYPE step is over, we can move on to the real-scale deployment in the IMPLEMENT step.
+We follow T4 by implementing and deploying the technical components.
+In parallel,
+we adapt the contractual framework to include
+the contractual arrangements for deployment (maintenance, security, and so on) (BO12),
+which requires parties to sign new agreements and/or contracts (BO13).
+This contractual framework must enable the sharing of results (data models, SLCs, and so on) back to the community and
+the replicability of the LDT (BO15).
+We need to onboard the users and participants alike in the LDT (BO14).
+Finally, we can start using the LDT (P6) and start creating the envisioned value for our beneficiaries.
+Note that this process might not be straightforward, and
+we might need to go back to previous steps to adapt or validate specific details,
+either with respect to the technical aspects or the business and organisational aspects, or both.
+In the following sections, [[#how-to-build-data-acquisition]] to [[#how-to-build-visualisations]],
+we provide a non-exhaustive overview of tools we can use to implement the different components of an LDT.
+They are illustrative examples to support implementation choices, rather than as prescriptive solutions.
+We grouped the tools according to the components they support, and
+may implement all or only part of the required functionalities.
+In practice,
+multiple tools may be combined to implement a single component.
+
+<pre class=include>
+path: how-to-build-data-acquisition.bs
+</pre>
+
+<pre class=include>
+path: how-to-build-data-management.bs
+</pre>
+
+<pre class=include>
+path: how-to-build-connectivity.bs
+</pre>
+
+<pre class=include>
+path: how-to-build-decision-making.bs
+</pre>
+
+<pre class=include>
+path: how-to-build-analysis.bs
+</pre>
+
+<pre class=include>
+path: how-to-build-visualisations.bs
+</pre>
