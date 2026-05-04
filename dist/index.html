@@ -1800,6 +1800,7 @@ dfn > a.self-link::before      { content: "#"; }
      <dd class="editor h-card p-author vcard"><span class="fn p-name">Sille Sepp</span> (<a class="org p-org" href="https://taltech.ee/">TalTech</a>)
      <dd class="editor h-card p-author vcard"><span class="fn p-name">Laura Riou</span> (<a class="org p-org" href="https://www.cerema.fr">Cerema</a>)
      <dd class="editor h-card p-author vcard"><span class="fn p-name">Lucas Vieira Magalhães</span> (<a class="org p-org" href="https://www.list.lu/">LIST</a>)
+     <dd class="editor h-card p-author vcard"><span class="fn p-name">Juan Francisco Inglés</span> (<a class="org p-org" href="https://www.libelium.com/">Libelium</a>)
      <dd class="editor h-card p-author vcard"><span class="fn p-name">Thimo Thoeye</span> (<a class="org p-org" href="https://oascities.org/">OASC</a>)
     </dl>
    </div>
@@ -2085,7 +2086,7 @@ Some examples of new SLCs are</p>
      <p>traffic congestion or flooding prediction and corresponding impact analysis.</p>
    </ul>
    <h3 class="heading settled" data-level="1.4" id="discover-slc-existing-ldt"><span class="secno">1.4. </span><span class="content">Discovering which Surface-level components work on which existing LDTs and exchanging components through interconnected LDTs</span><a class="self-link" href="#discover-slc-existing-ldt"></a></h3>
-   <p>While <a href="#adding-new-slc-to-existing-ldt">§ 1.3 Adding a new Surface-level component to an existing LDT, reusing Core and Base-level components</a> focuses on
+   <p>While <a href="#adding-new-slc-to-existing-ldt">the previous section</a> focuses on
 integrating a selected Surface-level component (SLC) into an existing LDT,
 interoperability should also support an earlier step:
 identifying which SLCs are suitable candidates in the first place.
@@ -2268,8 +2269,8 @@ Data spaces can strengthen LDTs by providing governed access to external data an
 while LDTs can contribute back valuable derived data products and capabilities.
 This makes data spaces a key interoperability mechanism for connecting LDTs with broader digital ecosystems.</p>
    <h2 class="heading settled" data-level="2" id="building-blocks"><span class="secno">2. </span><span class="content">LDT building blocks based on DSSC &amp; DS4SSCC-DEP building blocks</span><a class="self-link" href="#building-blocks"></a></h2>
-   <p>Building on the fact that LDTs can act as data consumers and data providers in data space ecosystems
-(<a href="#relationship-data-spaces">§ 1.6 Relationship between data spaces and LDTs</a>),
+   <p>Building on the fact that LDTs can act as
+<a href="#relationship-data-spaces">data consumers and data providers in data space ecosystems</a>,
 this blueprint proposes to reuse the DSSC &amp; DS4SSCC-DEP Blueprints and their building blocks
 to a certain extent (see <a href="#fig-blueprints">Figure 7</a>).
 The <a href="https://blueprint.dssc.eu/">DSSC Blueprint</a> defines a set of business, organisational, and technical building blocks,
@@ -2458,8 +2459,7 @@ inter alia contracts and rulebooks, or specific methodologies and templates,
 inter alia the
 <a href="https://knowledgehub.ldt4ssc.eu/resources_content/non_tech_resources/#the-ldt4ssc-methodology">LDT4SSC Methodology</a>,
 <a href="https://www.datacooperationcanvas.eu/canvas/intro">Data Cooperation Canvas</a>, and/or various ecosystem design materials.</p>
-   <p>The business and organisational building blocks are further described in the Business and
-Organisational Architecture in <a href="#business-organisational-architecture">§ 4.1 Business and organisational architecture</a>,
+   <p>The business and organisational building blocks are further described in <a href="#business-organisational-architecture">§ 4.1 Business and organisational architecture</a>,
 emphasising their connections and relevance for LDTs interoperability.</p>
    <h3 class="heading settled" data-level="2.2" id="technical-building-blocks"><span class="secno">2.2. </span><span class="content">Technical building blocks</span><a class="self-link" href="#technical-building-blocks"></a></h3>
    <p>This section explains what technical pillars and building blocks are required to build an LDT.
@@ -2574,8 +2574,8 @@ creating a service on top of an LDT.</p>
    </ul>
    <h2 class="heading settled" data-level="3" id="workflows"><span class="secno">3. </span><span class="content">Workflows</span><a class="self-link" href="#workflows"></a></h2>
    <p>Once we have built an LDT, the LDT should support the following workflows:
-adding a new SLC to an existing LDT (<a href="#workflow-adding-new-slc-existing-ldt">§ 3.1 Adding a new Surface-level component to an existing LDT</a>) and
-discovering which SLCs work on an existing LDT (<a href="#workflow-discover-slc-existing-ldt">§ 3.2 Discovering which Surface-level components work on an existing LDT</a>).
+<a href="#workflow-adding-new-slc-existing-ldt">adding a new SLC to an existing LDT</a> and
+<a href="#workflow-discover-slc-existing-ldt">discovering which SLCs work on an existing LDT</a>.
 We include both technical steps, which are labelled starting with "T", and
 business and organisational steps,
 which are labelled starting with "BO".
@@ -2584,8 +2584,7 @@ but it might be necessary that we revisit previous steps when we acquire new inf
 including requirements and restrictions.</p>
    <h3 class="heading settled" data-level="3.1" id="workflow-adding-new-slc-existing-ldt"><span class="secno">3.1. </span><span class="content">Adding a new Surface-level component to an existing LDT</span><a class="self-link" href="#workflow-adding-new-slc-existing-ldt"></a></h3>
    <p>In this section,
-we describe the workflow for adding a new SLC to an existing LDT,
-as mentioned in <a href="#adding-new-slc-to-existing-ldt">§ 1.3 Adding a new Surface-level component to an existing LDT, reusing Core and Base-level components</a>.
+we describe the workflow for <a href="#adding-new-slc-to-existing-ldt">adding a new SLC to an existing LDT</a>.
 We visualise this in <a href="#workflow-1">Figure 10</a>,
 where technical steps are blue with rounded corners and business and organisational steps are green with square corners.</p>
    <figure id="fig-workflow-1">
@@ -2640,7 +2639,7 @@ we might need to go back to previous steps to adapt or validate specific details
 either with respect to the technical aspects or the business and organisational aspects, or both.</p>
    <h3 class="heading settled" data-level="3.2" id="workflow-discover-slc-existing-ldt"><span class="secno">3.2. </span><span class="content">Discovering which Surface-level components work on an existing LDT</span><a class="self-link" href="#workflow-discover-slc-existing-ldt"></a></h3>
    <p>In the previous workflow, we manually executed the steps T2 and T3,
-but it should be possible to automate these steps, as mentioned in <a href="#discover-slc-existing-ldt">§ 1.4 Discovering which Surface-level components work on which existing LDTs and exchanging components through interconnected LDTs</a>.
+but it should be possible to <a href="#discover-slc-existing-ldt">automate these steps</a>.
 This is the goal of this section’s workflow (see <a href="#fig-workflow-2">Figure 11</a>).</p>
    <figure id="fig-workflow-2">
     
@@ -2671,21 +2670,21 @@ the standards and protocols that we recommend.</p>
    <h3 class="heading settled" data-level="4.1" id="business-organisational-architecture"><span class="secno">4.1. </span><span class="content">Business and organisational architecture</span><a class="self-link" href="#business-organisational-architecture"></a></h3>
    <p>The business and organisational architecture of LDTs builds on
 the building blocks of <a href="#business-organisational-building-blocks">§ 2.1 Business and organisational building blocks</a>.
-<a href>Figure ??</a> provides the schematic overview of
+<a href="#fig-bo-architecture-1">Figure 12</a> provides the schematic overview of
 the interrelations of various business and organisational building blocks,
 specific to developing and operating an LDT.
 Note that building blocks are not specific assets or components,
 as these are deployed based on particular implementation contexts.
 However, as the LDT4SSC project’s aim is to support the development of an LDT ecosystem,
-<a href>Figure ??</a> introduces further the business and organisational building blocks necessary for fostering
+<a href="#fig-bo-architecture-2">Figure 13</a> introduces further the business and organisational building blocks necessary for fostering
 the connections between various LDTs, and
 the sharing of data products and LDT services.</p>
-   <p>Figures <a href="#fig-bo-architecture-1">12</a> and <a href="fig-bo-architecture-2">13</a> consist of five major clusters:</p>
+   <p>Figures <a href="#fig-bo-architecture-1">12</a> and <a href="#fig-bo-architecture-2">13</a> consist of five major clusters:</p>
    <ol>
     <li data-md>
      <p><strong>An LDT</strong> (dark grey), including data products and LDT services.</p>
     <li data-md>
-     <p><strong>LDT ecosystem</strong> (light grey, only in <a href="#fig-bo-architecture-1">Figure ??</a>) refers to the overarching framework for
+     <p><strong>LDT ecosystem</strong> (light grey, only in <a href="#fig-bo-architecture-1">Figure 12</a>) refers to the overarching framework for
 connecting LDTs and sharing resources (data products and/or services) among them.</p>
     <li data-md>
      <p><strong>Participants in their specific roles</strong> (blue), emphasising especially data providers,
@@ -2714,7 +2713,7 @@ showing how LDTs help address local needs and achieve specific objectives.</p>
     High-level architecture of the business and organisational building blocks for developing and operating an LDT.
   </figcaption>
    </figure>
-   <p>Following <a href="#fig-bo-architecture-1">Figure ??</a>,
+   <p>Following <a href="#fig-bo-architecture-1">Figure 12</a>,
 the development and use of an LDT is dependent on a specific <strong>use case(s)</strong>,
 which identifies the need for specific <strong>LDT services</strong> and <strong>data products</strong>.
 That use case must address local needs and integrate the LDT into <strong>urban processes</strong>.
@@ -2750,7 +2749,7 @@ data sharing and engagement in the LDT may vary
 Also, if the LDT is co-developed by multiple actors, it may be co-governed through a specific organisational form
 (either incorporated, such as an association, or unincorporated, such as a consortium or joint venture).</p>
    <p>In addition to the perspective of necessary building blocks for the single LDT,
-<a href="#fig-bo-architecture-2">Figure ??</a> provides an overview of the building blocks (and relationships between them)
+<a href="#fig-bo-architecture-2">Figure 13</a> provides an overview of the building blocks (and relationships between them)
 that shape how several LDTs connect with one another and exchange assets among themselves.
 LDTs may leverage the interoperability framework of data spaces and
 the guidelines from DSSC and DS4SSCC-DEP,
@@ -2798,10 +2797,12 @@ we explain the artefacts of the architecture, including their names, description
 the high-level components they belong to, and
 the building blocks they are related to.
 Next, in <a href="#table-technical-architecture-components">Table 2</a>,
-we do the same for the components of the architecture. Descriptions are intentionally technology-agnostic.
-We provide recommendations for standards and protocols in <a href="#standards-protocols">§ 4.2.5 Standards and protocols</a>.
-Finally, we describe how the data flows through the architecture,
-visualised in <a href="#fig-technical-architecture">Figure 14</a>.
+we do the same for the components of the architecture.
+Descriptions are intentionally technology-agnostic.
+Next, we describe how the data flows through the architecture,
+visualised in <a href="#fig-technical-architecture">Figure 14</a>,
+in <a href="#support-different-data-models">§ 4.2.1 Support different data models</a> to <a href="#support-different-ai-models">§ 4.2.4 Support for working with different AI models</a>.
+Finally, we provide recommendations for standards and protocols in <a href="#standards-protocols">§ 4.2.5 Standards and protocols</a>.
 Note that this architecture focuses on the different artefacts, components, and their interactions.
 It doesn’t say anything about which parties deploy which components where.</p>
    <figure id="fig-technical-architecture">
@@ -3636,7 +3637,7 @@ where technical steps are blue with rounded corners and business and
 organisational steps are green with square corners.</p>
    <p>After the EXPLORE and VALIDATE steps,
 we determine the LDT’s technical requirements (T3) to make the functional requirements (T2) a reality.
-To do this, we refer to the following <a href="#how-to-build-data-acquisition">§ 6.2.1 How to build a Data Acquisition component</a> through <a href="#how-to-build-visualisations">§ 6.2.6 How to build Visualisations</a>,
+To do this, we refer to <a href="#how-to-build-data-acquisition">§ 6.2.1 How to build a Data Acquisition component</a> to <a href="#how-to-build-visualisations">§ 6.2.6 How to build Visualisations</a>,
 which contain recommendations for tools that implement one or more features of the components.
 Note that, to the best of our knowledge, for some components,
 there are no tools available (yet) that implement one or more of their features.

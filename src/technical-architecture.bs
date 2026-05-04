@@ -15,7 +15,7 @@ we do the same for the components of the architecture.
 Descriptions are intentionally technology-agnostic.
 Next, we describe how the data flows through the architecture,
 visualised in [Figure 14](#fig-technical-architecture),
-in [[##support-different-data-models]] to [[#support-different-ai-models]].
+in [[#support-different-data-models]] to [[#support-different-ai-models]].
 Finally, we provide recommendations for standards and protocols in [[#standards-protocols]].
 Note that this architecture focuses on the different artefacts, components, and their interactions.
 It doesn't say anything about which parties deploy which components where.
