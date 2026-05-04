@@ -1,0 +1,368 @@
+## Technical architecture ## {#technical-architecture}
+
+The technical architecture expands the [high-level overview of an LDT](#high-level-overview-ldt).
+It includes artefacts and components.
+Artefacts are structured pieces of information that are created, processed, exchanged, or consumed within an LDT.
+They are passive elements.
+Components are functional building blocks that perform operations on artefacts.
+They are active elements responsible for producing, transforming, managing, exchanging, or analysing these artefacts.
+First, in [Table 1](#table-technical-architecture-artefacts),
+we explain the artefacts of the architecture, including their names, descriptions,
+the high-level components they belong to, and
+the building blocks they are related to.
+Next, in [Table 2](#table-technical-architecture-components),
+we do the same for the components of the architecture. Descriptions are intentionally technology-agnostic.
+We provide recommendations for standards and protocols in [[#standards-protocols]].
+Finally, we describe how the data flows through the architecture,
+visualised in [Figure 14](#fig-technical-architecture).
+Note that this architecture focuses on the different artefacts, components, and their interactions.
+It doesn't say anything about which parties deploy which components where.
+
+<figure id="fig-technical-architecture">
+  <img id="img-technical-architecture" alt="TO-DO" src="img/technical-architecture.jpg">
+	<figcaption>
+		The technical architecture expands the high-level overview of an LDT.
+		It defines the artefacts and components for Data Sources, Data Acquisition,
+		Data Management, Analysis, Visualisations, Decision-Making, and Connectivity, and
+		how they interact.
+	</figcaption>
+</figure>
+
+<figure id="table-technical-architecture-artefacts" class="table">
+<table>
+  <thead>
+  <tr>
+    <td colspan="1" rowspan="1"><p><span>Artefact</span></p></td>
+    <td colspan="1" rowspan="1"><p><span>High-level component</span></p></td>
+    <td colspan="1" rowspan="1"><p><span>Description</span></p></td>
+    <td colspan="1" rowspan="1"><p><span>Building Block</span></p></td>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td colspan="1" rowspan="1"><p><span>Rich Data Model</span></p></td>
+    <td colspan="1" rowspan="1"><p><span>Data Acquisition</span></p></td>
+    <td colspan="1" rowspan="1"><p><span>This is a data model that represents all the data from a data source.</span>
+    </p></td>
+    <td colspan="1" rowspan="1"><p><span>Data models</span></p></td>
+  </tr>
+  <tr>
+    <td colspan="1" rowspan="1"><p><span>Common Data Model</span></p></td>
+    <td colspan="1" rowspan="1"><p><span>Data Management</span></p></td>
+    <td colspan="1" rowspan="1"><p><span>This is a data model used by the LDT Core and the SLCs. The word &ldquo;common&rdquo; refers to the fact that this model will only contain what is common between what the LDT Core offers and what an SLC needs.</span>
+    </p></td>
+    <td colspan="1" rowspan="1"><p><span>Data models</span></p></td>
+  </tr>
+  <tr>
+    <td colspan="1" rowspan="1"><p><span>Data Model Mappings</span></p></td>
+    <td colspan="1" rowspan="1"><p><span>Data Management</span></p></td>
+    <td colspan="1" rowspan="1"><p><span>These are rules to convert data using one data model to data using another data model.</span>
+    </p></td>
+    <td colspan="1" rowspan="1"><p><span>Data models</span></p></td>
+  </tr>
+  <tr>
+    <td colspan="1" rowspan="1"><p><span>Data, Service, and Offerings Descriptions</span></p></td>
+    <td colspan="1" rowspan="1"><p><span>Data Management, Visualisations, Decision-Making</span>
+    </p></td>
+    <td colspan="1" rowspan="1"><p><span>These are the details of the data, services, and offerings</span>
+    </p></td>
+    <td colspan="1" rowspan="1"><p><span>Data, service, and offerings descriptions</span></p></td>
+  </tr>
+  <tr>
+    <td colspan="1" rowspan="1"><p><span>Access and Usage Policies</span></p></td>
+    <td colspan="1" rowspan="1"><p><span>Data Management</span></p></td>
+    <td colspan="1" rowspan="1"><p><span>These are the details about permitted and prohibited access and usage actions over certain data, services, and offerings, as well as the obligations required to be met by the acting parties.</span>
+    </p></td>
+    <td colspan="1" rowspan="1"><p><span>Access and usage policy enforcement</span>
+    </p></td>
+  </tr>
+  <tr>
+    <td colspan="1" rowspan="1"><p><span>Rulebook</span></p></td>
+    <td colspan="1" rowspan="1"><p><span>Data Management</span></p></td>
+    <td colspan="1" rowspan="1"><p><span>This defines governance requirements and supports automated conformity assessment.</span>
+    </p></td>
+    <td colspan="1" rowspan="1"><p><span>Trust framework</span></p></td>
+  </tr>
+  <tr>
+    <td colspan="1" rowspan="1"><p><span>Accredited Trust Anchors and Trust Service Providers</span>
+    </p></td>
+    <td colspan="1" rowspan="1"><p><span>Data Management</span></p></td>
+    <td colspan="1" rowspan="1"><p><span>This is a listing of trust anchors and trust service providers (including revoked ones).</span>
+    </p></td>
+    <td colspan="1" rowspan="1"><p><span>Trust framework</span></p></td>
+  </tr>
+  <tr>
+    <td colspan="1" rowspan="1"><p><span>AI Model Descriptions</span></p></td>
+    <td colspan="1" rowspan="1"><p><span>Analysis</span></p></td>
+    <td colspan="1" rowspan="1"><p><span>These are the details of the &#8203;&#8203;datasets utilised, training versions, dependencies, and performance metrics such as accuracy and loss of AI models.</span>
+    </p>
+      <p><span></span></p></td>
+    <td colspan="1" rowspan="1"><p><span>Data, service, and offerings descriptions</span></p></td>
+  </tr>
+  </tbody>
+  </table>
+  <figcaption>
+    The artefacts of the technical architecture, including their names, descriptions,
+    the high-level components they belong to, and the building blocks they are related to.
+  </figcaption>
+</figure>
+
+<figure id="table-technical-architecture-components" class="table">
+<table>
+  <thead>
+  <tr>
+    <td  colspan="1" rowspan="1"><p><span>Component</span></p></td>
+    <td  colspan="1" rowspan="1"><p><span>High-level component</span></p></td>
+    <td  colspan="1" rowspan="1"><p><span>Description</span></p></td>
+    <td  colspan="1" rowspan="1"><p><span>Building Block</span></p></td>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td  colspan="1" rowspan="1"><p><span>Raw Data Sources</span></p></td>
+    <td  colspan="1" rowspan="1"><p><span>Data Sources</span></p></td>
+    <td  colspan="1" rowspan="1"><p><span>This is any data source, excluding data spaces.</span>
+    </p></td>
+    <td  colspan="1" rowspan="1"><p><span>Data Acquisition</span></p></td>
+  </tr>
+  <tr>
+    <td  colspan="1" rowspan="1"><p><span>Data Spaces</span></p></td>
+    <td  colspan="1" rowspan="1"><p><span>Data Sources</span></p></td>
+    <td  colspan="1" rowspan="1"><p><span>This is a federated environment where data is shared among trusted participants.</span>
+    </p></td>
+    <td  colspan="1" rowspan="1"><p><span>Data Acquisition</span></p></td>
+  </tr>
+  <tr>
+    <td  colspan="1" rowspan="1"><p><span>Data Space Connector</span></p></td>
+    <td  colspan="1" rowspan="1"><p><span>Connectivity</span></p></td>
+    <td  colspan="1" rowspan="1"><p><span>This enables an LDT to provide and consume data within a data space under governed, secure, and interoperable conditions.</span>
+    </p></td>
+    <td  colspan="1" rowspan="1"><p><span>Data Acquisition, Data Management</span></p>
+    </td>
+  </tr>
+  <tr>
+    <td  colspan="1" rowspan="1"><p><span>Extract, Transform, Load (ETL)</span></p>
+    </td>
+    <td  colspan="1" rowspan="1"><p><span>Data Acquisition</span></p></td>
+    <td  colspan="1" rowspan="1"><p><span>This is a data process that combines, cleans and organises data from multiple sources.</span>
+    </p></td>
+    <td  colspan="1" rowspan="1"><p><span>Data Acquisition</span></p></td>
+  </tr>
+  <tr>
+    <td  colspan="1" rowspan="1"><p><span>Data Storage</span></p></td>
+    <td  colspan="1" rowspan="1"><p><span>Data Acquisition</span></p></td>
+    <td  colspan="1" rowspan="1"><p><span>This is where the ETL stores existing data and where new data is stored that is generated by the SLCs.</span>
+    </p></td>
+    <td  colspan="1" rowspan="1"><p><span>Data Management</span></p></td>
+  </tr>
+  <tr>
+    <td  colspan="1" rowspan="1"><p><span>Data Model Publication</span></p></td>
+    <td  colspan="1" rowspan="1"><p><span>Data Management</span></p></td>
+    <td  colspan="1" rowspan="1"><p><span>This makes the data models available for querying. This includes (new) vocabularies.</span>
+    </p></td>
+    <td  colspan="1" rowspan="1"><p><span>Data Models, Publication and Discovery</span>
+    </p></td>
+  </tr>
+  <tr>
+    <td  colspan="1" rowspan="1"><p><span>Catalogue</span></p></td>
+    <td  colspan="1" rowspan="1"><p><span>Data Management</span></p></td>
+    <td  colspan="1" rowspan="1"><p><span>This makes the data, service, and offerings descriptions available for querying.</span>
+    </p></td>
+    <td  colspan="1" rowspan="1"><p><span>Publication and Discovery</span></p></td>
+  </tr>
+  <tr>
+    <td  colspan="1" rowspan="1"><p><span>Data Model Mediator</span></p></td>
+    <td  colspan="1" rowspan="1"><p><span>Data Management</span></p></td>
+    <td  colspan="1" rowspan="1"><p><span>This maps data from one data model to another data model.</span>
+    </p></td>
+    <td  colspan="1" rowspan="1"><p><span>Data models</span></p></td>
+  </tr>
+  <tr>
+    <td  colspan="1" rowspan="1"><p><span>Data Exchange Component</span></p></td>
+    <td  colspan="1" rowspan="1"><p><span>Data Management</span></p></td>
+    <td  colspan="1" rowspan="1"><p><span>This enables the actual sharing of data between a data provider and a data user.</span>
+    </p></td>
+    <td  colspan="1" rowspan="1"><p><span>Data exchange, Access and Usage Policy Enforcement</span>
+    </p></td>
+  </tr>
+  <tr>
+    <td  colspan="1" rowspan="1"><p><span>Observability Service</span></p></td>
+    <td  colspan="1" rowspan="1"><p><span>Data Management</span></p></td>
+    <td  colspan="1" rowspan="1"><p><span>This collects and stores provenance and traceability data.</span>
+    </p></td>
+    <td  colspan="1" rowspan="1"><p><span>Provenance, Traceability, and Observability</span></p></td>
+  </tr>
+  <tr>
+    <td  colspan="1" rowspan="1"><p><span>Discovery Service</span></p></td>
+    <td  colspan="1" rowspan="1"><p><span>Connectivity</span></p></td>
+    <td  colspan="1" rowspan="1"><p><span>This allows discovering which SLCs work with which LDTs.</span>
+    </p></td>
+    <td  colspan="1" rowspan="1"><p><span>Publication and Discovery</span></p></td>
+  </tr>
+  <tr>
+    <td  colspan="1" rowspan="1"><p><span>Rulebook Publication</span></p></td>
+    <td  colspan="1" rowspan="1"><p><span>Data Management</span></p></td>
+    <td  colspan="1" rowspan="1"><p><span>This makes the rulebook available for querying.</span>
+    </p></td>
+    <td  colspan="1" rowspan="1"><p><span>Trust Framework, Publication and Discovery</span></p></td>
+  </tr>
+  <tr>
+    <td  colspan="1" rowspan="1"><p><span>Trust Services</span></p></td>
+    <td  colspan="1" rowspan="1"><p><span>Connectivity</span></p></td>
+    <td  colspan="1" rowspan="1"><p><span>They validate attestations and declarations against the conformity assessment criteria defined in the Rulebook. They can also perform conformity assessments by validating declarations and certifications against the conformity schema. These services combine organisational checks and automated verification processes, issuing results under the authority of the Governance Authority.</span>
+    </p></td>
+    <td  colspan="1" rowspan="1"><p><span>Trust Framework, Identity and Attestation Management</span>
+    </p></td>
+  </tr>
+  <tr>
+    <td  colspan="1" rowspan="1"><p><span>Trust Anchors and Trust Service Providers Publication</span>
+    </p></td>
+    <td  colspan="1" rowspan="1"><p><span>Data Management</span></p></td>
+    <td  colspan="1" rowspan="1"><p><span>This makes the list of trust anchors and trust service providers available for querying.</span>
+    </p></td>
+    <td  colspan="1" rowspan="1"><p><span>Trust Framework, Publication and Discovery</span></p></td>
+  </tr>
+  <tr>
+    <td  colspan="1" rowspan="1"><p><span>Visualisation</span></p></td>
+    <td  colspan="1" rowspan="1"><p><span>Visualisations</span></p></td>
+    <td  colspan="1" rowspan="1"><p><span>This provides dashboards, spatial and temporal views, and interactive interfaces that enable end-users to explore, interpret, and interact with the outputs of services and analyses within an LDT.</span>
+    </p></td>
+    <td  colspan="1" rowspan="1"><p><span>Visualisation</span></p></td>
+  </tr>
+  <tr>
+    <td  colspan="1" rowspan="1"><p><span>Simulation</span></p></td>
+    <td  colspan="1" rowspan="1"><p><span>Analysis</span></p></td>
+    <td  colspan="1" rowspan="1"><p><span>This enables the exploration of dynamic behaviours and scenarios within LDTs. This supports testing of policies, systems, or interventions under different assumptions.</span>
+    </p></td>
+    <td  colspan="1" rowspan="1"><p><span>Analysis</span></p></td>
+  </tr>
+  <tr>
+    <td  colspan="1" rowspan="1"><p><span>AI Model Catalogue</span></p></td>
+    <td  colspan="1" rowspan="1"><p><span>Analysis</span></p></td>
+    <td  colspan="1" rowspan="1"><p><span>This tracks trained AI models and their associated metadata, including the datasets utilised, training versions, dependencies, and performance metrics such as accuracy and loss.</span>
+    </p></td>
+    <td  colspan="1" rowspan="1"><p><span>Publication and Discovery</span></p></td>
+  </tr>
+  <tr>
+    <td  colspan="1" rowspan="1"><p><span>AI Model Manager</span></p></td>
+    <td  colspan="1" rowspan="1"><p><span>Analysis</span></p></td>
+    <td  colspan="1" rowspan="1"><p><span>This manages each phase of an AI model&#39;s lifecycle, including training, deployment, and updates.</span>
+    </p></td>
+    <td  colspan="1" rowspan="1"><p><span>Analysis</span></p></td>
+  </tr>
+  <tr>
+    <td  colspan="1" rowspan="1"><p><span>AI Model Provider</span></p></td>
+    <td  colspan="1" rowspan="1"><p><span>Analysis</span></p></td>
+    <td  colspan="1" rowspan="1"><p><span>This deploys AI models as inference interfaces and manages the models&#39; state, deletion, and publication.</span>
+    </p></td>
+    <td  colspan="1" rowspan="1"><p><span>Analysis</span></p></td>
+  </tr>
+  <tr>
+    <td  colspan="1" rowspan="1"><p><span>AI Model Runner</span></p></td>
+    <td  colspan="1" rowspan="1"><p><span>Analysis</span></p></td>
+    <td  colspan="1" rowspan="1"><p><span>This runs the AI models, as instructed by the AI Model Provider.</span>
+    </p></td>
+    <td  colspan="1" rowspan="1"><p><span>Analysis</span></p></td>
+  </tr>
+  <tr>
+    <td  colspan="1" rowspan="1"><p><span>Decision Support Channels</span></p></td>
+    <td  colspan="1" rowspan="1"><p><span>Decision-Making</span></p></td>
+    <td  colspan="1" rowspan="1"><p><span>This enables the engagement of end-users (citizens or decision-makers) and supports participatory planning processes.</span>
+    </p></td>
+    <td  colspan="1" rowspan="1"><p><span>Decision-Making</span></p></td>
+  </tr>
+  <tr>
+    <td  colspan="1" rowspan="1"><p><span>Notifications</span></p></td>
+    <td  colspan="1" rowspan="1"><p><span>Decision-Making</span></p></td>
+    <td  colspan="1" rowspan="1"><p><span>This pushes notifications to end-users.</span></p></td>
+    <td  colspan="1" rowspan="1"><p><span>Decision-Making</span></p></td>
+  </tr>
+  <tr>
+    <td  colspan="1" rowspan="1"><p><span>Application Composition</span></p></td>
+    <td  colspan="1" rowspan="1"><p><span>Decision-Making</span></p></td>
+    <td  colspan="1" rowspan="1"><p><span>This allows end-users to wire together components from other high-level components (for example, dashboards, scenario builders, and analysis flows) to contribute to use cases.</span>
+    </p></td>
+    <td  colspan="1" rowspan="1"><p><span>Decision-Making</span></p></td>
+  </tr>
+  </tbody>
+  </table>
+
+  <figcaption>
+    The components of the technical architecture, including their names, descriptions,
+    the high-level components they belong to, and the building blocks they are related to.
+  </figcaption>
+</figure>
+
+When reading the data as an SLC,
+it flows through the architecture from the data sources to the SLCs,
+depicted by the arrows in [Figure 14](#fig-technical-architecture).
+Firstly, note that we didn't include every possible interaction/arrow to keep the figure as readable as possible.
+Secondly, if an SLC writes data back to the data sources or any of the components in between,
+then the arrows are reversed.
+
+Raw data goes from its data source,
+called Raw Data Source,
+to the ETL (arrow 1a).
+This does not include data from a data space.
+Data coming from a Data Space goes through a Data Space Connector (arrow 1b) before arriving at the ETL (arrow 1c).
+The ETL extracts, loads, and transforms the data based on a Rich Data Model that captures
+as much knowledge from the data sources as possible.
+Next, data flows from the ETL to the Data Storage (arrows 2a and 2b).
+The Data Model Mediator uses Data Model Mappings to map data (arrow 3) in a Rich Data Model to a Common Data Model.
+The mapped data flows to the Data Exchange Component (arrow 4).
+The Data Exchange Component uses the Trust Services (arrow 6) and the Access and Usage Policies to determine
+what data is shared with what parties and for what purposes.
+
+Next, the data flows from the Data Exchange Component to
+the Visualisations, Analysis, and Decision-Making (arrows 8a, 8b, 8c, and 8d).
+This can happen via different interfaces,
+for example, API 1 (arrow 8a and 8d) and API X (Arrow 8c and 8d).
+The shared data is in the Common Data Model that is required by the requesting SLC.
+The SLCs can access the data models through the Data Model Publication's API.
+The Discovery Service uses the details about
+the data, data models, AI models, services, and offerings (arrows 10a, 10b, 11a, 11b and 11c).
+
+The data can also flow from the Data Model Mediator to the Data Space Connector (arrow 14).
+From there, it can flow to the data space participants.
+Note that in [Figure 14](#fig-technical-architecture),
+we use 2 separate instances of the Data Space Connector for clarity,
+but during deployment, this can be a single instance.
+
+The AI Model Manager stores the details of the AI Data Model in the AI Model Registry (arrow 12a).
+The AI Model Provider uses these details (arrow 12b) to run the models on the AI Model Runner (arrow 12c).
+The latter uses the data made available through the Data Exchange Component (arrow 8b).
+Afterwards, a Decision-Making tool uses the runner's output (arrow 15).
+When accessing data, SLCs use the Trust Services (arrows 13a and 13b) to authenticate the users.
+To support provenance and traceability,
+the necessary information flows from different components to the Observability Service (arrows 5a and 5b).
+Note that in [Figure 14](#fig-technical-architecture),
+we only added arrows between two components and the Observability Service for clarity.
+It's possible to let the Observability Service collect data from other components as well.
+
+Similar to the AI Model Runner,
+the Simulation can use the data (arrow 8c).
+Afterwards, the results of the Simulation can flow,
+for example, to a Visualisation (arrow 9b) or a Decision-Making tool (arrow 9a).
+
+The Data Exchange Component and SLCs use a Contract Negotiation API that allows them to
+offer data, along with policies, to a data consumer that requests data (arrow 7).
+This happens before data flows from the Data Exchange Components to the SLCs.
+
+The architecture applies the [shift-left data paradigm](https://www.confluent.io/learn/what-is-shift-left/)
+to prevent bad data proliferation, storage, and compute needs in downstream systems.
+It achieves this by processing the data as close to the data sources as possible instead of
+requiring the SLCs to do that.
+Specifically, the Data Acquisition and Data Management components make sure
+
+- the data is correctly semantically modelled,
+    while maintaining the flexibility to map the data to a different data model when needed, and
+- the data can be exchanged through different (non-)streaming interfaces.
+
+In [[#support-different-data-models]], [[#support-different-data-exchange-types]], and [[#support-different-data]],
+we elaborate on how the architecture behaves during specific scenarios.
+In [[#support-different-ai-models]],
+we explain the recommended standards and protocols for the artefacts and the interaction between components.
+
+<pre class=include>
+path: technical-architecture-subsections.bs
+</pre>

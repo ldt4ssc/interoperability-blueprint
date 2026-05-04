@@ -38,3 +38,7 @@ h5 {
 figcaption:not(.no-marker)::before {
     content: "Figure " counter(figure) ". " !important;
 }
+
+figure.table figcaption:not(.no-marker)::before {
+    content: "Table " counter(table) ". " !important;
+}

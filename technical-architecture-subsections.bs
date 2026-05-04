@@ -1,0 +1,306 @@
+### Support different data models ### {#support-different-data-models}
+
+Support for different SLCs using different data models is achieved in the Data Management component
+by using the **Data Model Mediator**.
+After the data from the different data sources is materialised using
+their corresponding rich data model in the Data Acquisition component,
+the Data model mediator maps the data to one of the common data models.
+The mediator does this by using the corresponding data model mappings.
+The LDT can support new rich and common data models by adding mappings for the relevant models.
+Consequently, the LDT supports semantic interoperability.
+
+In [Figure 15](#fig-focus-on-data-models),
+we have an example with two Rich Data Models, two Common Data Models, and two Visualisations.
+The Data Acquisition component materialises the data from a Raw Data Source using
+Rich Data Model 1 (arrow 1a) and data from a Data Space using Rich Data Model 2 (arrows 1b and 1c).
+Next, the data goes to the Data Storage (arrows 2a and 2b) and then to the Data Model Mediator (arrow 3).
+The mediator maps the resulting data to either the Common Data Model 1 (arrow 4a),
+which is used by Visualisation 1 (arrow 5a), or the Common Data Model 2 (arrow 4b),
+which is used by Visualisation 2 (arrow 5b).
+Note that we kept only the relevant components needed for our explanation compared to Figure 4.2.
+
+Also, [Figure 15](#fig-focus-on-data-models) highlights
+how interoperability between different data sources and SLCs is achieved through
+the use of multiple data models and their mappings,
+but it doesn't provide an exhaustive representation of
+all possible data modelling and transformation patterns and deployments.
+
+<figure id="fig-focus-on-data-models">
+  <img id="focus-on-data-models" alt="TO-DO" src="img/focus-on-data-models.jpg">
+	<figcaption>
+		The Data Acquisition component ingests and structures the data from a raw data source using
+		Rich Data Model 1 and data from a data space using Rich Data Model 2.
+		Next, the data goes to the Data Storage and then to the Data Model Mediator.
+		The mediator maps the resulting data to either the Common Data Model 1,
+    which is used by Visualisation 1, or the Common Data Model 2, which is used by
+    Visualisation 2.
+	</figcaption>
+</figure>
+
+### Support different data exchange types ### {#support-different-data-exchange-types}
+
+Support for different SLCs using different data exchange types is achieved in
+the Data Management component by using the **Data Exchange Component**.
+After the data enters the Data Exchange Component from the Data Model Mediator,
+the Data Exchange Component offers it to the different SLCs through the necessary interfaces.
+Note that supporting different data exchange types contributes to an LDT's interoperability,
+but it doesn't contribute to the semantic interoperability.
+The LDT does this through the Data Model Mediator (see [[#support-different-data-models]]).
+
+In [Figure 16](#fig-focus-on-data-exchange-types),
+the Data Exchange Component has two interfaces: API 1 and API 2.
+There are two Visualisations:
+one that gets the data via API 1 (arrow 1) and another that gets the data via API 2 (arrow 2).
+
+<figure id="fig-focus-on-data-exchange-types">
+  <img id="focus-on-data-exchange-types" alt="TO-DO" src="img/focus-on-data-exchange-types.jpg">
+	<figcaption>
+		The Data Exchange Component has two interfaces: API 1 and API 2.
+    There are two Visualisations:
+    one that gets the data via API 1 and another that gets the data via API 2.
+	</figcaption>
+</figure>
+
+### Support for the usage of data from different LDTs ### {#support-different-data}
+
+The **Data Space Connector** in one LDT's Data Acquisition component and
+the Data Space Connector in the other LDT's Data Management component allow support for
+sharing data between those LDTs.
+After the data leaves the Data Model Mediator,
+an LDT's Data Space Connector shares the data with the other LDT’s Data Space Connector.
+Afterwards, the latter LDT processes the data like the data from a Raw Data Source.
+In [Figure 17](#fig-focus-on-sharing-data-between-ldts),
+the data from LDT 2 flows to its Data Space Connector (arrow 1).
+Next, it flows to the Data Space Connector of LDT 1 (arrow 2).
+Finally, the data is processed by LDT 1's ETL (arrow 3).
+
+<figure id="fig-focus-on-sharing-data-between-ldts">
+  <img id="focus-on-sharing-data-between-ldts" alt="TO-DO" src="img/focus-on-sharing-data-between-ldts.jpg">
+	<figcaption>
+		The Data Space Connectors of both LDTs allow for the sharing of data between the LDTs.
+		Data from one LDT flows, from the Data Management component,
+		to the other LDT, into the Data Acquisition component.
+	</figcaption>
+</figure>
+
+### Support for working with different AI models ### {#support-different-ai-models}
+
+The **AI model manager, AI model catalogue, AI model provider, and AI model runner**,
+which are part of the Analysis component, support working with different AI models.
+The manager updates a model's information in the catalogue.
+This allows the provider to query
+the necessary information about a model to deploy it on the runner.
+This setup allows running
+different models at the same time, but also different versions of the same model.
+In [Figure 18](#fig-how-ai-components-works),
+the manager manages the lifecycle of AI model 1 (top-left diagram).
+It stores the information about the model, including its versions,
+in the catalogue (top-right diagram, arrow 1).
+The provider queries the second version of the AI model 1’s information from the
+catalogue (bottom-left diagram, arrow 2) and deploys it on the runner (bottom-left diagram, arrow 3).
+Next to this model, the provider also deploys the third version of AI model 2
+(bottom-right diagram, arrow 3).
+
+<figure id="fig-how-ai-components-works">
+  <<img id="how-ai-components-work" alt="TO-DO" src="img/how-ai-components-work.jpg">
+	<figcaption>
+		The AI Model Manager, AI Model Catalogue, AI Model Provider, and AI Model Runner work together to support
+		working with different AI models.
+	</figcaption>
+</figure>
+
+### Standards and protocols ### {#standards-protocols}
+
+In this section,
+we list the recommended standards and protocols for the [artefacts](#artefacts) and
+the [interactions between the components](#interaction-components).
+We based ourselves on the previous deliverables D3.7 Technical Resources for pilots (Work Strand 1) and
+D3.8 Technical Resources for pilots (Work Strands 1, 2 & 3), the DSSC Blueprint v3, and
+the DS4SSCC-DEP Blueprint.
+We focus only on RDF-based and NGSI-LD systems to facilitate
+the interoperability within an LDT and between LDTs,
+as described in Section 4.2.5 of D3.8.
+
+#### Artefacts #### {#artefacts}
+
+In this section,
+we describe the standards and protocols for data, vocabularies, data models,
+data model mappings, services, and offerings descriptions, access and usage policies,
+provenance and traceability, and AI model descriptions.
+
+##### RDF-based systems ##### {#rdf-based-systems}
+**Data**: [Resource Description Framework](https://www.w3.org/TR/rdf11-concepts/) (RDF).
+RDF is a framework for representing information on the Web.
+Its core structure is a set of triples, each consisting of a subject, a predicate and an object.
+A set of such triples is called an RDF graph.
+
+**Vocabularies**: [RDF Schema](https://www.w3.org/TR/rdf11-schema/) (RDFS) and
+[Web Ontology Language](https://www.w3.org/OWL/) (OWL).
+RDF Schema provides a data-modelling vocabulary for RDF data.
+OWL is a language designed to represent rich and complex knowledge about things, groups of things, and
+relations between things.
+
+**Data Models**: [Shapes Constraint Language](https://www.w3.org/TR/shacl/) (SHACL).
+This is a language for validating RDF
+against a set of conditions.
+We provide these conditions as shapes and other constructs expressed via RDF.
+As we use SHACL shapes to validate that data satisfy a set of conditions,
+these shapes can also be viewed as a description of the data that satisfy these conditions.
+Such descriptions may be used for a variety of purposes besides validation,
+including user interface building, code generation and data integration through shared data models.
+
+##### NGSI-LD-based systems ##### {#ngsild-based-systems}
+
+**Data**:
+[NGSI-LD Information Model](https://www.etsi.org/deliver/etsi_gs/CIM/001_099/006/01.03.01_60/gs_cim006v010301p.pdf).
+It builds upon [JSON-LD](https://www.w3.org/TR/json-ld/) and RDF principles to represent
+entities, properties, and relationships as Linked Data,
+allowing information to be read by machines and interoperable across domains.
+
+**Vocabularies and Data Models**:
+[Smart Data Models](https://github.com/smart-data-models) (SDM) and [JSON Schema](https://json-schema.org/).
+SDM is an initiative that develops open, reusable data schemas aligned with NGSI-LD.
+It provides harmonised ontologies according to a specific domain, such as mobility, energy, or environment.
+JSON Schema is a declarative language for defining structure and constraints for JSON data.
+SDM uses it to describe its data models.
+
+##### System-independent ##### {#system-independent}
+
+**Data Model Mappings**:
+[Notation3](https://notation3.org/) (N3),
+]SPARQL Query Language](https://www.w3.org/TR/sparql11-query/) (SPARQL), and
+[RDF Mapping Language](https://rml.io/specs/rml/) (RML).
+N3 is a rule language for natively building and reasoning over semantic knowledge graphs.
+Since N3 is a superset of RDF,
+there is no impedance mismatch between N3 and Knowledge Graphs.
+We can use N3 to map RDF data using one data model to data using another data model by defining rules.
+We can find an example on the
+[Eyeling N3 Playground](https://eyereasoner.github.io/eyeling/demo?url=https://raw.githubusercontent.com/eyereasoner/eyeling/refs/heads/main/examples/schema-foaf-mapping.n3).
+We can use SPARQL to express queries across diverse data sources,
+whether the data is stored natively as RDF or viewed as RDF via middleware.
+SPARQL can be used to map RDF data by using the CONSTRUCT query form.
+We can try an example via
+[Comunica](https://query.comunica.dev/#datasources=https%3A%2F%2Fraw.githubusercontent.com%2Feyereasoner%2Feyeling%2Frefs%2Fheads%2Fmain%2Fexamples%2Fschema-foaf-mapping.n3&query=PREFIX%20foaf%3A%20%3Chttp%3A%2F%2Fxmlns.com%2Ffoaf%2F0.1%2F%3E%0APREFIX%20schema%3A%20%3Chttps%3A%2F%2Fschema.org%2F%3E%0A%0ACONSTRUCT%20%7B%0A%20%20%3Fperson%20a%20foaf%3APerson%20%3B%0A%20%20%20%20%20%20%20%20%20%20%20foaf%3Aname%20%3Fname%20.%0A%7D%20WHERE%20%7B%0A%20%20%3Fperson%20a%20schema%3APerson%20%3B%0A%20%20%20%20%20%20%20%20%20%20%20schema%3Aname%20%3Fname%20.%0A%7D%0A).
+RML is a mapping language defined to express mapping rules from
+heterogeneous data structures and serialisations to the RDF data model.
+Similar to N3,
+we can use RML to map RDF-based data (available as a result of,
+for example, a SPARQL query) by defining rules.
+We can try an example on the
+[RML Playground](https://rml.io/playground/rmlio/rmlmapper/v8/?example=eyJtYXBwaW5nIjoiQHByZWZpeCBycjogPGh0dHA6Ly93d3cudzMub3JnL25zL3Iycm1sIz4gLlxuQHByZWZpeCBmb2FmOiA8aHR0cDovL3htbG5zLmNvbS9mb2FmLzAuMS8-IC5cbkBwcmVmaXggZXg6IDxodHRwOi8vZXhhbXBsZS5jb20vPiAuXG5AcHJlZml4IHhzZDogPGh0dHA6Ly93d3cudzMub3JnLzIwMDEvWE1MU2NoZW1hIz4gLlxuQHByZWZpeCBybWw6IDxodHRwOi8vc2Vtd2ViLm1tbGFiLmJlL25zL3JtbCM-IC5cbkBwcmVmaXggcWw6IDxodHRwOi8vc2Vtd2ViLm1tbGFiLmJlL25zL3FsIz4gLlxuQGJhc2UgPGh0dHA6Ly9leGFtcGxlLmNvbS9iYXNlLz4gLlxuXG48VHJpcGxlc01hcDE-IGEgcnI6VHJpcGxlc01hcDtcbiAgICBcbiAgcm1sOmxvZ2ljYWxTb3VyY2UgWyBcbiAgICBybWw6c291cmNlIFwiZGF0YS5qc29uXCI7XG4gICAgcm1sOnJlZmVyZW5jZUZvcm11bGF0aW9uIHFsOkpTT05QYXRoO1xuICAgIHJtbDppdGVyYXRvciBcIiQucmVzdWx0cy5iaW5kaW5nc1sqXVwiXG4gIF07XG5cbiAgcnI6c3ViamVjdE1hcCBbIFxuICAgIHJtbDpyZWZlcmVuY2UgXCJwZXJzb25cIjtcbiAgICBycjpjbGFzcyBmb2FmOlBlcnNvbiBcbiAgXTtcblxuICBycjpwcmVkaWNhdGVPYmplY3RNYXAgWyBcbiAgICBycjpwcmVkaWNhdGUgZm9hZjpnaXZlbk5hbWUgOyBcbiAgICBycjpvYmplY3RNYXAgWyBybWw6cmVmZXJlbmNlIFwiZ2l2ZW5OYW1lXCIgXVxuICBdO1xuXG4gIHJyOnByZWRpY2F0ZU9iamVjdE1hcCBbIFxuICAgIHJyOnByZWRpY2F0ZSBmb2FmOmZhbWlseU5hbWUgOyBcbiAgICBycjpvYmplY3RNYXAgWyBybWw6cmVmZXJlbmNlIFwiZmFtaWx5TmFtZVwiIF1cbiAgXTtcblxuICBycjpwcmVkaWNhdGVPYmplY3RNYXAgWyBcbiAgICBycjpwcmVkaWNhdGUgZm9hZjpuYW1lIDsgXG4gICAgcnI6b2JqZWN0TWFwIFsgcm1sOnJlZmVyZW5jZSBcIm5hbWVcIiBdXG4gIF0uIiwiZGF0YSI6W3sicGF0aCI6InJlYWRpbmdzLTIuY3N2IiwidHlwZSI6ImNzdiIsInZhbHVlIjoiU2Vuc29ySUQsVGltZXN0YW1wLFRlbXBlcmF0dXJlXG4xLDIwMjMtMDEtMDFUMDk6MDA6MDAsOVxuMiwyMDIzLTAxLTAxVDA5OjAwOjAwLDlcbiJ9LHsicGF0aCI6ImRhdGEuanNvbiIsInR5cGUiOiJqc29uIiwidmFsdWUiOiJ7XG4gICAgXCJyZXN1bHRzXCI6IHtcbiAgICAgICAgXCJiaW5kaW5nc1wiOiBbXG4gICAgICAgICAgICB7XG4gICAgICAgICAgICAgICAgXCJwZXJzb25cIjogXCJodHRwczovL2V4YW1wbGUub3JnL2FsaWNlXCIsXG4gICAgICAgICAgICAgICAgXCJuYW1lXCI6IFwiQWxpY2UgRXhhbXBsZVwiLFxuICAgICAgICAgICAgICAgIFwiZ2l2ZW5OYW1lXCI6IFwiQWxpY2VcIixcbiAgICAgICAgICAgICAgICBcImZhbWlseU5hbWVcIjogXCJFeGFtcGxlXCJcbiAgICAgICAgICAgIH1cbiAgICAgICAgXVxuICAgIH1cbn0ifV19#).
+
+**Data, Services, and Offerings Descriptions**:
+[Data Catalog Vocabulary](https://www.w3.org/TR/vocab-dcat-3/) (DCAT) and
+[DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/).
+DCAT provides the baseline vocabulary for describing datasets and related resources in
+a structured, machine-readable manner.
+DCAT-AP is an application profile of
+DCAT with mandatory fields and controlled vocabularies,
+ensuring that metadata can be aggregated across Europe,
+such as the [official portal for European data](http://data.europa.eu).
+It’s extensible to reflect specific domains.
+It also contains the descriptions of the endpoints where others can find
+the rulebook, trust anchors, trust service providers, data models, and AI model descriptions.
+
+**Access and Usage Policies**: [Open Digital Rights Language](https://www.w3.org/TR/odrl-model/) (ODRL).
+This is a policy expression language that provides a flexible and interoperable information model,
+vocabulary, and encoding mechanisms for representing statements about the usage of content and services.
+Policies are used to represent permitted and prohibited actions over a certain asset,
+as well as the obligations required to be met by stakeholders.
+In addition,
+policies may be limited by constraints (for example, temporal or spatial constraints), and
+duties (for example, payments) may be imposed on permissions.
+
+**Provenance and Traceability**: [The PROV Ontology](https://www.w3.org/TR/prov-o/) (PROV-O).
+It provides a set of classes, properties, and restrictions that can be used to represent and interchange
+provenance information generated in different systems and under different contexts.
+It can also be specialised to create new classes and properties to model
+provenance information for different applications and domains.
+
+Note that, to the best of our knowledge,
+there is no standard yet for describing a rulebook
+and AI models in a machine-readable way.
+
+#### Interaction between components #### {#interaction-components}
+
+In this section, we explain how the different components interact.
+If a specific interaction between two components is not discussed,
+then it is very use-case dependent, which is out of scope of the blueprint.
+For example, how data sources interact with the ETL is very use-case dependent because
+it depends on the volume of the data, how often it changes, and whether it’s streaming data or not.
+Nonetheless, we can find suggestions in the deliverables D3.7 Technical Resources for pilots (Work Strand 1) and
+D3.8 Technical Resources for pilots (Work Strands 1, 2 and 3).
+
+The interactions between components can be understood as a sequence of steps that
+enable data discovery, data access, secure exchange, and supporting SLCs.
+
+**Discovery interactions** enable consumers to discover available datasets and SLCs.
+The **Catalogue** (arrows 10b, 11a, 11b, and 11c) is a crucial component in these interactions.
+For this component,
+we suggest the
+[Dataspace Protocol - Catalog Protocol](https://eclipse-dataspace-protocol-base.github.io/DataspaceProtocol/2025-1-err1/#catalog-protocol).
+It defines how a catalogue is requested from a catalogue service by a consumer using
+an abstract Message exchange format.
+The Catalog Protocol reuses properties from the DCAT and ODRL vocabularies with restrictions defined in the protocol.
+
+**Negotiation interactions** define how access to data is agreed between participants.
+The **Data Exchange Component** and **SLCs** (arrow 7) are crucial components in these interactions.
+For these components, we suggest the
+[Dataspace Protocol - Contract Negotiation Protocol](https://eclipse-dataspace-protocol-base.github.io/DataspaceProtocol/2025-1-err1/#negotiation-protocol).
+It defines how a data provider offers data, along with policies, to a data consumer that requests data.
+
+**Data exchange interactions** enable the actual sharing of data between participants once agreements are in place.
+The **Data Space Connector** is a crucial component when sharing data through a data space.
+For this component,
+we suggest the [Dataspace Protocol](https://eclipse-dataspace-protocol-base.github.io/DataspaceProtocol/2025-1-err1/).
+It is a specification designed to facilitate interoperable data sharing between entities governed by
+usage control and based on Web technologies.
+This specification defines the schemas and protocols required for entities to publish data, negotiate agreements, and
+access data as part of a data space.
+
+**Publication and management interactions** support the exposure and maintenance of shared artefacts.
+**Data Model Publication, Rulebook Publication, and Observability Service** are
+the related components for these interactions.
+For these components,
+we suggest an [HTTP API](https://httpwg.org/specs/rfc9110.html).
+The HTTP methods are enough to make data models, rulebooks, and provenance and traceability data
+queryable (GET) and updatable (POST, PUT, and DELETE).
+
+**Trust and identity interactions** establish trust between participants.
+**Trust Services** is a crucial component for these interactions.
+For this component,
+we suggest [W3C Verifiable Credentials](https://www.w3.org/TR/vc-data-model-2.0/) (VC),
+[W3C Decentralized Identifiers](https://www.w3.org/TR/did-core/) (DIDs),
+[OpenID for Verifiable Credentials](https://openid.net/sg/openid4vc/) (OIDC4VC), and
+[Eclipse Dataspace Decentralized Claims Protocol](https://projects.eclipse.org/projects/technology.dataspace-dcp/governance)
+(DCP).
+VC provides an interoperable model for expressing digital credentials.
+We can use it for attestations in a machine-readable format.
+DIDs are globally unique and verifiable identifiers.
+They allow organisations, natural persons, and machines to be securely identified across domains.
+OIDC4VC and DCP are two complementary protocols for credential exchange.
+OIDC4VC extends [OpenID Connect](https://openid.net/specs/openid-connect-core-1_0.html) and
+[OAuth2](https://datatracker.ietf.org/doc/html/rfc6749) flows,
+enabling secure and interoperable credential issuance and presentation in line with
+existing identity and access management practices.
+DCP, developed under the Eclipse Dataspace Foundation,
+provides a governance-aware protocol overlay for exchanging and verifying claims without relying on centralised intermediaries.
+
+**Notification interactions** enable the propagation of events and updates between components.
+**Notifications** is a crucial component for these interactions.
+For this component,
+we suggest [Linked Data Notifications](https://www.w3.org/TR/ldn/) (LDN) and
+[Common Alerting Protocol](https://www.oasis-open.org/standard/cap/) (CAP).
+LDN is a protocol that describes how servers (receivers) can have messages pushed to them by applications (senders),
+as well as how other applications (consumers) may retrieve those messages.
+Messages are expressed in RDF and can contain any data.
+CAP is an XML-based data format for exchanging public warnings and emergencies between alerting technologies.
+CAP increases warning effectiveness and simplifies the task of activating a warning for responsible officials.
+It allows LDTs to deliver notifications to end-users in a standardised manner.
+
+Note that some interactions are not standardised,
+such as the publication of Trust Anchors and Trust Service Providers and AI components.
+However, there are efforts that we can build on,
+such as the [Gaia-X Registry](https://gitlab.com/gaia-x/lab/compliance/gx-registry/-/blob/development/README-api.md),
+the [EBSI Trusted Issuers Registry](https://hub.ebsi.eu/apis/pilot/trusted-issuers-registry/v5), and
+the [Open Inference Protocol](https://kserve.github.io/website/docs/concepts/architecture/data-plane/v2-protocol).

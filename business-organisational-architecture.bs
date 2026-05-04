@@ -1,0 +1,115 @@
+## Business and organisational architecture ## {#business-organisational-architecture}
+
+The business and organisational architecture of LDTs builds on
+the building blocks of [[#business-organisational-building-blocks]].
+[Figure ??]() provides the schematic overview of
+the interrelations of various business and organisational building blocks,
+specific to developing and operating an LDT.
+Note that building blocks are not specific assets or components,
+as these are deployed based on particular implementation contexts.
+However, as the LDT4SSC project's aim is to support the development of an LDT ecosystem,
+[Figure ??]() introduces further the business and organisational building blocks necessary for fostering
+the connections between various LDTs, and
+the sharing of data products and LDT services.
+
+Figures [12](#fig-bo-architecture-1) and [13](fig-bo-architecture-2) consist of five major clusters:
+
+1. **An LDT** (dark grey), including data products and LDT services.
+2. **LDT ecosystem** (light grey, only in [Figure ??](#fig-bo-architecture-1)) refers to the overarching framework for
+    connecting LDTs and sharing resources (data products and/or services) among them.
+3. **Participants in their specific roles** (blue), emphasising especially data providers,
+    data consumers, intermediaries/operators and/or a governance authority
+    (even though there may be additional roles, defined by LDT’s governance framework).
+    Note that these are not mutually exclusive, and participants may carry one or multiple roles.
+    All participants must adhere to the governance framework, ensure regulatory compliance, and
+    are expected to participate in the respective use cases.
+    Note that single participants (legal bodies) have their own organisational form and business model, and
+    their interests, rights and responsibilities must be accounted for when designing the data cooperation model.
+4. **Business and organisational building blocks** (green) that are necessary either for
+    the design, governance or operations of the LDT and/or LDT ecosystem.
+5. **Urban and community processes** (yellow) layer emphasises the importance of integrating LDT services into
+    specific urban and community processes,
+    such as smart governance, administration, specific urban or community services or others.
+    This fosters practical value creation and increases the relevance of LDTs in the respective local community,
+    showing how LDTs help address local needs and achieve specific objectives.
+
+<figure id="fig-bo-architecture-1">
+  <img id="bo-architecture-1" alt="TO-DO" src="img/bo-architecture-1.jpg">
+  <figcaption>
+    High-level architecture of the business and organisational building blocks for developing and operating an LDT.
+  </figcaption>
+</figure>
+
+Following [Figure ??](#fig-bo-architecture-1),
+the development and use of an LDT is dependent on a specific **use case(s)**,
+which identifies the need for specific **LDT services** and **data products**.
+That use case must address local needs and integrate the LDT into **urban processes**.
+In doing so,
+the LDT's **user experience** should be carefully considered and monitored to foster adoption.
+To sustain the use of LDTs and the respective use cases,
+one needs to ensure a feasible **business model** (short- and long-term),
+which is aligned with the strategic business incentives of all engaged participants.
+
+Various **participants** engage/participate in the use case in different ways:
+
+- The **governance authority of an LDT** maintains the **governance framework**,
+    which defines the rules, processes, standards, and so on, of an LDT,
+    including the promotion of **responsible digital practices**.
+    All participants need to adhere to that governance framework to participate in the LDT development/operations and
+    in the specific use case.
+- A **data provider** provides data products for the LDT, which are then consumed by
+    **data consumers** (often the provider of the LDT services).
+- To support the integration of additional data sources,
+    the builders and/or owners of the LDT may cooperate with **intermediaries or operators**,
+    who may facilitate the exchange and/or preparation of the data products.
+
+While collecting,
+sharing and processing data (as well as any other business activity),
+all participants must ensure **regulatory compliance** in their actions.
+Relatedly, the **contractual framework** will give a legal ground to the established governance framework and
+ensure legal certainty and alignment with various regulations.
+
+Depending on whether the participants have an **organisational form** or not,
+data sharing and engagement in the LDT may vary
+(for example, whether individuals could engage with the LDT by providing data directly).
+Also, if the LDT is co-developed by multiple actors, it may be co-governed through a specific organisational form
+(either incorporated, such as an association, or unincorporated, such as a consortium or joint venture).
+
+In addition to the perspective of necessary building blocks for the single LDT,
+[Figure ??](#fig-bo-architecture-2) provides an overview of the building blocks (and relationships between them)
+that shape how several LDTs connect with one another and exchange assets among themselves.
+LDTs may leverage the interoperability framework of data spaces and
+the guidelines from DSSC and DS4SSCC-DEP,
+as discussed in [[#building-blocks]].
+
+<figure id="fig-bo-architecture-2">
+  <img id="bo-architecture-2" alt="TO-DO" src="img/bo-architecture-2.jpg">
+  <figcaption>
+    High-level architecture of the business and organisational building blocks for
+    developing and operating an LDT-ecosystem,
+    with the aim of sharing data products and/or LDT services among different LDTs.
+  </figcaption>
+</figure>
+
+The central focus point is again on the **use case**,
+which identifies the need for sharing specific data products or LDT services.
+Furthermore, the use case identifies mandatory **functionalities (capabilities)** for the functioning of the LDT ecosystem
+(for example, exchange of assets, brokering, and so on) that may be provided by a **data space**.
+A data space is defined by the **rulebook** (essentially a documented governance framework),
+which includes a structured set of principles, processes, standards, protocols, rules and practices that
+guide and regulate the governance, management and operations within a data space to
+ensure effective and responsible leadership, control, and oversight.
+It also defines the functionalities the data space provides and the associated data space roles,
+including the data space governance authority and participants.
+The rulebook is maintained by a **data space's (DS) governance authority**,
+which also decides on the **participants' management**,
+in other words, the onboarding, continuous facilitation of participants, and offboarding.
+Relatedly, LDT-ecosystem is not an intellectual construct -
+it has tangible interfaces through which **users experience** the ecosystem and the interactions within.
+
+It's worth noting that an operational data space (LDT ecosystem) also has a **business model** to
+sustain its activities and fulfil its purpose.
+It also takes an **organisational form** (incorporated or unincorporated),
+which influences several business and organisational considerations
+(such as what agreements/contracts should be established,
+what its decision-making processes will look like, and so on).
