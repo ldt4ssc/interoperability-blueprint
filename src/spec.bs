@@ -8,6 +8,7 @@ Editor: Pieter Heyvaert, Ghent University - imec http://idlab.ugent.be/, pieter.
 Editor: Sille Sepp, TalTech https://taltech.ee/
 Editor: Laura Riou, Cerema https://www.cerema.fr
 Editor: Lucas Vieira Magalhães, LIST https://www.list.lu/
+Editor: Juan Francisco Inglés, Libelium https://www.libelium.com/
 Editor: Thimo Thoeye, OASC https://oascities.org/
 Abstract: To-do
 Markup Shorthands: markdown yes, css no
