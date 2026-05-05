@@ -78,7 +78,7 @@ as proposed in Deliverable 3.8:
     This level uses the components Connectivity, Analysis, Visualisations, and Decision-Making.
 
 <figure id="fig-high-level-ldt">
-<img id="high-level-ldt" alt="TO-DO" src="img/high-level-ldt.jpg">
+<img id="high-level-ldt" alt="" src="img/high-level-ldt.jpg">
 <figcaption>High-level overview of an LDT. An LDT contains 7 high-level components:
 Data sources, Data Acquisition, Data management, Analysis, Visualisations,
 Decision-making, and Connectivity.</figcaption>
@@ -133,7 +133,7 @@ While adding new SLCs, we want to
 - limit the effects on other components if existing components need to be replaced.
 
 <figure id="fig-ldt-add-new-slc">
-<img id="ldt-add-new-slc" alt="TO-DO" src="img/ldt-add-new-slc.jpg">
+<img id="ldt-add-new-slc" alt="" src="img/ldt-add-new-slc.jpg">
 <figcaption>We design an LDT in such a way that we can easily add new visualisations, new analysis, and new decision-making tools.</figcaption>
 </figure>
 
@@ -168,7 +168,7 @@ their existing Base and Core-level components, and
 what adaptations would be required where full compatibility is not available (see [Figure 3](#fig-ldt-discovery)).
 
 <figure id="fig-ldt-discovery">
-<img id="ldt-discovery" alt="TO-DO" src="img/ldt-discovery.jpg">
+<img id="ldt-discovery" alt="" src="img/ldt-discovery.jpg">
 <figcaption>We want to be able to automatically discover which new SLCs can work on top of an existing LDT.</figcaption>
 </figure>
 
@@ -251,7 +251,7 @@ layer 6  (Decision-making) with the Visualisations (support), Analysis (automati
 Decision-Making (prescription, support) components (see [Figure 4](#fig-ldt-mim8)).
 
 <figure id="fig-ldt-mim8">
-<img id="ldt-mim8" alt="TO-DO" src="img/ldt-mim8.jpg">
+<img id="ldt-mim8" alt="" src="img/ldt-mim8.jpg">
 <figcaption>The high-level components align with the MIMs.</figcaption>
 </figure>
 
@@ -283,7 +283,7 @@ but also an enabler for building more complex systems by
 combining the outputs of multiple services in a governed way.
 
 <figure id="fig-connect-ldts-via-ds-1">
-<img id="connect-ldts-via-ds-1" alt="TO-DO" src="img/connect-ldts-via-ds-1.jpg">
+<img id="connect-ldts-via-ds-1" alt="" src="img/connect-ldts-via-ds-1.jpg">
 <figcaption>LDTs can use data from a data space.</figcaption>
 </figure>
 
@@ -326,7 +326,7 @@ In doing so, these components may use the same data or different data obtained t
 depending on the needs and context of each LDT.
 
 <figure id="fig-connect-ldts-via-ds-2">
-<img id="connect-ldts-via-ds-2" alt="TO-DO" src="img/connect-ldts-via-ds-2.jpg">
+<img id="connect-ldts-via-ds-2" alt="" src="img/connect-ldts-via-ds-2.jpg">
 <figcaption>Surface-level components of one LDT ideally work with other LDTs as well.</figcaption>
 </figure>
 

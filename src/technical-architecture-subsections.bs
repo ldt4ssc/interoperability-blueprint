@@ -26,7 +26,7 @@ but it doesn't provide an exhaustive representation of
 all possible data modelling and transformation patterns and deployments.
 
 <figure id="fig-focus-on-data-models">
-  <img id="focus-on-data-models" alt="TO-DO" src="img/focus-on-data-models.jpg">
+  <img id="focus-on-data-models" alt="" src="img/focus-on-data-models.jpg">
 	<figcaption>
 		The Data Acquisition component ingests and structures the data from a raw data source using
 		Rich Data Model 1 and data from a data space using Rich Data Model 2.
@@ -53,7 +53,7 @@ There are two Visualisations:
 one that gets the data via API 1 (arrow 1) and another that gets the data via API 2 (arrow 2).
 
 <figure id="fig-focus-on-data-exchange-types">
-  <img id="focus-on-data-exchange-types" alt="TO-DO" src="img/focus-on-data-exchange-types.jpg">
+  <img id="focus-on-data-exchange-types" alt="" src="img/focus-on-data-exchange-types.jpg">
 	<figcaption>
 		The Data Exchange Component has two interfaces: API 1 and API 2.
     There are two Visualisations:
@@ -75,7 +75,7 @@ Next, it flows to the Data Space Connector of LDT 1 (arrow 2).
 Finally, the data is processed by LDT 1's ETL (arrow 3).
 
 <figure id="fig-focus-on-sharing-data-between-ldts">
-  <img id="focus-on-sharing-data-between-ldts" alt="TO-DO" src="img/focus-on-sharing-data-between-ldts.jpg">
+  <img id="focus-on-sharing-data-between-ldts" alt="" src="img/focus-on-sharing-data-between-ldts.jpg">
 	<figcaption>
 		The Data Space Connectors of both LDTs allow for the sharing of data between the LDTs.
 		Data from one LDT flows, from the Data Management component,
@@ -102,7 +102,7 @@ Next to this model, the provider also deploys the third version of AI model 2
 (bottom-right diagram, arrow 3).
 
 <figure id="fig-how-ai-components-works">
-  <img id="how-ai-components-work" alt="TO-DO" src="img/how-ai-components-work.jpg">
+  <img id="how-ai-components-work" alt="" src="img/how-ai-components-work.jpg">
 	<figcaption>
 		The AI Model Manager, AI Model Catalogue, AI Model Provider, and AI Model Runner work together to support
 		working with different AI models.

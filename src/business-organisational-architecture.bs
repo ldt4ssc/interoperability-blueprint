@@ -34,7 +34,7 @@ Figures [12](#fig-bo-architecture-1) and [13](#fig-bo-architecture-2) consist of
     showing how LDTs help address local needs and achieve specific objectives.
 
 <figure id="fig-bo-architecture-1">
-  <img id="bo-architecture-1" alt="TO-DO" src="img/bo-architecture-1.jpg">
+  <img id="bo-architecture-1" alt="" src="img/bo-architecture-1.jpg">
   <figcaption>
     High-level architecture of the business and organisational building blocks for developing and operating an LDT.
   </figcaption>
@@ -83,7 +83,7 @@ the guidelines from DSSC and DS4SSCC-DEP,
 as discussed in [[#building-blocks]].
 
 <figure id="fig-bo-architecture-2">
-  <img id="bo-architecture-2" alt="TO-DO" src="img/bo-architecture-2.jpg">
+  <img id="bo-architecture-2" alt="" src="img/bo-architecture-2.jpg">
   <figcaption>
     High-level architecture of the business and organisational building blocks for
     developing and operating an LDT-ecosystem,

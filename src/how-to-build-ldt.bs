@@ -10,7 +10,7 @@ Next, we discuss [how to define and implement an LDT](#define-implement).
 Note that participatory, user-centred, and service design methods are used throughout the 4 steps.
 
 <figure id="fig-how-to-build-an-ldt">
-  <img id="img-how-to-build-an-ldt" alt="TO-DO" src="img/how-to-build-an-ldt.jpg">
+  <img id="img-how-to-build-an-ldt" alt="" src="img/how-to-build-an-ldt.jpg">
 	<figcaption>
 		The LDT4SSC methodology for building an LDT consists of 4 steps
     (EXPLORE, VALIDATE, DEFINE, and IMPLEMENT).

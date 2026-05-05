@@ -15,7 +15,7 @@ the context of interconnected local digital twins.
 Again, practical implementations are identified, and new, LDT-specific building blocks are added.
 
 <figure id="fig-blueprints">
-  <img id="blueprints" alt="TO-DO" src="img/blueprints.jpg">
+  <img id="blueprints" alt="" src="img/blueprints.jpg">
   <figcaption>
     The DSSC Blueprint was used by the DS4SSCC-DEP Blueprint.
     The LDT4SSC Blueprint uses the DS4SSCC-DEP Blueprint and, consequently, the DSSC Blueprint.
@@ -47,7 +47,7 @@ LDTs or interconnecting LDTs.
 four pillars: business, governance, legal and design.
 
 <figure id="fig-img-business-organisational-building-blocks">
-  <img id="img-business-organisational-building-blocks" alt="TO-DO" src="img/business-organisational-building-blocks.jpg">
+  <img id="img-business-organisational-building-blocks" alt="" src="img/business-organisational-building-blocks.jpg">
   <figcaption>
     Business and organisational building blocks,
     based on theDSSC/DS4SSCC-DEP building blocks and evolved as part of the LDT4SSC project.
@@ -193,7 +193,7 @@ This section explains what technical pillars and building blocks are required to
 which we will discuss in detail next.
 
 <figure id="fig-img-technical-building-blocks">
-  <img id="img-technical-building-blocks" alt="TO-DO" src="img/technical-building-blocks.jpg">
+  <img id="img-technical-building-blocks" alt="" src="img/technical-building-blocks.jpg">
   <figcaption>
     Technical LDT building blocks aligned with the LDT levels,
     based on the DSSC/DS4SSCC-DEP building blocks.

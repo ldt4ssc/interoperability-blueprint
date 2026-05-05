@@ -21,7 +21,7 @@ Note that this architecture focuses on the different artefacts, components, and 
 It doesn't say anything about which parties deploy which components where.
 
 <figure id="fig-technical-architecture">
-  <img id="img-technical-architecture" alt="TO-DO" src="img/technical-architecture.jpg">
+  <img id="img-technical-architecture" alt="" src="img/technical-architecture.jpg">
 	<figcaption>
 		The technical architecture expands the high-level overview of an LDT.
 		It defines the artefacts and components for Data Sources, Data Acquisition,
