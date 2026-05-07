@@ -34,10 +34,10 @@ It doesn't say anything about which parties deploy which components where.
 <table>
   <thead>
   <tr>
-    <td colspan="1" rowspan="1"><p><span>Artefact</span></p></td>
-    <td colspan="1" rowspan="1"><p><span>High-level component</span></p></td>
-    <td colspan="1" rowspan="1"><p><span>Description</span></p></td>
-    <td colspan="1" rowspan="1"><p><span>Building Block</span></p></td>
+    <th colspan="1" rowspan="1"><p><span>Artefact</span></p></th>
+    <th colspan="1" rowspan="1"><p><span>High-level component</span></p></th>
+    <th colspan="1" rowspan="1"><p><span>Description</span></p></th>
+    <th colspan="1" rowspan="1"><p><span>Building Block</span></p></th>
   </tr>
   </thead>
   <tbody>
@@ -113,10 +113,10 @@ It doesn't say anything about which parties deploy which components where.
 <table>
   <thead>
   <tr>
-    <td  colspan="1" rowspan="1"><p><span>Component</span></p></td>
-    <td  colspan="1" rowspan="1"><p><span>High-level component</span></p></td>
-    <td  colspan="1" rowspan="1"><p><span>Description</span></p></td>
-    <td  colspan="1" rowspan="1"><p><span>Building Block</span></p></td>
+    <th colspan="1" rowspan="1"><p><span>Component</span></p></th>
+    <th colspan="1" rowspan="1"><p><span>High-level component</span></p></th>
+    <th colspan="1" rowspan="1"><p><span>Description</span></p></th>
+    <th colspan="1" rowspan="1"><p><span>Building Block</span></p></th>
   </tr>
   </thead>
   <tbody>
