@@ -57,3 +57,5 @@ path: workflows-using-reference-architectures.bs
 <pre class=include>
 path: how-to-build-ldt.bs
 </pre>
+
+<script src="js/main.js"></script>
