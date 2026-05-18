@@ -7,12 +7,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unreleased
 
+## [1.0.1] - 2026-05-18
+
 ### Added
 
 - Hide previous version link if placeholder still present when serving HTML
 
-## v1.0.0
+## 1.0.0 - 2026-05-18
 
 ### Added
 
 - Content based on deliverable 5.1
+
+[1.0.1]: https://github.com/ldt4ssc/interoperability-blueprint/compare/v1.0.0...v1.0.1
