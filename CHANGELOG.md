@@ -9,7 +9,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 
-- Typos in technical architecture
+- Typos in technical architecture figure
+- Missing closing bracket in chapter 6
 
 ### Changed
 

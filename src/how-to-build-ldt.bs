@@ -4,7 +4,7 @@ In this chapter,
 we discuss how we can build an LDT based on the [reference architectures](#reference-architectures),
 following
 the [LDT4SSC Methodology](https://knowledgehub.ldt4ssc.eu/resources_content/non_tech_resources/#the-ldt4ssc-methodology)
-(see [Figure 19](#fig-how-to-build-an-ldt).
+(see [Figure 19](#fig-how-to-build-an-ldt)).
 First, we discuss [how to explore and validate an LDT as a solution](#explore-validate).
 Next, we discuss [how to define and implement an LDT](#define-implement).
 Note that participatory, user-centred, and service design methods are used throughout the 4 steps.
