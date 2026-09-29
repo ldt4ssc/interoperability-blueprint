@@ -11,6 +11,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Typos in technical architecture figure
 - Missing closing bracket in chapter 6
+- AI Model Registry should be AI Model Catalogue
 
 ### Changed
 
