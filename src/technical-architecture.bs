@@ -330,7 +330,7 @@ Note that in [Figure 14](#fig-technical-architecture),
 we use 2 separate instances of the Data Space Connector for clarity,
 but during deployment, this can be a single instance.
 
-The AI Model Manager stores the details of the AI Data Model in the AI Model Catalogue (arrow 12a).
+The AI Model Manager stores the details of the AI Model in the AI Model Catalogue (arrow 12a).
 The AI Model Provider uses these details (arrow 12b) to run the models on the AI Model Runner (arrow 12c).
 The latter uses the data made available through the Data Exchange Component (arrow 8b).
 Afterwards, a Decision-Making tool uses the runner's output (arrow 15).
