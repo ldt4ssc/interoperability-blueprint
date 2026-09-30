@@ -13,6 +13,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Missing closing bracket in chapter 6
 - AI Model Registry needs to be AI Model Catalogue
 - AI Data Model needs to be AI Model
+- Bikeshed uses the correct last updated date
 
 ### Changed
 
